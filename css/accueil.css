@@ -44,3 +44,21 @@ h1 {
     font-weight: 700; /* Exo bold for more emphasis */
 }
 
+.social-icons {
+    position: fixed;  /* Fixe les icônes sur l'écran */
+    right: 20px;      /* Distance du bord droit */
+    top: 50%;         /* Positionne au milieu verticalement */
+    transform: translateY(-50%);  /* Centre les icônes verticalement */
+    z-index: 20;      /* S'assure que les icônes restent au-dessus des autres éléments */
+}
+
+.social-icons a {
+    display: block;   /* Chaque lien dans sa propre ligne */
+    margin: 10px 0;   /* Espacement vertical entre les icônes */
+    color: white;     /* Couleur des icônes */
+    font-size: 24px;  /* Taille des icônes */
+}
+
+.social-icons a:hover {
+    color: #ccc;      /* Couleur au survol */
+}
