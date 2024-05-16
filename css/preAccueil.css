@@ -1,14 +1,18 @@
 body {
-    background-image: url('../img/Background/preVideoAccueil.mp4');
-    background-size: cover; /* Ajuste la taille de l'image pour remplir tout l'espace disponible de manière proportionnelle */
-    background-position: center; /* Centre l'image horizontalement et verticalement */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
-    /* Assure une couleur de texte contrastée par rapport à l'image de fond */
-    color: white;
-    /* Ajuste la hauteur de la page pour correspondre à la taille de l'écran */
-    height: 100vh; /* 100% de la hauteur de la fenêtre visible (viewport height) */
     margin: 0; /* Supprime les marges par défaut du corps */
     padding: 0; /* Supprime les espaces internes par défaut du corps */
+}
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 /* Styling for the skip button */

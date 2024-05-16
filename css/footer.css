@@ -42,20 +42,57 @@
     z-index: 50; /* Assurez-vous qu'il soit au-dessus de tout */
 }
 
+.footer-columns {
+    display: flex;
+    justify-content: center; /* Centre les colonnes au lieu de 'space-between' */
+    align-items: start; /* Alignement vertical au début */
+    width: 100%; /* Assure que les colonnes utilisent toute la largeur disponible */
+    padding: 0 150px; /* Ajoute de l'espacement aux deux extrémités */
+}
+
+.footer-column {
+    flex: 1; /* Assure que chaque colonne prend un espace équivalent */
+    padding: 0 10px; /* Espacement supplémentaire à l'intérieur de chaque colonne */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alignement des éléments à gauche */
+}
+
+.footer-column h4 {
+    color: #FFF;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #CCC;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #FFF;
+}
+
+
 .footer-content {
-    background-color: rgba(0, 0, 0, 0.6); /* Couleur de fond noire */
-    color: white; /* Texte en blanc pour contraster avec le fond noir */
-    padding: 20px; /* Espace intérieur pour ne pas coller le texte aux bords */
-    border-radius: 15px 15px 0 0; /* Arrondis en haut à gauche et à droite, plat en bas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
-    width: 80%; /* Largeur relative à son conteneur */
-    max-width: 1500px; /* Largeur maximale pour éviter un aspect trop étiré sur grands écrans */
-    text-align: center; /* Centrage du texte à l'intérieur */
-    position: fixed; /* Positionnement fixe */
-    left: 50%; /* Centrage horizontal */
-    transform: translateX(-50%); /* Ajustement précis du centrage horizontal */
-    bottom: 0; /* Positionné en bas de la vue */
-    z-index: 1050; /* S'assure qu'il est bien visible par-dessus les autres éléments */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 40px 40px; /* Augmentation de l'espacement supérieur */
+    border-radius: 70px 70px 0 0; /* Conservez vos arrondis définis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    height: 50%; /* Contrôle de la hauteur totale du footer */
+    width: 80%;
+    max-width: 1500px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; /* Assure que le contenu commence à s'aligner à partir du haut */
 }
 
 .close-btn {
