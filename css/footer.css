@@ -47,7 +47,7 @@
     justify-content: center; /* Centre les colonnes au lieu de 'space-between' */
     align-items: start; /* Alignement vertical au début */
     width: 100%; /* Assure que les colonnes utilisent toute la largeur disponible */
-    padding: 0 150px; /* Ajoute de l'espacement aux deux extrémités */
+    padding: 100px 150px; /* Ajoute de l'espacement aux deux extrémités */
 }
 
 .footer-column {
@@ -55,18 +55,17 @@
     padding: 0 10px; /* Espacement supplémentaire à l'intérieur de chaque colonne */
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alignement des éléments à gauche */
 }
 
 .footer-column h4 {
     color: #FFF;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .footer-column a {
     color: #CCC;
     text-decoration: none;
-    margin: 5px 0;
+    margin: 15px 0;
     transition: color 0.3s;
 }
 
@@ -74,11 +73,9 @@
     color: #FFF;
 }
 
-
 .footer-content {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 40px 40px; /* Augmentation de l'espacement supérieur */
     border-radius: 70px 70px 0 0; /* Conservez vos arrondis définis */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     height: 50%; /* Contrôle de la hauteur totale du footer */
@@ -97,8 +94,8 @@
 
 .close-btn {
     position: absolute; /* Positionnement absolu par rapport à son parent .footer-content */
-    top: 20px; /* Espacement depuis le haut */
-    left: 20px; /* Espacement depuis le côté droit */
+    top: 10%; /* Espacement depuis le haut */
+    left: 3%; /* Espacement depuis le côté droit */
     border: 1px solid white; /* Bordure blanche */
     background-color: transparent; /* Fond transparent */
     color: white; /* Couleur du texte (croix) blanche */
