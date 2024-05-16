@@ -17,5 +17,30 @@ body, html {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: transparent !important; /* Make sure the navbar is transparent */
 }
+
+.content {
+    position: absolute;
+    top: 50%; /* Adjusted as per your requirement */
+    left: 10%; /* Text aligned to the left */
+    color: white; /* Assuming you want white text */
+    font-family: 'Exo', sans-serif; /* Using the Exo font */
+    font-size: 2rem; /* Adjust the size as needed */
+    z-index: 10; /* Make sure it's above the background image */
+}
+
+.buttons button {
+    border: 1px solid white; /* Bordure blanche autour des boutons */
+    border-radius: 0 0 100px 0; /* Arrondis en haut à droite et en bas à gauche */
+    padding: 10px 70px !important; /* Augmentation de l'espacement interne horizontal pour élargir le bouton */
+    color: white; /* Couleur du texte */
+    margin-top: 20px; /* Space between text and buttons */
+    margin-right: 10px; /* Space between buttons */
+}
+
+h1 {
+    font-size: 80px;
+    margin-top: -30px; /* Remove default margin */
+    font-weight: 700; /* Exo bold for more emphasis */
+}
+

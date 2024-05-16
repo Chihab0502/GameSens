@@ -4,7 +4,7 @@ body, html {
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.2); /* Noir semi-transparent */
+    background-color: rgba(0, 0, 0, 0.3); /* Noir semi-transparent */
     padding: 10px 0; /* Ajustement de l'espacement autour des éléments de la navbar */
 }
 
@@ -23,7 +23,7 @@ body, html {
     border-radius: 0 100px 0 100px; /* Arrondis en haut à droite et en bas à gauche */
     padding: 10px 70px !important; /* Augmentation de l'espacement interne horizontal pour élargir le bouton */
     color: white; /* Couleur du texte */
-    margin: 5px 5px; /* Marge entre les boutons */
+    margin: 5px 15px; /* Marge entre les boutons */
 }
 
 .nav-link.nav-button:hover {
