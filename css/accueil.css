@@ -30,35 +30,35 @@ body, html {
 }
 
 .buttons button {
-    border: 1px solid white; /* Bordure blanche autour des boutons */
-    border-radius: 0 0 100px 0; /* Arrondis en haut à droite et en bas à gauche */
-    padding: 10px 70px !important; /* Augmentation de l'espacement interne horizontal pour élargir le bouton */
-    color: white; /* Couleur du texte */
-    margin-top: 20px; /* Space between text and buttons */
-    margin-right: 10px; /* Space between buttons */
+    border: 1px solid white;
+    border-radius: 0 0 100px 0;
+    padding: 10px 70px !important;
+    color: white;
+    margin-top: 20px;
+    margin-right: 10px;
 }
 
 h1 {
     font-size: 80px;
-    margin-top: -30px; /* Remove default margin */
-    font-weight: 700; /* Exo bold for more emphasis */
+    margin-top: -30px;
+    font-weight: 700;
 }
 
 .social-icons {
-    position: fixed;  /* Fixe les icônes sur l'écran */
-    right: 20px;      /* Distance du bord droit */
-    top: 50%;         /* Positionne au milieu verticalement */
-    transform: translateY(-50%);  /* Centre les icônes verticalement */
-    z-index: 20;      /* S'assure que les icônes restent au-dessus des autres éléments */
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
 }
 
 .social-icons a {
-    display: block;   /* Chaque lien dans sa propre ligne */
-    margin: 10px 0;   /* Espacement vertical entre les icônes */
-    color: white;     /* Couleur des icônes */
-    font-size: 24px;  /* Taille des icônes */
+    display: block;
+    margin: 10px 0;
+    color: white;
+    font-size: 24px;
 }
 
 .social-icons a:hover {
-    color: #ccc;      /* Couleur au survol */
+    color: #ccc;
 }

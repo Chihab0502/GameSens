@@ -1,0 +1,83 @@
+/* footer.css */
+.footer-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1051; /* Assurez-vous qu'il reste au-dessus des autres éléments */
+    cursor: pointer;
+}
+
+.footer-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #000; /* Fond noir ou tout autre design souhaité */
+    color: white;
+    border-radius: 50%; /* Rend le bouton rond */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Optionnel : ajoute un effet d'ombre */
+}
+
+.footer-button a:hover {
+    background-color: #222; /* Changement de couleur au survol */
+    color: #fff;
+}
+
+.bi-info-circle-fill {
+    font-size: 1.5rem; /* Ajustez la taille de l'icône */
+}
+
+.footer-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px); /* Floute le fond derrière le modal */
+    z-index: 50; /* Assurez-vous qu'il soit au-dessus de tout */
+}
+
+.footer-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Couleur de fond noire */
+    color: white; /* Texte en blanc pour contraster avec le fond noir */
+    padding: 20px; /* Espace intérieur pour ne pas coller le texte aux bords */
+    border-radius: 15px 15px 0 0; /* Arrondis en haut à gauche et à droite, plat en bas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Ombre pour un effet de profondeur */
+    width: 80%; /* Largeur relative à son conteneur */
+    max-width: 1500px; /* Largeur maximale pour éviter un aspect trop étiré sur grands écrans */
+    text-align: center; /* Centrage du texte à l'intérieur */
+    position: fixed; /* Positionnement fixe */
+    left: 50%; /* Centrage horizontal */
+    transform: translateX(-50%); /* Ajustement précis du centrage horizontal */
+    bottom: 0; /* Positionné en bas de la vue */
+    z-index: 1050; /* S'assure qu'il est bien visible par-dessus les autres éléments */
+}
+
+.close-btn {
+    position: absolute; /* Positionnement absolu par rapport à son parent .footer-content */
+    top: 20px; /* Espacement depuis le haut */
+    left: 20px; /* Espacement depuis le côté droit */
+    border: 1px solid white; /* Bordure blanche */
+    background-color: transparent; /* Fond transparent */
+    color: white; /* Couleur du texte (croix) blanche */
+    width: 30px; /* Largeur du bouton */
+    height: 30px; /* Hauteur du bouton */
+    border-radius: 5px; /* Bordure arrondie pour un aspect circulaire */
+    display: flex; /* Utilisation de Flexbox pour centrer l'icône */
+    align-items: center; /* Centrage vertical de l'icône */
+    justify-content: center; /* Centrage horizontal de l'icône */
+    cursor: pointer; /* Curseur pointeur pour indiquer l'interactivité */
+}
+
+.close-btn:focus {
+    outline: none; /* Supprime le contour lors du focus pour les utilisateurs clavier */
+}
+
+.bi-x-lg { /* Utilisez la classe correcte pour l'icône de croix */
+    font-size: 0.5rem; /* Taille de l'icône */
+}
