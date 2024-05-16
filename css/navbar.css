@@ -19,9 +19,9 @@ body, html {
 
 .nav-link.nav-button {
 
-    border: 2px solid white; /* Bordure blanche autour des boutons */
+    border: 1px solid white; /* Bordure blanche autour des boutons */
     border-radius: 0 100px 0 100px; /* Arrondis en haut à droite et en bas à gauche */
-    padding: 15px 70px !important; /* Augmentation de l'espacement interne horizontal pour élargir le bouton */
+    padding: 10px 70px !important; /* Augmentation de l'espacement interne horizontal pour élargir le bouton */
     color: white; /* Couleur du texte */
     margin: 5px 5px; /* Marge entre les boutons */
 }
@@ -31,6 +31,11 @@ body, html {
     color: black; /* Couleur du texte au survol */
 }
 
+.bi:hover {
+    color: white; /* Couleur du texte au survol */
+}
+
 .bi {
     font-size: 24px; /* Augmente la taille des icônes (ajustez selon vos besoins) */
 }
+

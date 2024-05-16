@@ -1,0 +1,21 @@
+/* accueil.css */
+.fullscreen-bg {
+    background: url('../img/Box/Box__flower_/GS_Box_Floral-1-4k.png') no-repeat center center;
+    background-size: cover; /* Cover ensures the image covers the whole screen */
+    height: 100vh; /* 100% of the viewport height */
+    width: 100vw; /* 100% of the viewport width */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent !important; /* Make sure the navbar is transparent */
+}
