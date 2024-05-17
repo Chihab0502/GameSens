@@ -74,6 +74,9 @@
 }
 
 .footer-content {
+    border-top: 1px solid white ;
+    border-left: 1px solid white ;
+    border-right: 1px solid white ;
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     border-radius: 70px 70px 0 0; /* Conservez vos arrondis définis */
