@@ -11,18 +11,20 @@
 
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/panier.css">
     <script src="js/footer.js" defer></script>
-    <script src="js/cart.js" defer></script>
 </head>
+
+
 <body>
+    <div class="fullscreen-bg">  
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid position-relative">
             <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
             <div class="navbar-header position-absolute" style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/Logo/PNG/Fond blanc et noir/Copie de logo (blanc)1.png" alt="GAMESENS Logo">
+                <a class="navbar-brand" href="accueil.html">
+                    <img src="./img/Logo/PNG/Fond blanc et noir/Copie de logo (blanc)1.png" alt="GAMESENS Logo" height="70">
                 </a>
             </div>
             <!-- Conteneur central pour les boutons -->
@@ -40,10 +42,9 @@
                 </ul>
             </div>
             <!-- Conteneur à droite pour les icônes -->
-
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="panier.html" id="cartToggle"><i class="bi bi-handbag"></i></a>
+                    <a class="nav-link" href="panier.html"><i class="bi bi-handbag"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="bi bi-person"></i></a>
@@ -51,49 +52,37 @@
             </ul>
         </div>
     </nav>
-
-    <div id="cartContent" class="cart-modal" style="display: none;">
-        <div class="cart-content">
-            <h2 class="cart-title">Panier</h2>
-            <button onclick="document.getElementById('cartContent').style.display='none'" class="close-cart-btn">
-                <i class="bi bi-x-lg"></i>
-            </button>
-            <!-- Conteneur pour les éléments du panier -->
-            <div class="cart-items">
-                <div class="cart-item">
-                    <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
-                    <div class="item-details">
-                        <h4>BOX "FLOWER"</h4>
-                        <p>Taille: S</p>
-                        <p>Prix: 35€</p>
-                    </div>
-                    <div class="item-actions">
-                        <button class="modify-btn">Modifier</button>
-                        <button class="remove-btn">Retirer</button>
-                    </div>
-                </div>
-                <!-- Répéter pour d'autres produits -->
-            </div>
-            <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button>
-        </div>
-    </div>
 </header>
 
-<div class="fullscreen-bg">
-    <div class="content">
-        <h1>COLLECTION</h1>
-        <h1>FLOWER</h1>
-        <div class="buttons">
-            <button type="button" class="btn btn-outline-light"><b>COMMANDER</b></button>
-            <button type="button" class="btn btn-outline-light"><b>OPENING</b></button>
+
+<div style="display: flex;margin-top: 8%; margin-left: 8%;color: #FFF;">
+    <h1 style="font-size: 65px; font-weight: bold;">PANIER </h1>
+    <p style="margin-top: 3%; margin-left: 6%;"> Les articles seront réservés pendant 60 minutes </p>
+
+    <div class="overlay-rectangles" style="margin-top: 17%; margin-left: -38%;">
+        <div class="rectangle">
+            <h2>35,99 €</h2>
+            <h2>BOX "FLOWER"</h2>
+            <p>
+                <label for="quantity1">Quantité :</label>
+                <select id="quantity1" name="quantity1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </p>
+        </div>
+        <div class="rectangle">
+            <h2>35,99 €</h2>
+            <h2>BOX "FLOWER"</h2>
+            <p>ici</p>
         </div>
     </div>
 </div>
-<div class="social-icons">
-    <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
-    <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
-</div>
+
+
 
 <footer>
     <div class="footer-button">
@@ -134,6 +123,9 @@
         </div>
     </div>
 </footer>
+
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
