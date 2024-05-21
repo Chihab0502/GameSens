@@ -13,16 +13,11 @@
     justify-content: center;
     width: 60px;
     height: 60px;
-    background-color: #000; /* Fond noir ou tout autre design souhaité */
     color: white;
     border-radius: 50%; /* Rend le bouton rond */
     box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Optionnel : ajoute un effet d'ombre */
 }
 
-.footer-button a:hover {
-    background-color: #222; /* Changement de couleur au survol */
-    color: #fff;
-}
 
 .bi-info-circle-fill {
     font-size: 1.5rem; /* Ajustez la taille de l'icône */

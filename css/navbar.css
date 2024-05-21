@@ -1,6 +1,14 @@
 /* navbar.css */
+
+@font-face {
+    font-family: "Conthrax";
+    src: local("conthrax/conthrax-sb.otf");
+    font-weight: bold;
+    font-style: normal;
+}
+
 body, html {
-    font-family: 'Exo', sans-serif; /* Applique la police Exo à tout le contenu du site */
+    font-family: 'Conthrax', sans-serif; /* Applique la police Exo à tout le contenu du site */
 }
 
 .navbar {
@@ -53,7 +61,7 @@ body, html {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    z-index: 1050;
+    z-index: 3000;
     overflow-y: auto; /* Ajouté pour permettre le défilement si le contenu dépasse la hauteur */
 }
 
@@ -100,6 +108,11 @@ body, html {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.0); /* Fond légèrement transparent pour intégrer le style de votre panier */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure subtile */
+    border-radius: 10px; /* Arrondir les coins */
+    padding: 10px; /* Ajouter un peu d'espacement à l'intérieur */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de profondeur */
 }
 
 .item-image {

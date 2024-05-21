@@ -24,7 +24,6 @@ body, html {
     top: 50%; /* Adjusted as per your requirement */
     left: 10%; /* Text aligned to the left */
     color: white; /* Assuming you want white text */
-    font-family: 'Exo', sans-serif; /* Using the Exo font */
     font-size: 2rem; /* Adjust the size as needed */
     z-index: 10; /* Make sure it's above the background image */
 }
@@ -62,3 +61,17 @@ h1 {
 .social-icons a:hover {
     color: #ccc;
 }
+
+/* Ajoutez cette classe pour le fond qui va flouter le reste de la page */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Assombrir légèrement pour un effet visuel plus fort */
+    backdrop-filter: blur(10px); /* Appliquer le flou */
+    z-index: 2999; /* Doit être inférieur à celui du modal du panier mais supérieur au reste du contenu */
+    display: none; /* Caché par défaut */
+}
+
