@@ -1,4 +1,9 @@
 /* accueil.css */
+
+body, html {
+    font-family: 'Exo', sans-serif; /* Applique la police Exo à tout le contenu du site */
+}
+
 .fullscreen-bg {
     background: url('../img/Box/Box__flower_/GS_Box_Floral-1-4k.png') no-repeat center center;
     background-size: cover; /* Cover ensures the image covers the whole screen */

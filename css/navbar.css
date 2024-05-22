@@ -1,14 +1,7 @@
 /* navbar.css */
 
-@font-face {
-    font-family: "Conthrax";
-    src: local("conthrax/conthrax-sb.otf");
-    font-weight: bold;
-    font-style: normal;
-}
-
 body, html {
-    font-family: 'Conthrax', sans-serif; /* Applique la police Exo à tout le contenu du site */
+    font-family: 'Exo', sans-serif; /* Applique la police Exo à tout le contenu du site */
 }
 
 .navbar {

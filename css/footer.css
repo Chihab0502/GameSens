@@ -113,3 +113,23 @@
 .bi-x-lg { /* Utilisez la classe correcte pour l'icône de croix */
     font-size: 0.5rem; /* Taille de l'icône */
 }
+
+@keyframes slideIn {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes slideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
+}
+
+.footer-modal{
+    animation-name: slideIn;
+    animation-duration: 1s;
+}
+
+.footer-modal.closing {
+    animation-name: slideOut;
+    animation-duration: 1s;
+}
