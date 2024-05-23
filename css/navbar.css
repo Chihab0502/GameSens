@@ -42,7 +42,7 @@ body, html {
 
 .cart-modal {
     position: fixed;
-    right: 0;
+    right: -650px; /* Commence à l'extérieur de la vue */
     top: 10%;
     bottom: 0; /* Ajouté pour maintenir un espace de 20px du bas de la page */
     width: 650px; /* Largeur ajustée comme dans tes dernières spécifications */
@@ -56,6 +56,8 @@ body, html {
     padding: 20px;
     z-index: 3000;
     overflow-y: auto; /* Ajouté pour permettre le défilement si le contenu dépasse la hauteur */
+    transition: right 0.5s ease; /* Ajoute une transition pour l'animation de slide */
+
 }
 
 .cart-title {

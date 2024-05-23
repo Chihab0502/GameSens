@@ -3,7 +3,7 @@
     position: fixed;
     left: 20px;
     bottom: 20px;
-    z-index: 1051; /* Assurez-vous qu'il reste au-dessus des autres éléments */
+    z-index: 100; /* Assurez-vous qu'il reste au-dessus des autres éléments */
     cursor: pointer;
 }
 
@@ -124,12 +124,10 @@
     to { transform: translateY(100%); }
 }
 
-.footer-modal{
-    animation-name: slideIn;
-    animation-duration: 1s;
+.footer-modal.showing{
+    animation: slideIn 1s forwards; /* L'animation reste sur l'état final grâce à 'forwards' */
 }
 
 .footer-modal.closing {
-    animation-name: slideOut;
-    animation-duration: 1s;
+    animation: slideOut 1s forwards; /* L'animation reste sur l'état final grâce à 'forwards' */
 }
