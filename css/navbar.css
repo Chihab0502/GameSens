@@ -73,18 +73,19 @@ body, html {
 }
 
 .close-cart-btn {
-    position: absolute; /* Position absolue par rapport à son conteneur */
-    top: 9%; /* Espacement depuis le haut */
-    right: 3%; /* Espacement depuis la droite */
-    background: none;
-    border: 1px solid white;
-    border-radius: 10px;
-    color: white;
-    cursor: pointer;
-    padding: 5px 8px; /* Léger padding pour une meilleure apparence */
+    position: absolute; /* Positionnement absolu par rapport à son parent .footer-content */
+    top: 10%; /* Espacement depuis le haut */
+    right: 3%; /* Espacement depuis le côté droit */
+    border: 1px solid white; /* Bordure blanche */
+    background-color: transparent; /* Fond transparent */
+    color: white; /* Couleur du texte (croix) blanche */
+    width: 30px; /* Largeur du bouton */
+    height: 30px; /* Hauteur du bouton */
+    border-radius: 5px; /* Bordure arrondie pour un aspect circulaire */
     display: flex; /* Utilisation de Flexbox pour centrer l'icône */
     align-items: center; /* Centrage vertical de l'icône */
     justify-content: center; /* Centrage horizontal de l'icône */
+    cursor: pointer; /* Curseur pointeur pour indiquer l'interactivité */
 }
 
 .bi-x-lg { /* Style pour l'icône de fermeture */

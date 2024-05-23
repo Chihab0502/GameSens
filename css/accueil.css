@@ -70,13 +70,14 @@ h1 {
 /* Ajoutez cette classe pour le fond qui va flouter le reste de la page */
 .backdrop {
     position: fixed;
-    top: 0;
+    top: 70px; /* Ajuste ceci à la hauteur de ta navbar */
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Assombrir légèrement pour un effet visuel plus fort */
-    backdrop-filter: blur(10px); /* Appliquer le flou */
-    z-index: 2999; /* Doit être inférieur à celui du modal du panier mais supérieur au reste du contenu */
-    display: none; /* Caché par défaut */
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Fond légèrement transparent pour voir le contenu derrière */
+    backdrop-filter: blur(5px); /* Applique un effet de flou */
+    display: none; /* Cache ce fond par défaut */
+    z-index: 1000; /* S'assure que ça se trouve derrière le panier mais au-dessus des autres contenus */
 }
+
 
