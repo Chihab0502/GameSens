@@ -128,8 +128,9 @@ body, html {
 .item-actions button {
     margin-right: 10px;
     padding: 5px 10px;
-    background-color: #333;
-    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+    color: #333;
     border: none;
     border-radius: 5px;
     cursor: pointer;

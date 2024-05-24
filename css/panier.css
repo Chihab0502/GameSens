@@ -4,17 +4,20 @@
     /* Ajoutez d'autres variations de la police si nécessaire */
 }
 
+
 body, html {
     font-family: 'Conthrax', sans-serif;
 }
 
 .fullscreen-bg {
-    position: relative; /* Ensure the container is positioned */
+    position: absolute;
+    top: 0;
+    left: 0;
     background: url('../img/Background/panier.png') no-repeat center center;
     background-size: cover; /* Cover ensures the image covers the whole screen */
     height: 100vh; /* 100% of the viewport height */
     width: 100vw; /* 100% of the viewport width */
-    z-index: 0; /* Base z-index */
+    z-index: -1;
 }
 
 .fullscreen-bg::before {
