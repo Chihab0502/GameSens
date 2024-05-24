@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Conthrax';
+    src: url('../conthrax/conthrax-sb.otf') format('truetype');
+    /* Ajoutez d'autres variations de la police si nécessaire */
+}
+
+body, html {
+    font-family: 'Conthrax', sans-serif;
+}
+
+
 body {
     margin: 0; /* Supprime les marges par défaut du corps */
     padding: 0; /* Supprime les espaces internes par défaut du corps */

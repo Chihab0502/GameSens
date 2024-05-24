@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Conthrax';
+    src: url('../conthrax/conthrax-sb.otf') format('truetype');
+    /* Ajoutez d'autres variations de la police si nécessaire */
+}
+
+body, html {
+    font-family: 'Conthrax', sans-serif;
+}
+
 .fullscreen-bg {
     position: relative; /* Ensure the container is positioned */
     background: url('../img/Background/panier.png') no-repeat center center;

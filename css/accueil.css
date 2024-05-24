@@ -1,7 +1,12 @@
 /* accueil.css */
+@font-face {
+    font-family: 'Conthrax';
+    src: url('../conthrax/conthrax-sb.otf') format('truetype');
+    /* Ajoutez d'autres variations de la police si nécessaire */
+}
 
 body, html {
-    font-family: 'Exo', sans-serif; /* Applique la police Exo à tout le contenu du site */
+    font-family: 'Conthrax', sans-serif;
 }
 
 .fullscreen-bg {
