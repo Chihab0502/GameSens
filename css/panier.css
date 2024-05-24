@@ -36,6 +36,7 @@
     margin-bottom: 20px; /* Space between the rectangles */
     padding: 20px; /* Padding inside the rectangles */
     color: #fff; /* White text color */
+    border: 2px solid rgba(84, 81, 81, 0.5);
 }
 
 .item-image {
@@ -106,4 +107,15 @@
     width: 20px; /* Ajustez la largeur de la croix selon vos besoins */
     height: auto; /* Garantit que la hauteur est ajustée proportionnellement à la largeur */
     z-index: 4; /* Assurez-vous que la croix est au-dessus des autres éléments */
+}
+
+
+
+.buttons button {
+    border: 1px solid white;
+    border-radius: 0 0 100px 0;
+    padding: 10px 70px !important;
+    color: white;
+    margin-top: 20px;
+    margin-right: 10px;
 }

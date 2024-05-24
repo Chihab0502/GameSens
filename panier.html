@@ -23,7 +23,7 @@
         <div class="container-fluid position-relative">
             <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
             <div class="navbar-header position-absolute" style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="accueil.html">
                     <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
                 </a>   
             </div>
@@ -57,7 +57,7 @@
 
 <div style="display: flex;margin-top: 4%; margin-left: 8%;color: #FFF;">
     <h1 style="font-size: 65px; font-weight: bold;">PANIER </h1>
-    <p style="margin-top: 3%; margin-left: 6%;"> Les articles seront réservés pendant 60 minutes </p>
+    <p style="margin-top: 3%; margin-left: 6%;white-space: nowrap;"> Les articles seront réservés pendant 60 minutes </p>
 
     <br>
     <br>
@@ -66,24 +66,29 @@
     <br>
     <br>
 
-    <div class="overlay-rectangles" style="margin-top: 17%; margin-left: -38%;">
+    <div class="overlay-rectangles" style="margin-top: 8%; margin-left: -38%;">
+
+        <div style="position: absolute; top: 22%; left: 111%; z-index: 100;">
+            <img src="./img/Box/croixPanier.png" alt="Croix" width="50" height="50">
+        </div>
+
         <div style="margin-top: 19% !important;" class="rectangle">
-            <img src="./img/Box/croixPanier.png" alt="Croix Panier" class="croix-panier">
+
             <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
             <div>
                 <h2>35,99 €</h2>
                 <h2 style="font-size: 33px;margin-top: 8%;">BOX "FLOWER"</h2>
-                <p>
-                    <label for="size1">Taille :</label>
-                    <select id="size1" name="size1">
+                <div style="display: flex; align-items: center;"> <!-- Nouveau conteneur pour aligner les éléments -->
+                    <p style="margin-right: 5%; margin-bottom: 2%;white-space: nowrap;">Taille :</p> <!-- Élément Taille -->
+                    <select id="size1" name="size1" style="margin-right: -10%;">
                         <option value="XS">XS</option>
                         <option value="S">S</option>
                         <option value="M">M</option>
                         <option value="L">L</option>
                         <option value="XL">XL</option>
                     </select>
-                    <span style="margin-left: 8%; margin-right: 8%;" class="white-bar">|</span>
-                    <label for="quantity1">Quantité :</label>
+                    <span style="margin-left: 12%; margin-right: 12%;" class="white-bar">|</span>
+                    <p style="margin-right: 5%; margin-bottom: 2%;white-space: nowrap;">Quantité :</p> <!-- Élément Quantité -->
                     <select id="quantity1" name="quantity1">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -91,95 +96,67 @@
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </select>
-                </p>
+                </div>
             </div>
         </div>
 
         <div style="margin-top: 12% !important;" class="rectangle">
             <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
             <div>
-                <h2>35,99 €</h2>
-                <h2 style="font-size: 33px;margin-top: 8%;">BOX "FLOWER"</h2>
-                <p>
-                    <label for="size1">Taille :</label>
-                    <select id="size1" name="size1">
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                    <span style="margin-left: 8%; margin-right: 8%;" class="white-bar">|</span>
-                    <label for="quantity1">Quantité :</label>
-                    <select id="quantity1" name="quantity1">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </p>
+                <div style="position: absolute; top: 68%; left: 111%; z-index: 100;">
+                    <img src="./img/Box/croixPanier.png" alt="Croix" width="50" height="50">
+                </div>
+                <div>
+                    <h2>35,99 €</h2>
+                    <h2 style="font-size: 33px;margin-top: 8%;">BOX "FLOWER"</h2>
+                    <div style="display: flex; align-items: center;"> <!-- Nouveau conteneur pour aligner les éléments -->
+                        <p style="margin-right: 5%; margin-bottom: 2%;white-space: nowrap;">Taille :</p> <!-- Élément Taille -->
+                        <select id="size1" name="size1" style="margin-right: -10%;">
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <span style="margin-left: 12%; margin-right: 12%;" class="white-bar">|</span>
+                        <p style="margin-right: 5%; margin-bottom: 2%;white-space: nowrap;">Quantité :</p> <!-- Élément Quantité -->
+                        <select id="quantity1" name="quantity1">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 
-    <div class="overlay-rectangles" style="margin-top: 17%; margin-left: -38%;">
-        <img src="./img/Box/croixPanier.png" alt="Croix Panier" class="croix-panier">
-        <div style="margin-top: 19% !important;" class="rectangle">
-            <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
-            <div>
-                <h2>35,99 €</h2>
-                <h2 style="font-size: 33px;margin-top: 8%;">BOX "FLOWER"</h2>
-                <p>
-                    <label for="size1">Taille :</label>
-                    <select id="size1" name="size1">
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                    <span style="margin-left: 8%; margin-right: 8%;" class="white-bar">|</span>
-                    <label for="quantity1">Quantité :</label>
-                    <select id="quantity1" name="quantity1">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </p>
-            </div>
+
+    <div id="resumeBox" class="rectangle" style="margin-left: 1%; margin-right: 14%; margin-top:12%; display: flex; flex-direction: column; justify-content: flex-start;">
+        <div style="position: absolute; top: 36%; right: 15%; z-index: 100;">
+            <img src="./img/Box/croixPanier.png" alt="Croix" width="50" height="50">
+        </div>
+        <h2 style="font-size: 33px;">Résumé</h2>
+        <div style="margin-top: 20px;">
+            <p>Nombres d'articles: <span id="numArticles">2</span></p>
+            <p>Sous-total: <span id="subTotal">71,98 €</span></p>
+            <p>Information sur la livraison: <span id="deliveryInfo">...</span></p>
         </div>
 
-        <div style="margin-top: 12% !important;" class="rectangle">
-            <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
-            <div>
-                <h2>35,99 €</h2>
-                <h2 style="font-size: 33px;margin-top: 8%;">BOX "FLOWER"</h2>
-                <p>
-                    <label for="size1">Taille :</label>
-                    <select id="size1" name="size1">
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                    <span style="margin-left: 8%; margin-right: 8%;" class="white-bar">|</span>
-                    <label for="quantity1">Quantité :</label>
-                    <select id="quantity1" name="quantity1">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </p>
-            </div>
+
+        <div class="buttons">
+            <button type="button" class="btn btn-outline-light"><b>ALLER AU PAYEMENT</b></button>
         </div>
     </div>
+
+
+
+
+
+
 </div>
 
 
