@@ -85,17 +85,6 @@ h1 {
     z-index: 1000; /* S'assure que ça se trouve derrière le panier mais au-dessus des autres contenus */
 }
 
-.footer-image {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999; /* Assurez-vous que l'image soit au-dessus du reste du contenu */
-}
-
-.footer-image img {
-    width: 55px; /* Ajustez la largeur de l'image selon vos besoins */
-    height: auto; /* Pour maintenir le ratio d'aspect de l'image */
-}
 
 
 
