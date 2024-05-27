@@ -111,21 +111,64 @@
 }
 
 /* Ajout des classes .form-group pour connexion et inscription */
-#loginForm .form-group input[type="text"],
-#loginForm .form-group input[type="email"],
-#loginForm .form-group input[type="password"],
-#signupForm .form-group input[type="text"],
-#signupForm .form-group input[type="email"],
-#signupForm .form-group input[type="password"] {
-    width: 30%; /*Taille champs*/
+#loginForm .form-group input[type="pseudo"],
+#loginForm .form-group input[type="nom"],
+#loginForm .form-group input[type="prenom"]{
+    width: 150%; /*Taille champs*/
     padding: 10px;
-    padding-left: 25px;
     border: 1px solid rgba(84, 81, 81, 0.5); /* Contour gris */
     border-radius: 100px;
     background-color: rgba(0, 0, 0, 0.5); /* Noir transparent */
     color: white;
     box-sizing: border-box;
 }
+
+
+#loginForm .form-group input[type="mail"],
+#loginForm .form-group input[type="tel"]{
+    width: 200%; /*Taille champs*/
+    padding: 10px;
+    border: 1px solid rgba(84, 81, 81, 0.5); /* Contour gris */
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.5); /* Noir transparent */
+    color: white;
+    box-sizing: border-box;
+}
+
+#loginForm .form-group input[type="nomFigure"],
+#loginForm .form-group input[type="rue"]{
+    width: 90%; /*Taille champs*/
+    padding: 10px;
+    border: 1px solid rgba(84, 81, 81, 0.5); /* Contour gris */
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.5); /* Noir transparent */
+    color: white;
+    box-sizing: border-box;
+}
+
+#loginForm .form-group input[type="codepostal"],
+#loginForm .form-group input[type="ville"],
+#loginForm .form-group input[type="pays"]{
+    width: 150%; /*Taille champs*/
+    padding: 10px;
+    border: 1px solid rgba(84, 81, 81, 0.5); /* Contour gris */
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.5); /* Noir transparent */
+    color: white;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 #loginForm .form-group input::placeholder,
 #signupForm .form-group input::placeholder {

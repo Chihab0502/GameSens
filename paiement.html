@@ -70,20 +70,66 @@
         <p style="margin-left: 6%; color: rgba(255, 255, 255, 0.5);margin-top: 7%;"> Vos données sont protégées, cliquez pour en savoir plus... </p>
     </div>
     <div class="title-container">
-            <h3 style="display: flex; align-items: center; margin-left: 15%; margin-top: 4%;color: #FFF;">Informations du Profil</h3>
+            <h3 style="display: flex; align-items: center; margin-left: 15%; margin-top: 4%;color: #FFF;">INFORMATION DU PROFIL</h3>
             <form id="loginForm">
                 <br>
                 <br>
+            <div style="display: flex">
             <div class="form-group" style="margin-left: 12%">
-                <label for="email">ADRESSE MAIL :</label>
-                <input type="email" id="email" name="email" placeholder="..." required>
+                <label for="email">PSEUDO </label>
+                <input type="pseudo" id="email" name="email" placeholder="" required>
             </div>
             <div class="form-group" style="margin-left: 12%">
-                <label for="password">MOT DE PASSE :</label>
-                <input type="password" id="password" name="password" placeholder="..." required>
+                <label for="password">NOM </label>
+                <input type="nom" id="password" name="password" placeholder="" required>
             </div>
+                <div class="form-group" style="margin-left: 12%">
+                    <label for="password">PRENOM </label>
+                    <input type="prenom" id="password" name="password" placeholder="" required>
+                </div>
+            </div>
+                <div style="display: flex">
+                <div class="form-group" style="margin-left: 12%">
+                    <label for="password">MAIL </label>
+                    <input type="mail" id="password" name="password" placeholder="" required>
+                </div>
+                <div class="form-group" style="margin-left: 22%">
+                    <label for="password">TÉLÉPHONE </label>
+                    <input type="tel" id="password" name="password" placeholder="" required>
+                </div>
+                </div>
 
-        </form>
+                <h3 style="display: flex; align-items: center; margin-left: 15%; margin-top: 4%;color: #FFF;">ADRESSE DE FACTURATION</h3>
+                <form id="loginForm">
+                    <br>
+                    <br>
+                        <div class="form-group" style="margin-left: 12%">
+                            <label for="email">NOM À FAIRE FIGURER SUR LA FACTURE </label>
+                            <input type="nomFigure" id="email" name="email" placeholder="" required>
+                        </div>
+                        <div class="form-group" style="margin-left: 12%">
+                            <label for="password">N° ET NOM DE VOIE </label>
+                            <input type="rue" id="password" name="password" placeholder="" required>
+                        </div>
+                    <div style="display: flex">
+                    <div class="form-group" style="margin-left: 12%">
+                            <label for="password">CODE POSTAL </label>
+                            <input type="codepostal" id="password" name="password" placeholder="" required>
+                        </div>
+                        <div class="form-group" style="margin-left: 12%">
+                            <label for="password">VILLE </label>
+                            <input type="ville" id="password" name="password" placeholder="" required>
+                        </div>
+                        <div class="form-group" style="margin-left: 12%">
+                            <label for="password">PAYS </label>
+                            <input type="pays" id="password" name="password" placeholder="" required>
+                        </div>
+                    </div>
+
+
+
+
+            </form>
     </div>
 
 
