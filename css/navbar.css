@@ -145,6 +145,7 @@ body, html {
 }
 
 .item-actions button:hover {
+    color: white;
     background-color: #555;
 }
 
