@@ -9,6 +9,14 @@ body, html {
 }
 
 .navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.navbar {
     background-color: rgba(0, 0, 0, 0.3); /* Noir semi-transparent */
     padding: 10px 0; /* Ajustement de l'espacement autour des éléments de la navbar */
 }

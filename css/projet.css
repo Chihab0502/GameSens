@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Conthrax';
+    src: url('../conthrax/conthrax-sb.otf') format('truetype');
+    /* Ajoutez d'autres variations de la police si nécessaire */
+}
+
+body, html {
+    font-family: 'Conthrax', sans-serif;
+}
+
+.fullscreen-bg {
+    background: url('../img/Background/panier.png') no-repeat center center;
+    background-size: cover; /* Cover ensures the image covers the whole screen */
+    height: 100vh; /* 100% of the viewport height */
+    width: 100vw; /* 100% of the viewport width */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.social-icons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+
+.social-icons a {
+    display: block;
+    margin: 10px 0;
+    color: white;
+    font-size: 24px;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+.content {
+    position: absolute;
+    top: 50%; /* Adjusted as per your requirement */
+    left: 10%; /* Text aligned to the left */
+    color: white; /* Assuming you want white text */
+    font-size: 2rem; /* Adjust the size as needed */
+    z-index: 10; /* Make sure it's above the background image */
+}
+
+.buttons button {
+    border: 1px solid white;
+    border-radius: 0 0 100px 0;
+    padding: 10px 70px !important;
+    color: white;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 80px;
+    margin-top: -30px;
+    font-weight: 700;
+}

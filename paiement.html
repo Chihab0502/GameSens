@@ -3,132 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameSens Connexion</title>
+    <title>GameSens Navbar</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/paiement.css">
+    <link rel="stylesheet" href="css/accueil.css">
     <script src="js/footer.js" defer></script>
     <script src="js/cart.js" defer></script>
-    <script src="js/connexion.js" defer></script>
 </head>
-
-
-<body>
-
-<div class="fullscreen-bg">
-
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <br>
-            <br>
-            <br>
-            <div class="container-fluid position-relative">
-                <!-- Conteneur pour le logo, maintenant ajusté pour être centré horizontalement et positionné plus bas verticalement -->
-                <div class="navbar-header position-absolute" style="left: 50%; top: 60%; transform: translate(-50%, -50%); z-index: 30;">
-                    <a class="navbar-brand" href="accueil.html">
-                        <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
-                    </a>
-                </div>
-            </div>
-        </nav>
-
-
-
-        <div id="cartContent" class="cart-modal" style="display: none;">
-            <div class="cart-content">
-                <h2 class="cart-title">Panier</h2>
-                <button onclick="document.getElementById('cartContent').style.display='none'" class="close-cart-btn">
-                    <i class="bi bi-x-lg"></i>
-                </button>
-                <!-- Conteneur pour les éléments du panier -->
-                <div class="cart-items">
-                    <div class="cart-item">
-                        <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
-                        <div class="item-details">
-                            <h4>BOX "FLOWER"</h4>
-                            <p>Taille: S</p>
-                            <p>Prix: 35€</p>
-                        </div>
-                        <div class="item-actions">
-                            <button class="modify-btn">Modifier</button>
-                            <button class="remove-btn">Retirer</button>
-                        </div>
-                    </div>
-                    <!-- Répéter pour d'autres produits -->
-                </div>
-                <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button>
-            </div>
-        </div>
-    </header>
-
-    <div class="title-container" style="display: flex; align-items: center; margin-top: 2%">
-        <h1 style=" margin-left: 8%; margin-top: 4%;font-size: 65px; font-weight: bold; color: #FFF;">INFOS. CLIENT </h1>
-        <p style="margin-left: 6%; color: rgba(255, 255, 255, 0.5);margin-top: 7%;"> Vos données sont protégées, cliquez pour en savoir plus... </p>
-    </div>
-    <div class="title-container">
-            <h3 style="display: flex; align-items: center; margin-left: 15%; margin-top: 4%;color: #FFF;">Informations du Profil</h3>
-            <form id="loginForm">
-                <br>
-                <br>
-            <div class="form-group" style="margin-left: 12%">
-                <label for="email">ADRESSE MAIL :</label>
-                <input type="email" id="email" name="email" placeholder="..." required>
-            </div>
-            <div class="form-group" style="margin-left: 12%">
-                <label for="password">MOT DE PASSE :</label>
-                <input type="password" id="password" name="password" placeholder="..." required>
-            </div>
-
-        </form>
-    </div>
-
-
-
-    <footer>
-        <div class="footer-button">
-            <a href="#" id="footerToggle">
-                <i class="bi bi-info-circle-fill"></i> <!-- Utilisation de Bootstrap Icons, assurez-vous que les icônes sont bien chargées -->
-            </a>
-        </div>
-
-        <div id="footerContent" class="footer-modal" style="display: none;">
-            <div class="footer-content">
-                <button onclick="document.getElementById('footerContent').style.display='none'" class="close-btn">
-                    <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
-                </button>
-                <div class="footer-columns">
-                    <div class="footer-column">
-                        <h4>Explorer</h4>
-                        <a href="#">Accueil</a>
-                        <a href="#">Projet</a>
-                        <a href="#">Shop</a>
-                        <a href="#">Opening</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Légal</h4>
-                        <a href="#">Mentions Légales</a>
-                        <a href="#">CGU / CGV</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Social</h4>
-                        <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                        <a href="https://tiktok.com" target="_blank"><i class="bi bi-discord"></i></a>
-                        <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Contact</h4>
-                        <a href="#">Nous Contacter</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</div>
-</body>
-</html>
