@@ -21,7 +21,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid position-relative">
             <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
-            <div class="navbar-header position-absolute" style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
+            <div class="navbar-header position-absolute"
+                 style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
                 <a class="navbar-brand" href="accueil.html">
                     <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
                 </a>
@@ -178,5 +179,28 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Déclarer 'prevScrollPos' à un niveau où il est accessible dans la fonction de l'événement scroll
+    var prevScrollPos = window.scrollY;
+    console.log("Prêt à scroller, position initiale: " + prevScrollPos); // S'assure que la valeur initiale est enregistrée
+
+    window.addEventListener('scroll', function () {
+        console.log("Événement de scroll détecté"); // Confirme que l'événement de scroll est détecté
+        var currentScrollPos = window.scrollY;  // Obtient la position de défilement actuelle
+        console.log("Position de défilement actuelle: " + currentScrollPos); // Affiche la position actuelle du scroll
+
+        var navbar = document.querySelector(".navbar");  // Sélectionne la navbar une seule fois
+
+        if (prevScrollPos > currentScrollPos) {
+            console.log("Monte - Affiche la navbar");
+            navbar.style.top = "0";  // Affiche la navbar
+        } else {
+            console.log("Descend - Cache la navbar");
+            navbar.style.top = "-70px";  // Cache la navbar
+        }
+        prevScrollPos = currentScrollPos;  // Met à jour la position de défilement précédente
+    });
+</script>
+
 </body>
 </html>
