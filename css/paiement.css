@@ -213,4 +213,88 @@ body {
     text-decoration: underline;
 }
 
+.rectangle {
+    display: flex;
+    align-items: center;
+    margin-left: 42%;
+    margin-top: 2%;
+    width: 1090px; /* Ajustez la largeur des rectangles selon vos besoins */
+    height: auto;
+    background: rgba(0, 0, 0, 0.8); /* Black with transparency */
+    border-radius: 15px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between the rectangles */
+    padding: 20px; /* Padding inside the rectangles */
+    color: #fff; /* White text color */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.item-image {
+    margin-right: 20px; /* Ajoute de l'espace entre l'image et le texte */
+    width: auto; /* Assurez-vous que la largeur est automatique pour conserver les proportions */
+    height: 100px; /* Ajustez la hauteur de l'image selon vos besoins */
+}
+
+.overlay-rectangles {
+    position: absolute;
+    top: 50%; /* Centers the rectangles vertically */
+    left: 50%; /* Centers the rectangles horizontally */
+    transform: translate(-50%, -50%); /* Corrects the position due to centering */
+    z-index: 3; /* Ensure the rectangles are above the overlay but below other content if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.rectangle h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.rectangle p {
+    margin: 5px 0;
+}
+
+.rectangle select {
+    background: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding-right: 50px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Ajoutez une image personnalisée pour la flèche vers le bas */
+    background: url("../img/Box/flechebas.png") no-repeat;
+    background-position: right 18px center; /* Ajustez la position de l'image */
+    background-size: 25px auto; /* Augmentez la taille de l'image */
+}
+
+
+
+.rectangle select option {
+    background: #000; /* Black background for the dropdown options */
+    color: #fff; /* White text color for the dropdown options */
+}
+
+.rectangle select::-ms-expand {
+    display: none; /* Remove the default dropdown arrow for Internet Explorer */
+}
+
+.white-bar {
+    color: #fff; /* Couleur du texte blanc */
+}
+
+.croix-panier {
+    position: absolute;
+    top: 10px; /* Ajustez la position verticale de la croix */
+    left: 10px; /* Ajustez la position horizontale de la croix */
+    width: 20px; /* Ajustez la largeur de la croix selon vos besoins */
+    height: auto; /* Garantit que la hauteur est ajustée proportionnellement à la largeur */
+    z-index: 4; /* Assurez-vous que la croix est au-dessus des autres éléments */
+}
 
