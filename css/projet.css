@@ -7,13 +7,16 @@
 
 body, html {
     font-family: 'Conthrax', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.fullscreen-bg {
-    background: url('../img/Background/panier.png') no-repeat center center;
+body {
+    background: url('../img/Background/panier.png') no-repeat fixed center center;
     background-size: cover; /* Cover ensures the image covers the whole screen */
     height: 100vh; /* 100% of the viewport height */
     width: 100vw; /* 100% of the viewport width */
+    scrollbar-color: #95c2d9 black;
 }
 
 body, html {
@@ -51,6 +54,17 @@ body, html {
     align-items: center;
 }
 
+.content2 {
+    position: absolute;
+    top: 40%; /* Adjusted as per your requirement */
+    left: 10%; /* Text aligned to the left */
+    color: white; /* Assuming you want white text */
+    font-size: 2rem; /* Adjust the size as needed */
+    z-index: 10; /* Make sure it's above the background image */
+    align-items: center;
+}
+
+
 .buttons button {
     border: 1px solid white;
     border-radius: 0 0 100px 0;
@@ -66,13 +80,16 @@ h1 {
 }
 
 .sous-texte{
+    width: auto;
     padding-left: 50px;
     font-size: 15px;
+    font-family: Arial,serif;
+    font-weight: 300;
 }
 
 .shirt-container {
     position: absolute;
-    width: 38%; /* Ajuste selon la taille de tes images */
+    width: 35%; /* Ajuste selon la taille de tes images */
     height: auto;
     top: 20%;
     right: 10%;
@@ -83,3 +100,12 @@ h1 {
     display: block;
 }
 
+.section {
+    width: 100vw; /* 100% de la largeur de la fenêtre de visualisation */
+    height: 100vh; /* 100% de la hauteur de la fenêtre de visualisation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* position relative pour le positionnement des enfants si nécessaire */
+}
