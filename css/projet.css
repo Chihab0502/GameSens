@@ -57,13 +57,20 @@ body, html {
 .content2 {
     position: absolute;
     top: 40%; /* Adjusted as per your requirement */
-    left: 10%; /* Text aligned to the left */
+    width: 55%;
+    right: 0; /* Text aligned to the left */
     color: white; /* Assuming you want white text */
     font-size: 2rem; /* Adjust the size as needed */
     z-index: 10; /* Make sure it's above the background image */
     align-items: center;
 }
 
+.heading-container {
+    display: inline-block; /* Centre le bloc dans son parent */
+    text-align: left; /* Alignement du texte à gauche dans le bloc */
+    max-width: 100%; /* Empêche le bloc de dépasser la largeur de son parent */
+    width: auto; /* Permet au bloc de rétrécir pour s'adapter au contenu */
+}
 
 .buttons button {
     border: 1px solid white;
@@ -77,14 +84,15 @@ body, html {
 h1 {
     font-size: 50px;
     font-weight: 700;
+    margin: 0; /* Supprime les marges par défaut pour un contrôle précis */
 }
 
-.sous-texte{
-    width: auto;
-    padding-left: 50px;
+.sous-texte {
+    padding-left: 50px; /* Ajuste selon besoin ou supprime si non nécessaire */
     font-size: 15px;
-    font-family: Arial,serif;
+    font-family: Arial, serif;
     font-weight: 300;
+    margin: 20px 0; /* Espacement vertical sans affecter la largeur */
 }
 
 .shirt-container {
