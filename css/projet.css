@@ -17,6 +17,7 @@ body {
     height: 100vh; /* 100% of the viewport height */
     width: 100vw; /* 100% of the viewport width */
     scrollbar-color: #95c2d9 black;
+    scroll-snap-type: y mandatory;
 }
 
 body, html {
@@ -82,7 +83,7 @@ body, html {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 700;
     margin: 0; /* Supprime les marges par défaut pour un contrôle précis */
 }
@@ -93,6 +94,9 @@ h1 {
     font-family: Arial, serif;
     font-weight: 300;
     margin: 20px 0; /* Espacement vertical sans affecter la largeur */
+    width: 80%;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .shirt-container {
@@ -108,7 +112,24 @@ h1 {
     display: block;
 }
 
+.box-image {
+    position: absolute;
+    width: 60%; /* Ajuste selon la taille de tes images */
+    height: auto;
+    top: 20%;
+    right: 0;
+}
+
+.box-image img{
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+
 .section {
+    scroll-snap-align: start;
     width: 100vw; /* 100% de la largeur de la fenêtre de visualisation */
     height: 100vh; /* 100% de la hauteur de la fenêtre de visualisation */
     display: flex;
