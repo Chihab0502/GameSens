@@ -66,6 +66,41 @@ body, html {
     align-items: center;
 }
 
+.content3{
+    position: absolute;
+    top: 12%; /* Adjusted as per your requirement */
+    width: 55%;
+    left: 5%; /* Text aligned to the left */
+    color: white; /* Assuming you want white text */
+    font-size: 2rem; /* Adjust the size as needed */
+    z-index: 10; /* Make sure it's above the background image */
+    align-items: center;
+
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+.image-wrapper {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    margin: auto;
+    padding-top: 65%; /* 4:5 ratio (height is 125% of width) */
+    overflow: hidden; /* Ensure image stays within the bounds */
+}
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container without distortion */
+}
+
 .heading-container {
     display: inline-block; /* Centre le bloc dans son parent */
     text-align: left; /* Alignement du texte à gauche dans le bloc */
@@ -98,6 +133,18 @@ h1 {
     text-align: justify;
     text-justify: inter-word;
 }
+
+.sous-texte-image {
+    color: #cccccc;
+    font-size: 15px;
+    font-family: Arial, serif;
+    font-weight: 300;
+    margin: 20px 0; /* Espacement vertical sans affecter la largeur */
+    width: 50%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 
 .shirt-container {
     position: absolute;
