@@ -78,6 +78,28 @@ body, html {
 
 }
 
+.content4{
+    position: absolute;
+    top: 45%; /* Adjusted as per your requirement */
+    width: 55%;
+    left: 5%; /* Text aligned to the left */
+    color: white; /* Assuming you want white text */
+    font-size: 2rem; /* Adjust the size as needed */
+    z-index: 10; /* Make sure it's above the background image */
+    align-items: center;
+
+}
+
+.content4 .sous-texte {
+    font-size: 15px;
+    font-family: Arial, serif;
+    font-weight: 300;
+    margin: 20px 0; /* Espacement vertical sans affecter la largeur */
+    width: 70%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .image-container {
     display: flex;
     justify-content: center;
@@ -186,13 +208,18 @@ h1 {
     position: relative; /* position relative pour le positionnement des enfants si nécessaire */
 }
 .carousel-container { /* Styles spécifiques pour le conteneur du carousel */
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
-    margin: 0;
 }
+.carousel-container {
+    position: absolute;
+    right: -10%; /* Ajuste cette valeur pour le déplacer plus à droite */
+}
+
 
 .carousel {
     display: flex;
