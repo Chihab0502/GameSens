@@ -111,7 +111,7 @@ body, html {
 .buttons button {
     border: 1px solid white;
     border-radius: 0 0 100px 0;
-    padding: 10px 70px !important;
+    padding: 10px 90px !important;
     color: white;
     margin-top: 20px;
     margin-right: 10px;
@@ -184,4 +184,49 @@ h1 {
     justify-content: center;
     align-items: center;
     position: relative; /* position relative pour le positionnement des enfants si nécessaire */
+}
+.carousel-container { /* Styles spécifiques pour le conteneur du carousel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container .carousel .carousel-item {
+    text-align: center;
+    margin: 0 10px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    display: block;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-item h2, .carousel-item p {
+    color: #fff;
+}
+
+.carousel-item:not(.selected) {
+    filter: grayscale(100%);
+    transform: scale(0.8);
+}
+
+.carousel-item.selected {
+    transform: scale(1);
 }
