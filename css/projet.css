@@ -257,3 +257,18 @@ h1 {
 .carousel-item.selected {
     transform: scale(1);
 }
+
+.strasbourg {
+    color: rgba(255, 255, 255, 1); /* Blanc léger */
+    font-weight: bold;
+}
+
+.entrepreneurs {
+    color: rgba(255, 255, 255, 1); /* Blanc plus fort */
+    font-weight: bold;
+}
+
+.awards {
+    color: rgba(255, 255, 255, 1); /* Blanc plus fort */
+    font-weight: bold;
+}
