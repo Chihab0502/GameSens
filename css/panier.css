@@ -37,11 +37,7 @@ body, html {
 }
 
 .mt-5 {
-}
-
-.panier-content{
-    margin-left: 0; /* Ajuste la marge gauche pour être plus à gauche */
-    margin-top: 150px; /* Ajuste cette valeur selon tes besoins */
+    margin-top: 150px !important; /* Ajuste cette valeur selon tes besoins */
 }
 
 .panier-header {
@@ -62,4 +58,46 @@ body, html {
     color: white;
     margin: 0; /* Supprime les marges pour un alignement parfait */
     font-family: Arial, sans-serif;
+}
+
+.panier-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacement entre les items */
+}
+
+.item-rectangle {
+    width: 100%; /* Ajuste la largeur selon le conteneur parent */
+    background: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Padding intérieur */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure translucide */
+    color: white; /* Couleur du texte */
+}
+
+.resume {
+    background: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Padding intérieur */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure translucide */
+    color: white; /* Couleur du texte */
+}
+
+.resume h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.resume p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.resume button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
