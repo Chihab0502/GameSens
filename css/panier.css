@@ -37,7 +37,7 @@ body, html {
 }
 
 .mt-5 {
-    margin-top: 150px !important; /* Ajuste cette valeur selon tes besoins */
+    margin-top: 100px !important; /* Ajuste cette valeur selon tes besoins */
 }
 
 .panier-header {
@@ -74,6 +74,14 @@ body, html {
     border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure translucide */
     color: white; /* Couleur du texte */
 }
+
+.item-image {
+    width: 40%; /* Ajuste la largeur selon tes besoins */
+    height: auto; /* Assure que la hauteur est ajustée proportionnellement */
+    margin-left: -70px; /* Décale l'image plus à gauche */
+    margin-right: 20px; /* Espace entre l'image et le texte */
+}
+
 
 .resume {
     background: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
