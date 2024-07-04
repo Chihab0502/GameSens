@@ -53,97 +53,13 @@
     </nav>
 </header>
 
-<div class="fullscreen-bg">
-
-<div style="display: flex;margin-top: 4%; margin-left: 8%;color: #FFF;">
-    <h1 style="font-size: 65px; font-weight: bold;">PANIER </h1>
-    <p style="margin-top: 3%; margin-left: 6%;white-space: nowrap;"> Les articles seront réservés pendant 60 minutes </p>
-    <div class="overlay-rectangles" style="margin-top: 8%; margin-left: -38%;">
-
-        <div style="position: absolute; top: 22%; left: 111%; z-index: 100;">
-            <img src="./img/Box/croixPanier.png" alt="Croix" width="50" height="50">
-        </div>
-
-        <div style="margin-top: 19% !important;" class="rectangle">
-
-            <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
-            <div>
-                <h2>35,99 €</h2>
-                <h2 style="font-size: 33px;margin-top: 8%;">BOX "FLOWER"</h2>
-                <div style="display: flex; align-items: center;"> <!-- Nouveau conteneur pour aligner les éléments -->
-                    <p style="margin-right: 5%; margin-bottom: 2%;white-space: nowrap;">Taille :</p> <!-- Élément Taille -->
-                    <select id="size1" name="size1" style="margin-right: -10%;">
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                    <span style="margin-left: 12%; margin-right: 12%;" class="white-bar">|</span>
-                    <p style="margin-right: 5%; margin-bottom: 2%;white-space: nowrap;">Quantité :</p> <!-- Élément Quantité -->
-                    <select id="quantity1" name="quantity1">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div style="margin-top: 12% !important;" class="rectangle">
-            <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
-            <div>
-                <div style="position: absolute; top: 68%; left: 111%; z-index: 100;">
-                    <img src="./img/Box/croixPanier.png" alt="Croix" width="50" height="50">
-                </div>
-                <div>
-                    <h2>35,99 €</h2>
-                    <h2 style="font-size: 33px;margin-top: 8%;">BOX "FLOWER"</h2>
-                    <div style="display: flex; align-items: center;"> <!-- Nouveau conteneur pour aligner les éléments -->
-                        <p style="margin-right: 5%; margin-bottom: 2%;white-space: nowrap;">Taille :</p> <!-- Élément Taille -->
-                        <select id="size1" name="size1" style="margin-right: -10%;">
-                            <option value="XS">XS</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                        </select>
-                        <span style="margin-left: 12%; margin-right: 12%;" class="white-bar">|</span>
-                        <p style="margin-right: 5%; margin-bottom: 2%;white-space: nowrap;">Quantité :</p> <!-- Élément Quantité -->
-                        <select id="quantity1" name="quantity1">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div id="resumeBox" class="rectangle" style="margin-left: 1%; margin-right: 14%; margin-top:12%; display: flex; flex-direction: column; justify-content: flex-start;">
-        <h2 style="font-size: 33px;">Résumé</h2>
-        <div style="margin-top: 20px;">
-            <p>Nombres d'articles: <span id="numArticles">2</span></p>
-            <p>Sous-total: <span id="subTotal">71,98 €</span></p>
-            <p>Information sur la livraison: <span id="deliveryInfo">...</span></p>
-        </div>
-
-
-        <div class="buttons">
-            <a href="infoClient.html">
-            <button type="button" class="btn btn-outline-light"><b>ALLER AU PAYEMENT</b></button>
-            </a>
-        </div>
+<div class="fullscreen-bg"></div>
+<div class="panier-content">
+    <div class="container mt-5 text-left panier-header">
+        <h1 class="panier-title">PANIER</h1>
+        <p class="panier-subtitle">Les articles seront réservés pendant 60 minutes</p>
     </div>
 </div>
-
 
 
 <footer>
@@ -185,9 +101,6 @@
         </div>
     </div>
 </footer>
-
-
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
