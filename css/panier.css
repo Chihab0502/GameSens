@@ -126,6 +126,15 @@ body, html {
     color: #fff;
 }
 
+.item-delete {
+    position: absolute;
+    top: 10px; /* Ajuste selon la hauteur souhaitée */
+    right: 10px; /* Ajuste selon l'écart souhaité par rapport au bord droit */
+    width: 50px; /* Ajuste la taille de la croix */
+    height: 50px; /* Assure un aspect carré */
+    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
+
 .resume {
     background: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
     border-radius: 10px; /* Coins arrondis */
