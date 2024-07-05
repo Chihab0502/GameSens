@@ -73,15 +73,57 @@ body, html {
     padding: 20px; /* Padding intérieur */
     border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure translucide */
     color: white; /* Couleur du texte */
+    display: flex; /* Utilise flexbox pour aligner le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    gap: 20px; /* Espace entre l'image et le texte */
 }
 
 .item-image {
     width: 40%; /* Ajuste la largeur selon tes besoins */
     height: auto; /* Assure que la hauteur est ajustée proportionnellement */
-    margin-left: -70px; /* Décale l'image plus à gauche */
-    margin-right: 20px; /* Espace entre l'image et le texte */
+    margin-left: -10%; /* Décale l'image plus à gauche */
+    flex-shrink: 0; /* Empêche l'image de rétrécir */
 }
 
+.item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement le contenu */
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.item-name {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.item-options {
+    display: flex;
+    gap: 20px; /* Espacement entre la taille et la quantité */
+}
+
+.item-options p {
+    margin: 0;
+}
+
+.item-options select {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    appearance: none;
+    background: url('../img/Box/flechebas.png') no-repeat left 20px center;
+    background-size: 20px;
+}
+
+.item-options select option {
+    background: #000;
+    color: #fff;
+}
 
 .resume {
     background: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
