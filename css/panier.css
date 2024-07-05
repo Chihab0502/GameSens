@@ -140,15 +140,34 @@ body, html {
 }
 
 .resume p {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
 .resume button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 0 0 100px 0;
+    padding: 10px 70px !important;
+    color: black;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.resume button:hover {
+    background-color: transparent;
     color: white;
-    border: none;
-    border-radius: 5px;
+}
+
+.resume .resume-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.resume .resume-item span {
+    flex-grow: 1;
+    text-align: right;
+    margin-left: 10px;
 }
