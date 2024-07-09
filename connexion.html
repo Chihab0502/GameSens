@@ -16,123 +16,89 @@
     <script src="js/cart.js" defer></script>
     <script src="js/connexion.js" defer></script>
 </head>
-
-
 <body>
 
 <div class="fullscreen-bg">
 
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <br>
-        <br>
-        <br>
-        <div class="container-fluid position-relative">
-            <!-- Conteneur pour le logo, maintenant ajusté pour être centré horizontalement et positionné plus bas verticalement -->
-            <div class="navbar-header position-absolute" style="left: 50%; top: 60%; transform: translate(-50%, -50%); z-index: 30;">
-                <a class="navbar-brand" href="accueil.html">
-                    <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
-                </a>
-            </div>
-        </div>
-    </nav>
-    
-    
-
-    <div id="cartContent" class="cart-modal" style="display: none;">
-        <div class="cart-content">
-            <h2 class="cart-title">Panier</h2>
-            <button onclick="document.getElementById('cartContent').style.display='none'" class="close-cart-btn">
-                <i class="bi bi-x-lg"></i>
-            </button>
-            <!-- Conteneur pour les éléments du panier -->
-            <div class="cart-items">
-                <div class="cart-item">
-                    <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
-                    <div class="item-details">
-                        <h4>BOX "FLOWER"</h4>
-                        <p>Taille: S</p>
-                        <p>Prix: 35€</p>
-                    </div>
-                    <div class="item-actions">
-                        <button class="modify-btn">Modifier</button>
-                        <button class="remove-btn">Retirer</button>
-                    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <div class="navbar-header mx-auto">
+                    <a class="navbar-brand custom-logo" href="accueil.html">
+                        <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
+                    </a>
                 </div>
-                <!-- Répéter pour d'autres produits -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
             </div>
-            <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button>
-        </div>
-    </div>
-</header>
+        </nav>
+    </header>
 
-<div class="form-container">
-    <div class="toggle">
-        <button style="font-size: 25px;" class="active" id="loginToggle">CONNEXION</button>
-        <div class="separator"></div>
-        <button style="font-size: 25px;" id="signupToggle">INSCRIPTION</button>
-        <div class="highlight"></div>
-    </div>
 
-    <form id="loginForm">
-        <div class="form-group">
-            <label for="email">ADRESSE MAIL :</label>
-            <input type="email" id="email" name="email" placeholder="..." required>
+    <div class="form-container">
+
+        <div class="toggle">
+            <button style="font-size: 25px;" class="active" id="loginToggle">CONNEXION</button>
+            <div class="separator"></div>
+            <button style="font-size: 25px;" id="signupToggle">INSCRIPTION</button>
+            <div class="highlight"></div>
         </div>
-        <div class="form-group">
-            <label for="password">MOT DE PASSE :</label>
-            <input type="password" id="password" name="password" placeholder="..." required>
-            <div class="forgot-password">
-                <a href="#" style="font-size: 12px;" class="forgot-password-link">Mot de passe oublié ?</a>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">ADRESSE MAIL :</label>
+                <input type="email" id="email" name="email" placeholder="..." required>
             </div>
-        </div>
-        <div class="buttons">
-            <button type="button" class="btn btn-outline-light"><b>CONNEXION</b></button>
-        </div>
-    </form>
-    
-    
-    
-    
-        
-    <form id="signupForm" style="display: none;">
-        <div class="form-group">
-            <label for="nom">NOM :</label>
-            <input type="text" id="nom" name="nom" placeholder="..." required>
-        </div>
-        <div class="form-group">
-            <label for="prenom">PRÉNOM :</label>
-            <input type="text" id="prenom" name="prenom" placeholder="..." required>
-        </div>
-        <div class="form-group">
-            <label for="email">ADRESSE MAIL :</label>
-            <input type="email" id="email" name="email" placeholder="..." required>
-        </div>
-        <div class="form-group">
-            <label for="password">MOT DE PASSE :</label>
-            <input type="password" id="password" name="password" placeholder="..." required>
-        </div>
-        <div class="buttons">
-            <button type="button" class="btn btn-outline-light"><b>INSCRIPTION</b></button>
-        </div>
-    </form>
-    
-    
-</div>
+            <div class="form-group">
+                <label for="password">MOT DE PASSE :</label>
+                <input type="password" id="password" name="password" placeholder="..." required>
+                <div class="forgot-password">
+                    <a href="#" style="font-size: 12px;" class="forgot-password-link">Mot de passe oublié ?</a>
+                </div>
+            </div>
+            <div class="buttons">
+                <button type="button" class="btn btn-outline-light"><b>CONNEXION</b></button>
+            </div>
+        </form>
 
+        <form id="signupForm" style="display: none;">
+            <div class="form-group">
+                <label for="nom">NOM :</label>
+                <input type="text" id="nom" name="nom" placeholder="..." required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">PRÉNOM :</label>
+                <input type="text" id="prenom" name="prenom" placeholder="..." required>
+            </div>
+            <div class="form-group">
+                <label for="emailSignup">ADRESSE MAIL :</label>
+                <input type="email" id="emailSignup" name="emailSignup" placeholder="..." required>
+            </div>
+            <div class="form-group">
+                <label for="passwordSignup">MOT DE PASSE :</label>
+                <input type="password" id="passwordSignup" name="passwordSignup" placeholder="..." required>
+            </div>
+            <div class="buttons">
+                <button type="button" class="btn btn-outline-light"><b>INSCRIPTION</b></button>
+            </div>
+        </form>
+    </div>
 
 
 <footer>
     <div class="footer-button">
         <a href="#" id="footerToggle">
-            <i class="bi bi-info-circle-fill"></i> <!-- Utilisation de Bootstrap Icons, assurez-vous que les icônes sont bien chargées -->
+            <i class="bi bi-info-circle-fill"></i> <!-- Assurez-vous que l'icône est bien chargée -->
         </a>
     </div>
 
     <div id="footerContent" class="footer-modal" style="display: none;">
         <div class="footer-content">
             <button onclick="document.getElementById('footerContent').style.display='none'" class="close-btn">
-                <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
+                <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est bien référencée -->
             </button>
             <div class="footer-columns">
                 <div class="footer-column">
@@ -161,8 +127,9 @@
         </div>
     </div>
 </footer>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</div>
+
 </body>
 </html>
