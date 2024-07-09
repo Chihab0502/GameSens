@@ -183,6 +183,8 @@
     z-index: 3; /* Place la barre de navigation au-dessus du fond et de l'overlay */
 }
 
+
+
 .navbar-brand {
     margin-left: 50%; /* Centre le logo horizontalement */
     transform: translateX(-50%);
