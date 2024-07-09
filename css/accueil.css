@@ -197,7 +197,7 @@ h1 {
     width: 75%;
     height: 22%;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #3a3333;
+    border: 1px solid #3A3333FF;
     border-radius: 10px; /* Arrondi tous les coins */
     position: relative;
     overflow: hidden;
