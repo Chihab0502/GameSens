@@ -143,6 +143,66 @@
         </div>
     </div>
 </footer>
+<!-- Ajoutez ceci juste avant la balise de fermeture </body> -->
+<div class="overlay" id="overlay"></div>
+<div class="stock-modal" id="stockModal">
+    <div class="stock-content">
+        <h2 style="font-size: 42px;margin-left: 12%;margin-top: 2%;margin-bottom: 2%">Stock</h2>
+
+        <div class="stock-boxes">
+            <button onclick="closeStockModal()" class="close-cart-btn">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const openingButton = document.querySelector('.nav-link[href="#"]'); // Sélectionnez le bon lien "OPENING"
+        const overlay = document.getElementById('overlay');
+        const stockModal = document.getElementById('stockModal');
+
+        openingButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+            overlay.style.display = 'block';
+            stockModal.style.display = 'block';
+        });
+    });
+
+    function closeStockModal() {
+        const overlay = document.getElementById('overlay');
+        const stockModal = document.getElementById('stockModal');
+        overlay.style.display = 'none';
+        stockModal.style.display = 'none';
+    }
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

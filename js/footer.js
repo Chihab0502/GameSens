@@ -1,4 +1,3 @@
-// footer.js
 document.getElementById('footerToggle').addEventListener('click', function() {
     var footerContent = document.getElementById('footerContent');
     footerContent.style.display = 'block';
@@ -8,14 +7,23 @@ document.getElementById('footerToggle').addEventListener('click', function() {
     });
 });
 
-document.querySelector('.close-btn').addEventListener('click', function() {
+// Ajouter un écouteur pour détecter les clics sur les boutons de fermeture
+document.querySelector('.close-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Empêche le comportement par défaut
+    closeFooter();
+});
+
+function closeFooter() {
     var footerContent = document.getElementById('footerContent');
     footerContent.classList.remove('showing');
-    requestAnimationFrame(() => {
-        footerContent.classList.add('closing');
-        setTimeout(function() {
+    footerContent.classList.add('closing');
+
+    // Attendre la fin de l'animation avant de masquer l'élément
+    footerContent.addEventListener('transitionend', function handleTransitionEnd(event) {
+        if (event.propertyName === 'opacity' && footerContent.classList.contains('closing')) {
             footerContent.style.display = 'none';
             footerContent.classList.remove('closing');
-        }, 1000); // Assurez-vous que cette durée correspond à l'animation CSS
+            footerContent.removeEventListener('transitionend', handleTransitionEnd);
+        }
     });
-});
+}
