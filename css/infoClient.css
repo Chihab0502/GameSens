@@ -213,4 +213,42 @@ body {
     text-decoration: underline;
 }
 
+/* Hide the default checkbox */
+input[type="checkbox"] {
+    display: none;
+}
 
+/* Create a custom checkbox */
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Create the round background with gray border */
+input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 1px solid #a1a1a1; /* Gray border */
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+/* Create the round checked indicator */
+input[type="checkbox"]:checked + label::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #a1a1a1; /* Black inner circle */
+}
