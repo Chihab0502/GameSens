@@ -15,14 +15,14 @@ const images = [
 let currentImageIndex = 0;
 let intervalId = null;
 
-document.getElementById('shirtContainer').addEventListener('mouseenter', function() {
+function startRotation() {
     intervalId = setInterval(() => {
         currentImageIndex = (currentImageIndex + 1) % images.length;
         document.getElementById('shirtImage').src = images[currentImageIndex];
     }, 200); // Temps en millisecondes entre les changements d'image
-});
+}
 
-shirtContainer.addEventListener('mouseleave', function() {
-    clearInterval(intervalId);
-    shirtImage.src = baseImage; // Revenir à l'image de base
-});
+// Démarrer l'animation lorsque la page est chargée
+window.onload = function() {
+    startRotation();
+};
