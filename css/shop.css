@@ -9,15 +9,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-body {
-    background: url('../img/Shooting photos/Shooting Photo/Photoshoot_format_Back/ImageFemme.png') no-repeat fixed center center;
-    background-size: cover; /* Cover ensures the image covers the whole screen */
-    height: 100vh; /* 100% of the viewport height */
-    width: 100vw; /* 100% of the viewport width */
-    scrollbar-color: #95c2d9 black;
-    scroll-snap-type: y mandatory;
+    overflow: auto;
 }
 
 .social-icons {
@@ -39,29 +31,39 @@ body {
     color: #ccc;
 }
 
-.content2 {
-    position: absolute;
-    top: 40%; /* Adjusted as per your requirement */
-    left: 50%; /* Text aligned to the left */
-    color: white; /* Assuming you want white text */
-    font-size: 2rem; /* Adjust the size as needed */
-    z-index: 10; /* Make sure it's above the background image */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Alignement du contenu à droite */
     align-items: center;
+    text-align: left; /* Alignement du texte à droite */
+    padding: 0 100px; /* Ajouter un padding pour éviter que le contenu soit trop collé au bord */
 }
 
+.image-section {
+    background: url('../img/Shooting photos/Shooting Photo/Photoshoot_format_Back/ImageFemme.png') no-repeat center center;
+    background-size: cover;
+}
+
+.color-section {
+    background-color: #171717;
+}
+
+.content1 {
+    width: 100%; /* Utiliser toute la largeur disponible */
+    max-width: 600px; /* Limite maximale de largeur */
+    color: white;
+}
 
 .buttons button {
     border: 1px solid white;
     border-radius: 0 100px 0 100px;
-    padding: 10px 90px !important;
+    padding: 10px 90px;
     margin-top: 20px;
-    margin-right: 10px;
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 4vw; /* Taille du texte relative à la largeur de l'écran */
     font-weight: 700;
     margin: 0; /* Supprime les marges par défaut pour un contrôle précis */
 }
-
-
