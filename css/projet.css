@@ -272,3 +272,39 @@ h1 {
     color: rgba(255, 255, 255, 1); /* Blanc plus fort */
     font-weight: bold;
 }
+
+
+.btn-precommander {
+    background-color: white;
+    color: black !important;
+    font-weight: bold;
+}
+
+/* Hover style for the "PRÉ-COMMANDER" button */
+.btn-precommander:hover {
+
+    background-color: black;
+    color: white !important;
+}
+
+.btn-savoirplus {
+    background-color: white;
+    color: black !important;
+    font-weight: bold;
+}
+
+.btn-savoirplus:hover {
+    background-color: black;
+    color: white !important;
+}
+
+.btn-commander {
+    background-color: white;
+    color: black !important;
+    font-weight: bold;
+}
+
+.btn-commander:hover {
+    background-color: black;
+    color: white !important;
+}
