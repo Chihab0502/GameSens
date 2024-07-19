@@ -100,10 +100,49 @@
     </div>
 </div>
 
-<!-- Deuxième section avec le fond de couleur -->
 <div class="section color-section">
-    <div class="content">
-        <!-- Contenu de la deuxième section (ajouter du texte, des boutons, etc.) -->
+    <div class="container-fluid p-0">
+        <!-- Navigation Section -->
+        <div class="row navigation-section border-bottom pb-3">
+            <div class="col-2 d-flex align-items-center">
+                <h2 class="text-white">FILTRES</h2>
+            </div>
+            <div class="col-5 d-flex justify-content-center align-items-center position-relative">
+                <div class="buttons-group">
+                    <button class="btn btn-dark"><i class="bi bi-t-shirt"></i></button>
+                    <button class="btn btn-dark"><i class="bi bi-box"></i></button>
+                </div>
+            </div>
+            <div class="col-5 d-flex justify-content-end align-items-center">
+                <div class="dropdown me-2">
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="collectionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        COLLECTION
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="collectionDropdown">
+                        <li><a class="dropdown-item" href="#">Collection 1</a></li>
+                        <li><a class="dropdown-item" href="#">Collection 2</a></li>
+                        <li><a class="dropdown-item" href="#">Collection 3</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="typeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        TYPE
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="typeDropdown">
+                        <li><a class="dropdown-item" href="#">Type 1</a></li>
+                        <li><a class="dropdown-item" href="#">Type 2</a></li>
+                        <li><a class="dropdown-item" href="#">Type 3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Cards Section -->
+        <div class="row">
+            <div class="col-12 cards-section pt-3">
+                <h2 class="text-white">Cards Section</h2>
+                <!-- Cards will go here -->
+            </div>
+        </div>
     </div>
 </div>
 

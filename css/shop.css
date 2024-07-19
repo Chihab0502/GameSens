@@ -67,3 +67,63 @@ h1 {
     font-weight: 700;
     margin: 0; /* Supprime les marges par défaut pour un contrôle précis */
 }
+
+/* CSS pour la section color-section */
+.color-section {
+    background-color: #171717;
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.container-fluid{
+    margin-top: 0;
+}
+
+.navigation-section {
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative; /* Nécessaire pour le positionnement absolu des boutons */
+}
+
+.navigation-section h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 15vh; /* Pour centrer verticalement le titre */
+}
+
+.navigation-section .buttons-group {
+    position: absolute;
+    bottom: 0; /* Positionne les boutons en bas de la section */
+    left: 50%;
+    transform: translateX(-50%); /* Centre horizontalement les boutons */
+    display: flex;
+    gap: 5px;
+}
+
+.navigation-section .btn {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown .btn {
+    font-size: 1.2rem;
+}
+
+.cards-section {
+    width: 100%;
+    height: 70vh; /* 70% de la hauteur de l'écran */
+    overflow-y: auto; /* Pour permettre le défilement si le contenu est trop grand */
+}
+
+/* Assurez-vous que la hauteur totale de .color-section est de 100vh */
+.color-section {
+    height: 100vh;
+}
