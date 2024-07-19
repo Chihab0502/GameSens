@@ -104,7 +104,7 @@
     </div>
 </div>
 
-<div class="section">
+<div class="section slide-in">
     <div class="content2">
         <div class="heading-container">
             <h1>NOTRE CONCEPT</h1>
@@ -117,7 +117,9 @@
     </div>
 </div>
 
-<div class="section">
+
+
+<div class="section slide-in">
     <div id="box-image" class="box-image">
         <img id="boxImage" src="img/Box/Box_sans%20habillage/BOX_Screen%20Rotate_PP_00000.png" alt="T-shirt GameSens">
     </div>
@@ -131,6 +133,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="section">
     <div class="content3">
@@ -188,6 +191,42 @@
     </div>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in');
+                } else {
+                    entry.target.classList.remove('slide-in');
+                }
+            });
+        });
+
+        const section = document.querySelector('.section:nth-child(2)');
+        observer.observe(section);
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in');
+                } else {
+                    entry.target.classList.remove('slide-in');
+                }
+            });
+        });
+
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+
+</script>
+
+
 
 <footer>
     <div class="footer-image" style="margin-right: 2%">
@@ -198,7 +237,8 @@
 
     <div class="footer-button">
         <a href="#" id="footerToggle">
-            <img src="./img/Logo/footer_icon.svg" alt="Info" style="width: 130px; height: 100px;"> <!-- Assurez-vous que les dimensions sont correctes -->
+            <img src="./img/Logo/footer_icon.svg" alt="Info" style="width: 130px; height: 100px;">
+            <!-- Assurez-vous que les dimensions sont correctes -->
         </a>
     </div>
 

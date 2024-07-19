@@ -280,9 +280,7 @@ h1 {
     font-weight: bold;
 }
 
-/* Hover style for the "PRÉ-COMMANDER" button */
 .btn-precommander:hover {
-
     background-color: black;
     color: white !important;
 }
@@ -307,4 +305,31 @@ h1 {
 .btn-commander:hover {
     background-color: black;
     color: white !important;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.section {
+    scroll-snap-align: start;
+    width: 100vw; /* 100% de la largeur de la fenêtre de visualisation */
+    height: 100vh; /* 100% de la hauteur de la fenêtre de visualisation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* position relative pour le positionnement des enfants si nécessaire */
+}
+
+.section.slide-in {
+    animation: slideInFromLeft 2s ease-out forwards;
+    /* Adjust the duration (1s) and timing function (ease-out) as needed */
 }
