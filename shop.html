@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/cards.css">
+
     <script src="js/footer.js" defer></script>
     <script src="js/cart.js" defer></script>
     <script src="js/t-shirt.js" defer></script>
+    <script src="js/data.js" defer></script>
 </head>
 <body>
 <header>
@@ -107,40 +110,37 @@
             <div class="col-2 d-flex align-items-center">
                 <h2 class="text-white">FILTRES</h2>
             </div>
-            <div class="col-5 d-flex justify-content-center align-items-center position-relative">
+            <div class="col-5 d-flex justify-content-center align-items-center">
                 <div class="buttons-group">
-                    <button class="btn btn-dark"><i class="bi bi-t-shirt"></i></button>
-                    <button class="btn btn-dark"><i class="bi bi-box"></i></button>
+                    <button id="btn-tshirt" class="btn btn-dark"><i class="bi bi-person"></i></button>
+                    <button id="btn-box" class="btn btn-dark"><i class="bi bi-box"></i></button>
                 </div>
             </div>
             <div class="col-5 d-flex justify-content-end align-items-center">
                 <div class="dropdown me-2">
-                    <button class="btn btn-dark dropdown-toggle" type="button" id="collectionDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        COLLECTION
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="collectionDropdown">
-                        <li><a class="dropdown-item" href="#">Collection 1</a></li>
-                        <li><a class="dropdown-item" href="#">Collection 2</a></li>
-                        <li><a class="dropdown-item" href="#">Collection 3</a></li>
+                    <input class="btn btn-dark dropdown-toggle" type="button" id="collectionDropdown" data-bs-toggle="dropdown" aria-expanded="false" value="Collection 1">
+                    </input>
+                    <ul class="dropdown-menu" aria-labelledby="collectionDropdown" id="collectionDropdownUl">
+                        <li><a class="dropdown-item" href="#" onclick="filterCollection('Collection 1')">Collection 1</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterCollection('Collection 2')">Collection 2</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterCollection('Collection 3')">Collection 3</a></li>
                     </ul>
                 </div>
                 <div class="dropdown">
-                    <button class="btn btn-dark dropdown-toggle" type="button" id="typeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        TYPE
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="typeDropdown">
-                        <li><a class="dropdown-item" href="#">Type 1</a></li>
-                        <li><a class="dropdown-item" href="#">Type 2</a></li>
-                        <li><a class="dropdown-item" href="#">Type 3</a></li>
+                    <input class="btn btn-dark dropdown-toggle" type="button" id="typeDropdown" data-bs-toggle="dropdown" aria-expanded="false" value="Type 1">
+                    </input>
+                    <ul class="dropdown-menu" aria-labelledby="typeDropdown" id="typeDropdownUl">
+                        <li><a class="dropdown-item" href="#" onclick="filterType('Type 1')">Type 1</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterType('Type 2')">Type 2</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filterType('Type 3')">Type 3</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- Cards Section -->
         <div class="row">
-            <div class="col-12 cards-section pt-3">
-                <h2 class="text-white">Cards Section</h2>
-                <!-- Cards will go here -->
+            <div class="col-12 cards-section">
+                <div class="products-container"></div>
             </div>
         </div>
     </div>
