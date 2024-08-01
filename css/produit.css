@@ -20,3 +20,270 @@ body, html {
     bottom: 0;
     z-index: -1;
 }
+
+
+/** LISTE DES PRODUITS */
+#products-to-reveal {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    gap: 2em;
+    padding: 2em 5%;
+    margin-bottom: 2em;
+}
+
+/* Scrollbar spécifique pour #products-to-reveal */
+#products-to-reveal::-webkit-scrollbar {
+    height: 12px;
+}
+#products-to-reveal::-webkit-scrollbar-track {
+    background: transparent;
+}
+#products-to-reveal::-webkit-scrollbar-thumb {
+    background: #FFFFFF20;
+    border-radius: 6px;
+}
+#products-to-reveal::-webkit-scrollbar-thumb:hover {
+    background: #ffffff2c;
+}
+
+.btn-panier {
+    background-color: white;
+    color: black;
+    padding: 1em;
+    border-width: 0px;
+}
+
+.product, .product .active {
+    width: 30vh;
+    height: 90%;
+    overflow: hidden;
+}
+
+.product {
+    border: 2px solid #FFFFFF20;
+    border-radius: 2em 2em 2em 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, margin 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto
+}
+
+.product.active {
+    transform: scale(1.1);
+    cursor: auto;
+}
+
+.product.active .product-content, .product.active .product-show {
+    display: block;
+}
+
+.product-content, .product-show {
+    display: none;
+}
+
+.product.active .reveal {
+    display: none;
+}
+
+.product-content {
+    position: relative;
+    height: 100%;
+    border-radius: 2em 2em 0 0;
+}
+
+.product-title {
+    text-align: left;
+    text-transform: uppercase;
+    padding: 1em 1em 0 1em;
+    margin-bottom: 0;
+}
+
+.product-img {
+    height: calc(100% - 8em);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-img img {
+    width: 100%;
+    height: auto;
+}
+
+.product-show {
+    color: white;
+    background-color: #4CA4D3;
+    padding: 1em;
+    border-radius: 0 0 2em 0;
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-width: 0;
+}
+
+.reveal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/** DESCRIPTION DU PRODUIT (DÉCOUVRIR) */
+#product-description {
+    display: none;
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    width: 80vw;
+    height: 80vh;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.description-modal {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 2px solid #FFFFFF20;
+    border-radius: 5em 5em 5em 0;
+    backdrop-filter: blur(10px); /* l'effet ne flou n'est pas efficace sur une vidéo en arrière plan */
+    /* background-color: rgba(0, 0, 0, 0.8); */ /* utiliser un fond semi transparent sinon */
+}
+
+.description-content {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 1em;
+}
+
+.main, .carousel {
+    width: 50%;
+    flex: 1;
+}
+
+.description-content h3 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.description-collection {
+    padding-bottom: 1em;
+}
+
+.description-collection, .description-price, .description-footer .rarety {
+    font-size: 1.8em;
+}
+
+.description-description, .description-icons, .star-rating {
+    /** Changer le font family ici pour la description du modal */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.description-icons {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1em;
+}
+
+.description-icons .icon {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.description-icons .icon p {
+    padding-left: 1em;
+    margin: 0
+}
+
+.description-size {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.description-size ul {
+    display: flex;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.size-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.6em;
+    height: 2.6em;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.size-item.active {
+    color: black;
+    background-color: white;
+}
+
+.description-footer {
+    background-color: #4CA4D3;
+    padding: 2em;
+    border-radius: 0 0 4em 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description-footer .rarety {
+    text-transform: uppercase;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel img {
+    padding: 4em;
+    height: auto;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.star-rating {
+    padding-bottom: 1em;
+}
+
+.lootbox {
+    border-radius: 0 0 6em 0;
+    padding-right: 2em;
+}
+
+.close {
+    position: absolute;
+    font-size: 2.5em;
+    top: 0.5em;
+    right: 1em;
+    cursor: pointer;
+}
+
+/* > Little devices (landscape mobile) Possibilité de responsive en fonction du besoin */
+@media only screen and (max-width: 900px) {
+    .description-content {
+        display: block;
+    }
+    .main, .carousel {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
