@@ -149,7 +149,7 @@ h1 {
     z-index: 1000;
     text-align: left; /* Alignement du texte à gauche */
     color: white; /* Écriture en blanc */
-    border: 2px solid gray; /* Ajout de la bordure grise */
+    border: 1px solid gray; /* Ajout de la bordure grise */
     border-radius: 20px; /* Augmentation du rayon des coins */
     overflow: auto; /* Ajoute des barres de défilement si le contenu dépasse la taille du bloc */
 }
@@ -246,4 +246,33 @@ h1 {
     height: auto; /* Assure que la hauteur est ajustée proportionnellement */
     flex-shrink: 0; /* Empêche l'image de rétrécir */
 }
+
+/* Bloc central */
+.stock-modal {
+    position: fixed;
+    top: -100%; /* Commence en dehors de l'écran en haut */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+    text-align: left;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 20px;
+    overflow: auto;
+    transition: top 0.5s ease; /* Transition pour l'animation */
+}
+
+/* Classe pour montrer la modale */
+.stock-modal.show {
+    display: block;
+    top: 6%; /* La position finale souhaitée de la modale */
+}
+
+
 
