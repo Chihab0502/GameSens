@@ -18,6 +18,8 @@
     <script src="js/cart.js" defer></script>
     <script src="js/t-shirt.js" defer></script>
     <script src="js/data.js" defer></script>
+    <script src="js/stock.js" defer></script>
+
 </head>
 <body>
 <header>
@@ -34,13 +36,13 @@
             <div class="mx-auto d-flex justify-content-center" style="flex-grow: 1;">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link nav-button" aria-current="page" href="#"><b>PROJET</b></a>
+                        <a class="nav-link nav-button" aria-current="page" href="projet.html"><b>PROJET</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button" href="#"><b>SHOP</b></a>
+                        <a class="nav-link nav-button" href="shop.html"><b>SHOP</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button" href="#"><b>OPENING</b></a>
+                        <a class="nav-link nav-button" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
                     </li>
                 </ul>
             </div>
@@ -188,6 +190,46 @@
         </div>
     </div>
 </footer>
+
+<div class="overlay" id="overlay"></div>
+<div class="stock-modal" id="stockModal">
+    <div class="stock-content">
+        <h2 style="font-size: 42px;margin-left: 12%;margin-top: 2%;margin-bottom: 2%">Stock</h2>
+
+        <div class="stock-boxes">
+            <button onclick="closeStockModal()" class="close-cart-btn">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+        </div>
+    </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

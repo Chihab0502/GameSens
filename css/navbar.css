@@ -169,3 +169,96 @@ body, html {
     background-color: #fff; /* Changement de couleur au survol */
     color: black; /* Couleur du texte au survol */
 }
+
+
+/* Bloc central */
+.stock-modal {
+    position: fixed;
+    top: -100%; /* Commence en dehors de l'écran en haut */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+    text-align: left;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 20px;
+    overflow: auto;
+    transition: top 0.5s ease; /* Transition pour l'animation */
+}
+
+/* Classe pour montrer la modale */
+.stock-modal.show {
+    display: block;
+    top: 6%; /* La position finale souhaitée de la modale */
+}
+
+
+
+/* Fond assombri */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 999;
+}
+
+.stock-content {
+    font-family: 'Conthrax', sans-serif;
+    position: absolute; /* Positionnement absolu pour placer le texte */
+    top: 0; /* Alignement en haut */
+    left: 0; /* Alignement à gauche */
+    width: 100%; /* Largeur à 100% */
+    height: 100%; /* Hauteur à 100% */
+    padding-left: 20px; /* Espacement à gauche pour le texte */
+    padding-top: 50px; /* Espacement en haut pour le texte */
+    color: white; /* Couleur du texte en blanc */
+    z-index: 10; /* Assure que le texte est au-dessus du fond */
+}
+
+
+.close-stock-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white; /* Couleur du bouton de fermeture en blanc */
+}
+
+/* Conteneur pour les blocs */
+.stock-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligne les blocs en haut */
+    align-items: center;
+    height: calc(100% - 60px); /* Ajuste la hauteur en tenant compte du titre et du bouton de fermeture */
+}
+
+
+/* Styles pour les blocs rectangulaires */
+.stock-box {
+    display: flex;
+    justify-content: space-between; /* Aligner les éléments à l'extrémité */
+    align-items: center; /* Centrer verticalement */
+    width: 75%;
+    height: 22%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #3A3333FF;
+    border-radius: 10px; /* Arrondi tous les coins */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 23px; /* Espacement entre les blocs */
+    padding: 10px; /* Espacement interne */
+}

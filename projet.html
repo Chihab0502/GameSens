@@ -16,6 +16,7 @@
     <script src="js/cart.js" defer></script>
     <script src="js/t-shirt.js" defer></script>
     <script src="js/carousel_projet.js" defer></script>
+    <script src="js/stock.js" defer></script>
 </head>
 <body>
 <header>
@@ -38,7 +39,7 @@
                         <a class="nav-link nav-button" href="shop.html"><b>SHOP</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button" href="#"><b>OPENING</b></a>
+                        <a class="nav-link nav-button" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
                     </li>
                 </ul>
             </div>
@@ -91,15 +92,20 @@
 
 <div class="section">
     <div id="shirtContainer" class="shirt-container">
-        <img id="shirtImage" src="./img/T-shirts%20(3D)/ZELDA/ZELDA_DisplaceLoop%20(SANS%20ETQ)0001.png" alt="T-shirt GameSens">
-    </div>
+        <video id="shirtVideo" autoplay muted loop>
+            <source src="./img/video/tvideo.webm" type="video/webm">
+            Votre navigateur ne prend pas en charge la balise vidéo.
+        </video>    </div>
     <div class="content">
         <h1>LA MARQUE DE</h1>
         <h1 style="color: #95c2d9">VÊTEMENTS GAMIFIÉS</h1>
         <p class="sous-texte" style="margin-left: -7%">Le vêtement du gamer, inspiré des codes du jeu vidéo.</p>
         <div class="buttons">
+            <a href="shop.html">
             <button type="button" class="btn btn-outline-light btn-precommander"><b>PRÉ-COMMANDER</b></button>
-            <button type="button" class="btn btn-outline-light"><b>DECOUVRIR</b></button>
+            </a>
+            <a href="produit.html">
+            <button type="button" class="btn btn-outline-light"><b>DECOUVRIR</b></button></a>
         </div>
     </div>
 </div>
@@ -128,8 +134,10 @@
         <h1>DÉCOUVRE TA <span style="color: #95c2d9">RÉCOMPENSE</span></h1>
         <p class="sous-texte" style="margin-left: -7%">Le vêtement du gamer, inspiré des codes du jeu vidéo.</p>
         <div class="buttons">
+            <a href="shop.html">
             <button type="button" class="btn btn-outline-light btn-commander"><b>COMMANDER</b></button>
-            <button type="button" class="btn btn-outline-light"><b>DECOUVRIR</b></button>
+                <button type="button" class="btn btn-outline-light"><b>DECOUVRIR</b></button>
+            </a>
         </div>
     </div>
 </div>
@@ -147,7 +155,9 @@
                 </div>
                 <p class="sous-texte-image">Le vêtement du gamer, inspiré des codes du jeu vidéo.</p>
                 <div class="buttons">
+                    <a href="shop.html">
                     <button type="button" class="btn btn-outline-light"><b>DÉCOUVRIR</b></button>
+                    </a>
                 </div>
             </div>
             <div class="col-md-6 d-flex flex-column align-items-center">
@@ -156,7 +166,9 @@
                 </div>
                 <p class="sous-texte-image">Le vêtement du gamer, inspiré des codes du jeu vidéo.</p>
                 <div class="buttons">
-                    <button type="button" class="btn btn-outline-light"><b>DÉCOUVRIR</b></button>
+                    <a href="shop.html">
+                        <button type="button" class="btn btn-outline-light"><b>DÉCOUVRIR</b></button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -274,6 +286,46 @@
         </div>
     </div>
 </footer>
+<div class="overlay" id="overlay"></div>
+<div class="stock-modal" id="stockModal">
+    <div class="stock-content">
+        <h2 style="font-size: 42px;margin-left: 12%;margin-top: 2%;margin-bottom: 2%">Stock</h2>
+
+        <div class="stock-boxes">
+            <button onclick="closeStockModal()" class="close-cart-btn">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+            <div class="stock-box">
+                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                <div class="box-info">
+                    <h3>BOX "FLOWER"</h3>
+                    <p>Box n° 784515</p>
+                </div>
+                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

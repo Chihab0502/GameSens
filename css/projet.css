@@ -1,14 +1,12 @@
+/* accueil.css */
 @font-face {
     font-family: 'Conthrax';
-    src: url('../conthrax/conthrax-sb.otf') format('opentype');
+    src: url('../conthrax/conthrax-sb.otf') format('truetype');
     /* Ajoutez d'autres variations de la police si nécessaire */
-    font-weight: 1;
 }
 
 body, html {
     font-family: 'Conthrax', sans-serif;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 body {
@@ -333,3 +331,18 @@ h1 {
     animation: slideInFromLeft 2s ease-out forwards;
     /* Adjust the duration (1s) and timing function (ease-out) as needed */
 }
+
+.shirt-container {
+    position: absolute;
+    width: 35%; /* Ajuste selon la taille de tes vidéos */
+    height: auto;
+    top: 6%;
+    right: 6%;
+}
+
+.shirt-container video {
+    width: 80%;
+    height: auto;
+    display: block;
+}
+
