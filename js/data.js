@@ -221,10 +221,10 @@ function updateData() {
                                 <h3 class="product-title">${item.title}</h3>
                             </div>
                             <div class="product-content-hide">
-                                <p class="product-price">${item.price}</p>
                                 <div class="product-size">
                                     <ul>${sizes}</ul>
                                 </div>
+                                <p class="product-price">${item.price}</p>
                             </div>
                         </div>
                     </div>`;
