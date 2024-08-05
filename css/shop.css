@@ -146,3 +146,50 @@ h1 {
 .color-section {
     height: 100vh;
 }
+
+
+.navigation-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1c1c1c;
+    padding: 0 20px;
+    height: 10vh;
+    position: relative;
+    width: 125%; /* Assure que la section prend toute la largeur disponible */
+    margin-left: -12%;
+    margin-top: -12%;
+}
+
+.buttons-group {
+    display: flex; /* Utilisation de flex pour aligner les boutons horizontalement */
+    gap: 10px; /* Espacement entre les boutons */
+    flex-grow: 1; /* Permet aux boutons de s'étendre pour remplir l'espace disponible */
+}
+
+.dropdown input {
+    width: 100%; /* Permet au dropdown de s'étendre sur toute la largeur disponible */
+    background-color: #000000A0;
+    border: 1px solid #FFFFFF20;
+    text-align: left;
+}
+
+.dropdown ul {
+    width: 100%; /* Assure que le menu déroulant utilise toute la largeur disponible */
+}
+
+.dropdown ul li {
+    width: 100%; /* Assure que chaque élément de menu utilise toute la largeur disponible */
+}
+
+/* Réglage des titres et des boutons à l'intérieur de la section */
+.navigation-section h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 10vh; /* Centrage vertical du titre */
+}
+
+/* Si vous voulez que la section de filtre (navigation-section) soit en haut */
+.navigation-section {
+    margin-bottom: 20px; /* Assure un espacement entre la section de filtre et le reste du contenu */
+}

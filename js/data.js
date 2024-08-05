@@ -56,7 +56,7 @@ const productData = [
         category: "box",
         collection: "Collection 1",
         type: "Type 1",
-        size: ["L","XL","XXL"],
+        size: ["XS","S","M","L","XL","XXL"],
         price: "50€",
         img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png"
     },
