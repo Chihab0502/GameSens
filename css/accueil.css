@@ -289,8 +289,22 @@ h1 {
     display: block;
 }
 
-
-
+/* Style de la pastille */
+.nav-item .badge {
+    position: absolute;
+    top: 30px; /* Ajustez selon votre besoin */
+    right: 1px; /* Ajustez selon votre besoin */
+    background-color: #c3c3ff; /* Couleur de fond de la pastille */
+    color: white; /* Couleur du texte de la pastille */
+    border-radius: 50%; /* Cercle parfait */
+    padding: 5px 10px; /* Ajustez selon votre besoin */
+    font-size: 6px; /* Ajustez selon votre besoin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3px !important; /* Largeur de la pastille */
+    height: 10px !important; /* Hauteur de la pastille */
+}
 
 
 
