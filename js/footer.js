@@ -1,10 +1,17 @@
 document.getElementById('footerToggle').addEventListener('click', function() {
     var footerContent = document.getElementById('footerContent');
-    footerContent.style.display = 'block';
-    requestAnimationFrame(() => {
-        footerContent.classList.remove('closing');
-        footerContent.classList.add('showing');
-    });
+
+    if (footerContent.classList.contains('showing')) {
+        // Si le footer est actuellement affiché, alors le fermer
+        closeFooter();
+    } else {
+        // Si le footer est actuellement caché, alors l'ouvrir
+        footerContent.style.display = 'block';
+        requestAnimationFrame(() => {
+            footerContent.classList.remove('closing');
+            footerContent.classList.add('showing');
+        });
+    }
 });
 
 // Ajouter un écouteur pour détecter les clics sur les boutons de fermeture

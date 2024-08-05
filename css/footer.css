@@ -153,3 +153,19 @@ body, html {
     width: 55px; /* Ajustez la largeur de l'image selon vos besoins */
     height: auto; /* Pour maintenir le ratio d'aspect de l'image */
 }
+
+.footer-modal {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.footer-modal.showing {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-modal.closing {
+    opacity: 0;
+    transform: translateY(100%);
+}

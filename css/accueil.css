@@ -274,5 +274,23 @@ h1 {
     top: 6%; /* La position finale souhaitée de la modale */
 }
 
+.shirt-container {
+    position: absolute;
+    width: 10% !important; /* Ajuste selon la taille de tes vidéos */
+    height: 2%;
+    top: 5%;
+    right: 6%;
+}
+
+.shirt-container video {
+
+    width: 10% !important;
+    height: 10%;
+    display: block;
+}
+
+
+
+
 
 
