@@ -18,6 +18,29 @@
     height: calc(35vh - 3px);
 }
 
+.blur {
+    display: flex;
+    align-items: center;
+}
+
+.blur p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blur .product-img {
+    filter: blur(4px);
+    border: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+.blur .product-content {
+    display: none;
+}
+
 /** Cards content */
 .product-title {
     color: white;

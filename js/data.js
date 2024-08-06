@@ -8,7 +8,8 @@ const productData = [
         type: "Type 1",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png",
+        rarety: "rare"
     },
     {
         id: 2,
@@ -18,7 +19,8 @@ const productData = [
         type: "Type 1",
         size: ["S", "M"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png",
+        rarety: "commun"
     },
     {
         id: 3,
@@ -28,7 +30,8 @@ const productData = [
         type: "Type 1",
         size: ["S", "M", "L","XL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png",
+        rarety: "rare"
     },
     {
         id: 4,
@@ -38,7 +41,8 @@ const productData = [
         type: "Type 1",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png",
+        rarety: "rare"
     },
     {
         id: 5,
@@ -48,7 +52,8 @@ const productData = [
         type: "Type 2",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png",
+        rarety: "rare"
     },
     {
         id: 6,
@@ -56,9 +61,10 @@ const productData = [
         category: "box",
         collection: "Collection 1",
         type: "Type 1",
-        size: ["XS","S","M","L","XL","XXL"],
+        size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png"
+        img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png",
+        available: true
     },
     {
         id: 7,
@@ -68,7 +74,8 @@ const productData = [
         type: "Type 1",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png"
+        img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png",
+        available: true
     },
     {
         id: 8,
@@ -78,7 +85,8 @@ const productData = [
         type: "Type 2",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png"
+        img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png",
+        available: true
     },
     {
         id: 9,
@@ -88,7 +96,8 @@ const productData = [
         type: "Type 2",
         size: ["M"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png",
+        rarety: "rare"
     },
     {
         id: 10,
@@ -98,7 +107,8 @@ const productData = [
         type: "Type 2",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png",
+        rarety: "rare"
     },
     {
         id: 11,
@@ -108,7 +118,8 @@ const productData = [
         type: "Type 2",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png",
+        rarety: "rare"
     },
     {
         id: 12,
@@ -118,7 +129,8 @@ const productData = [
         type: "Type 2",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png",
+        rarety: "rare"
     },
     {
         id: 13,
@@ -128,7 +140,8 @@ const productData = [
         type: "Type 1",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png"
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png",
+        rarety: "rare"
     },
     {
         id: 14,
@@ -138,8 +151,31 @@ const productData = [
         type: "Type 2",
         size: ["L","XL","XXL"],
         price: "50€",
-        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png"
-    }
+        img: "./img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0040.png",
+        rarety: "rare"
+    },
+    {
+        id: 15,
+        title: "TOAD",
+        category: "box",
+        collection: "Collection 1",
+        type: "Type 1",
+        size: ["L","XL","XXL"],
+        price: "50€",
+        img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png",
+        available: false
+    },
+    {
+        id: 16,
+        title: "TOAD",
+        category: "box",
+        collection: "Collection 1",
+        type: "Type 1",
+        size: ["L","XL","XXL"],
+        price: "50€",
+        img: "./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png",
+        available: false
+    },
 ];
 
 
@@ -205,33 +241,105 @@ function filterType(type) {
 
 /** Affichage */
 function updateData() {
-    let displayData = `<div class="no-product">Aucun produit.</div>`;
+    productContainer.innerHTML = ``;
+
     if(productDataFiltered.length > 0) {
-        displayData = productDataFiltered.map(function(item){
-            let sizes = item.size.map(size => `<li>${size}</li>`).join("");
-            return `<div class="product">
-                        <i class="bi bi-flower3 flower"></i>
-                        <div class="corner"></div>
-                        <div class="product-img">
-                            <img src="${item.img}" alt=""/>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-content-default">
-                                <p class="product-collection">${item.collection}</p>
-                                <h3 class="product-title">${item.title}</h3>
-                            </div>
-                            <div class="product-content-hide">
-                                <div class="product-size">
-                                    <ul>${sizes}</ul>
-                                </div>
-                                <p class="product-price">${item.price}</p>
-                            </div>
-                        </div>
-                    </div>`;
-        }); 
-        displayData = displayData.join("");
+       
+        productDataFiltered.forEach(item => {
+
+            /** Parent */
+            let product = document.createElement('div');
+            product.classList.add('product');
+
+            /** Image */
+            let productImg = document.createElement('div');
+            productImg.classList.add('product-img');
+            let img = document.createElement('img');
+            img.setAttribute('src', item.img);
+            productImg.appendChild(img);
+
+            /** Box indisponible (flou) */
+            if(item.category == 'box' && !item.available) {
+                product.appendChild(productImg);
+                product.classList.add('blur');
+                let soon = document.createElement('p');
+                soon.textContent = 'PROCHAINEMENT...';
+                product.appendChild(soon);
+            } 
+
+            /** Tous les autres cas */
+            else {
+                /** Rarety */
+                if(item.category == 'tshirt' && item.rarety) {
+                    let rarety = document.createElement('div');
+                    rarety.classList.add('rarety');
+                    rarety.textContent = item.rarety;
+                    product.appendChild(rarety)
+                }
+
+                /** Flower */
+                let flower = document.createElement('i');
+                flower.classList.add('bi');
+                flower.classList.add('bi-flower3');
+                flower.classList.add('flower');
+                product.appendChild(flower);
+
+                /** Corner */
+                let corner = document.createElement('div');
+                corner.classList.add('corner');
+                product.appendChild(corner);
+
+                /** Image */
+                product.appendChild(productImg);
+
+                /** Content */
+                let productContent = document.createElement('div');
+                productContent.classList.add('product-content');
+                product.appendChild(productContent);
+
+                let productContentDefault = document.createElement('div');
+                productContentDefault.classList.add('product-content-default');
+                productContent.appendChild(productContentDefault);
+                /** Collection */
+                let productCollection = document.createElement('p');
+                productCollection.classList.add('product-collection');
+                productCollection.textContent = item.collection;
+                productContentDefault.appendChild(productCollection);
+                /** Title */
+                let productTitle = document.createElement('h3');
+                productTitle.classList.add('product-title');
+                productTitle.textContent = item.title;
+                productContentDefault.appendChild(productTitle);
+
+                let productContentHide = document.createElement('div');
+                productContentHide.classList.add('product-content-hide');
+                productContent.appendChild(productContentHide);
+                /** Price */
+                let productPrice = document.createElement('p');
+                productPrice.classList.add('product-price');
+                productPrice.textContent = item.price;
+                productContentHide.appendChild(productPrice);
+                /** Sizes */
+                let productSize = document.createElement('div');
+                productSize.classList.add('product-size');
+                let productSizeUl = document.createElement('ul');
+                item.size.forEach(size => {
+                    let productSizeLi = document.createElement('li');
+                    productSizeLi.innerHTML = size;
+                    productSizeUl.appendChild(productSizeLi);
+                });
+                productSize.appendChild(productSizeUl);
+                productContentHide.appendChild(productSize);
+            }
+
+            productContainer.appendChild(product);
+        });
+    } 
+    else {
+        let noProduct = document.createElement('div');
+        noProduct.classList.add('no-product');
+        productContainer.appendChild(noProduct);
     }
-    productContainer.innerHTML = displayData;
 }
 
 /** Affichage par défault à l'ouverture du site : T-shirt */
