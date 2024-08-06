@@ -139,25 +139,6 @@ h1 {
 }
 
 /* Bloc central */
-.stock-modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%; /* 75% de la largeur de la page */
-    height: 90%; /* 75% de la hauteur de la page */
-    background: rgba(0, 0, 0, 0.8); /* Fond noir légèrement transparent */
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none;
-    z-index: 1000;
-    text-align: left; /* Alignement du texte à gauche */
-    color: white; /* Écriture en blanc */
-    border: 1px solid gray; /* Ajout de la bordure grise */
-    border-radius: 20px; /* Augmentation du rayon des coins */
-    overflow: auto; /* Ajoute des barres de défilement si le contenu dépasse la taille du bloc */
-}
-
 .stock-content {
     font-family: 'Conthrax', sans-serif;
     position: absolute; /* Positionnement absolu pour placer le texte */
@@ -254,11 +235,11 @@ h1 {
 /* Bloc central */
 .stock-modal {
     position: fixed;
-    top: -100%; /* Commence en dehors de l'écran en haut */
+    top: 0; /* Commence en dehors de l'écran en haut */
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
-    height: 90%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -298,8 +279,8 @@ h1 {
     bottom: 0; /* Positionner en haut */
     left: 0; /* Positionner à gauche */
     z-index: 0; /* Assurez-vous qu'il est au-dessus du contenu */
-    width: 80%; /* Occupe toute la largeur de l'écran */
-    height: 80vh; /* Occupe toute la hauteur de l'écran */
+    width: 100%; /* Occupe toute la largeur de l'écran */
+    height: 100vh; /* Occupe toute la hauteur de l'écran */
 }
 
 .svg-overlay img {
