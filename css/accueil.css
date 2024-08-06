@@ -256,7 +256,8 @@ h1 {
 /* Classe pour montrer la modale */
 .stock-modal.show {
     display: block;
-    top: 6%; /* La position finale souhaitée de la modale */
+    top: -5%; /* La position finale souhaitée de la modale */
+    bottom: 13%;
 }
 
 .shirt-container {
