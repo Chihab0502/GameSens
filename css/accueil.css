@@ -235,10 +235,11 @@ h1 {
 /* Bloc central */
 .stock-modal {
     position: fixed;
-    top: 0; /* Commence en dehors de l'écran en haut */
+    top: -5%; /* Commence en dehors de l'écran en haut */
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
+    bottom: 13%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     padding: 20px;

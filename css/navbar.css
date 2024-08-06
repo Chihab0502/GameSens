@@ -262,3 +262,31 @@ body, html {
     margin-bottom: 23px; /* Espacement entre les blocs */
     padding: 10px; /* Espacement interne */
 }
+
+.stock-modal {
+    position: fixed;
+    top: -5%; /* Commence en dehors de l'écran en haut */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    bottom: 13%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+    text-align: left;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 20px;
+    overflow: auto;
+    transition: top 0.5s ease; /* Transition pour l'animation */
+}
+
+/* Classe pour montrer la modale */
+.stock-modal.show {
+    display: block;
+    top: -5%; /* La position finale souhaitée de la modale */
+    bottom: 13%;
+}
