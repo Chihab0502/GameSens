@@ -41,19 +41,14 @@
             </div>
             <!-- Conteneur à droite pour les icônes -->
 
-            <ul class="navbar-nav ms-auto" style="margin-right: 2%">
-                <li class="nav-item position-relative">
-                    <a class="nav-link" href="panier.html" id="cartToggle">
-                        <i class="bi bi-handbag"></i>
-                        <span class="badge"></span> <!-- Ajout de la pastille -->
-                    </a>
+            <ul class="navbar-nav ms-auto"  style="margin-right: 2%">
+                <li class="nav-item">
+                    <a class="nav-link" href="panier.html" id="cartToggle"><i class="bi bi-handbag"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="connexion.html"><i class="bi bi-person"></i></a>
                 </li>
             </ul>
-
-
         </div>
     </nav>
 
@@ -88,12 +83,16 @@
 </header>
 
 <div class="fullscreen-bg">
+    <video autoplay muted loop id="background-video">
+        <source src="img/video/Animation de fond.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
     <div class="content">
         <h1 style="font-family: 'Conthrax', sans-serif;">COLLECTION</h1>
         <h1 style="font-family: 'Conthrax', sans-serif;">FLOWER</h1>
         <div class="buttons">
             <a href="produit.html">
-            <button type="button" class="btn btn-outline-light" ><b>COMMANDER</b></button>
+                <button type="button" class="btn btn-outline-light" ><b>COMMANDER</b></button>
             </a>
             <button type="button" class="btn btn-outline-light" id="mainOpeningButton"><b>OPENING</b></button>
         </div>
@@ -105,6 +104,11 @@
     <a href="https://tiktok.com" target="_blank"><i class="bi bi-tiktok"></i></a>
     <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
 </div>
+
+<div class="svg-overlay">
+    <img src="img/svg/Grid_layout_1 (2).svg" alt="Superposed SVG">
+</div>
+
 
 <footer>
     <div class="footer-image" style="margin-right: 2%;">

@@ -9,12 +9,16 @@ body, html {
     font-family: 'Conthrax', sans-serif;
 }
 
-.fullscreen-bg {
-    background: url('../img/Box/Box__flower_/GS_Box_Floral-1-4k.png') no-repeat center center;
-    background-size: cover; /* Cover ensures the image covers the whole screen */
-    height: 100vh; /* 100% of the viewport height */
-    width: 100vw; /* 100% of the viewport width */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
+
 
 body, html {
     margin: 0;
@@ -289,21 +293,21 @@ h1 {
     display: block;
 }
 
-/* Style de la pastille */
-.nav-item .badge {
+
+
+.svg-overlay {
     position: absolute;
-    top: 30px; /* Ajustez selon votre besoin */
-    right: 1px; /* Ajustez selon votre besoin */
-    background-color: #c3c3ff; /* Couleur de fond de la pastille */
-    color: white; /* Couleur du texte de la pastille */
-    border-radius: 50%; /* Cercle parfait */
-    padding: 5px 10px; /* Ajustez selon votre besoin */
-    font-size: 6px; /* Ajustez selon votre besoin */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3px !important; /* Largeur de la pastille */
-    height: 10px !important; /* Hauteur de la pastille */
+    bottom: 0; /* Positionner en haut */
+    left: 0; /* Positionner à gauche */
+    z-index: 0; /* Assurez-vous qu'il est au-dessus du contenu */
+    width: 80%; /* Occupe toute la largeur de l'écran */
+    height: 80vh; /* Occupe toute la hauteur de l'écran */
+}
+
+.svg-overlay img {
+    width: 100%; /* L'image SVG occupera toute la largeur de son conteneur */
+    height: 100%; /* L'image SVG occupera toute la hauteur de son conteneur */
+    object-fit: cover; /* L'image couvrira le conteneur sans déformer */
 }
 
 
