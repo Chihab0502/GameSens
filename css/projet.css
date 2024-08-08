@@ -6,6 +6,9 @@
 
 body, html {
     font-family: 'Conthrax', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 body {
@@ -17,11 +20,6 @@ body {
     scroll-snap-type: y mandatory;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
 
 .social-icons {
     position: fixed;
@@ -130,7 +128,7 @@ body, html {
 .buttons button {
     border: 1px solid white;
     border-radius: 0 0 100px 0;
-    padding: 10px 90px !important;
+    padding: 10px 60px !important;
     color: white;
     margin-top: 20px;
     margin-right: 10px;
@@ -140,17 +138,6 @@ h1 {
     font-size: 40px;
     font-weight: 700;
     margin: 0; /* Supprime les marges par défaut pour un contrôle précis */
-}
-
-.sous-texte {
-    padding-left: 50px; /* Ajuste selon besoin ou supprime si non nécessaire */
-    font-size: 15px;
-    font-family: Arial, serif;
-    font-weight: 300;
-    margin: 20px 0; /* Espacement vertical sans affecter la largeur */
-    width: 80%;
-    text-align: justify;
-    text-justify: inter-word;
 }
 
 .sous-texte-image {
@@ -363,4 +350,16 @@ html, body {
     width: 100%; /* L'image SVG occupera toute la largeur de son conteneur */
     height: 100%; /* L'image SVG occupera toute la hauteur de son conteneur */
     object-fit: cover; /* L'image couvrira le conteneur sans déformer */
+}
+
+.sous-texte {
+    padding-left: 50px; /* Ajuste selon besoin ou supprime si non nécessaire */
+    font-size: 12px;
+    font-family: Arial, serif;
+    font-weight: 300;
+    margin: 20px 0; /* Espacement vertical sans affecter la largeur */
+    width: 80%;
+    text-align: justify;
+    text-justify: inter-word;
+    color: lightgray;
 }
