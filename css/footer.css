@@ -11,27 +11,12 @@ body, html {
 /* footer.css */
 .footer-button {
     position: fixed;
-    left: 20px;
+    left: 25px;
     bottom: 20px;
     z-index: 100; /* Assurez-vous qu'il reste au-dessus des autres éléments */
     cursor: pointer;
 }
 
-.footer-button a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    color: white;
-    border-radius: 50%; /* Rend le bouton rond */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Optionnel : ajoute un effet d'ombre */
-}
-
-
-.bi-info-circle-fill {
-    font-size: 1.5rem; /* Ajustez la taille de l'icône */
-}
 
 .footer-modal {
     position: fixed;
