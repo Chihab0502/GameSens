@@ -347,22 +347,44 @@ h1 {
 }
 
 
+/* Conteneur pour les SVG */
 .svg-container {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     width: 100%;
     height: 100%;
+    z-index: 1; /* Assurez-vous que le z-index soit inférieur à celui du contenu si nécessaire */
 }
 
+/* Style pour les SVG superposés */
 .svg-overlay, .svg-overlay2 {
-    flex: 1; /* Chaque SVG occupe une portion égale de la hauteur de la page */
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0; /* Enlever toute marge supplémentaire */
-    padding: 0; /* Enlever tout padding supplémentaire */
+    height: 100%;
+    pointer-events: none; /* Permet de cliquer à travers les SVG */
+    z-index: 2; /* Assurez-vous que ce z-index soit au-dessus du conteneur si nécessaire */
 }
 
-.svg-overlay img, .svg-overlay2 img {
-    width: 100%; /* L'image SVG occupera toute la largeur de son conteneur */
-    height: 100%; /* L'image SVG occupera toute la hauteur de son conteneur */
-    object-fit: cover; /* L'image couvrira le conteneur sans déformer */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Conthrax', sans-serif;
+    background: url('../img/Background/panier.png') no-repeat fixed center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+}
+
+.header, .section {
+    position: relative;
+    z-index: 3; /* Assurez-vous que ce z-index soit supérieur à celui des SVG */
+}
+
+/* Si besoin, ajoute un fond au contenu pour masquer les SVG */
+.section {
+    padding: 20px;
+    border-radius: 10px;
 }
