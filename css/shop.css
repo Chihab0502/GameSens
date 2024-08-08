@@ -144,3 +144,19 @@ h1 {
 .color-section {
     height: 100vh;
 }
+
+
+.svg-overlay {
+    position: absolute;
+    bottom: 0; /* Positionner en haut */
+    left: 0; /* Positionner à gauche */
+    z-index: 0; /* Assurez-vous qu'il est au-dessus du contenu */
+    width: 100%; /* Occupe toute la largeur de l'écran */
+    height: 100vh; /* Occupe toute la hauteur de l'écran */
+}
+
+.svg-overlay img {
+    width: 100%; /* L'image SVG occupera toute la largeur de son conteneur */
+    height: 100%; /* L'image SVG occupera toute la hauteur de son conteneur */
+    object-fit: cover; /* L'image couvrira le conteneur sans déformer */
+}
