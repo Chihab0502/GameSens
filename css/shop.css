@@ -67,7 +67,7 @@ body, html {
 .buttons button {
     border: 1px solid white;
     border-radius: 0 100px 0 100px;
-    padding: 10px 90px;
+    padding: 10px 50px;
     margin-top: 20px;
 }
 
