@@ -32,7 +32,15 @@ body, html {
 }
 
 .section {
-    height: 100vh;
+    scroll-snap-align: start;
+    width: 100vw; /* 100% de la largeur de la fenêtre de visualisation */
+    height: 100vh; /* 100% de la hauteur de la fenêtre de visualisation */
+    position: relative; /* position relative pour le positionnement des enfants si nécessaire */
+}
+
+
+.section {
+    height: 100vh; /* 100% de la hauteur de la fenêtre de visualisation */
     display: flex;
     justify-content: flex-end; /* Alignement du contenu à droite */
     align-items: center;
@@ -50,6 +58,7 @@ body, html {
 }
 
 .content1 {
+    z-index: 5;
     width: 100%; /* Utiliser toute la largeur disponible */
     max-width: 600px; /* Limite maximale de largeur */
     color: white;
@@ -158,4 +167,8 @@ h1 {
     width: 100%; /* L'image SVG occupera toute la largeur de son conteneur */
     height: 100%; /* L'image SVG occupera toute la hauteur de son conteneur */
     object-fit: cover; /* L'image couvrira le conteneur sans déformer */
+}
+
+html, body {
+    overflow-x: hidden;
 }
