@@ -164,8 +164,6 @@ h1 {
 }
 
 .svg-overlay img {
-    width: 100%; /* L'image SVG occupera toute la largeur de son conteneur */
-    height: 100%; /* L'image SVG occupera toute la hauteur de son conteneur */
     object-fit: cover; /* L'image couvrira le conteneur sans déformer */
 }
 
