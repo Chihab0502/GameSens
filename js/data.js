@@ -185,8 +185,8 @@ const productData = [
 let productDataFiltered = [];
 let filters = {                         /** Filtres par défaut */
     category: "tshirt",
-    collection: "Collection 1",
-    type: "Type 1"
+    collection: ["Collection 1"],
+    type: ["Type 1"]
 }
 
 const productContainer = document.querySelector('.products-container');
@@ -195,10 +195,40 @@ const productContainer = document.querySelector('.products-container');
 /** Filtres */
 function filter() {
     productDataFiltered = productData;
-    if(filters.collection) productDataFiltered = productDataFiltered.filter(p => p.collection === filters.collection);
-    if(filters.type) productDataFiltered = productDataFiltered.filter(p => p.type === filters.type);
+    productDataFiltered = productDataFiltered.filter(p => filters.collection.includes(p.collection));
+    productDataFiltered = productDataFiltered.filter(p => filters.type.includes(p.type));
     if(filters.category) productDataFiltered = productDataFiltered.filter(p => p.category === filters.category);
     updateData();
+}
+
+
+/** Filtres collections & types */
+document.addEventListener('DOMContentLoaded', () => {
+    const checkboxesCollection = document.querySelectorAll('input[name="collection"]');
+    checkboxesCollection.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            filters.collection = getChecked('collection'); 
+            filter();
+        });
+    });
+
+    const checkboxesType = document.querySelectorAll('input[name="type"]');
+    checkboxesType.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            filters.type = getChecked('type'); 
+            filter();
+        });
+    });
+});
+
+function getChecked(type) {
+    let checked = document.querySelectorAll('input[name="' + type + '"]:checked');
+    let selectedLabels = [];
+    checked.forEach(checkbox => {
+        const label = document.querySelector(`label[for="${checkbox.id}"]`).innerText;
+        selectedLabels.push(label);
+    });
+    return selectedLabels;
 }
 
 /** Filtre T-shirt */
@@ -220,24 +250,6 @@ bBox.addEventListener('click', () => {
     filters.category = "box";
     filter();
 });
-
-/** Filtre Collection */
-const iCollection = document.getElementById('collectionDropdown');
-
-function filterCollection(collection) {
-    iCollection.value = collection;
-    filters.collection = collection;
-    filter();
-}
-
-/** Filtre Type */
-const iType = document.getElementById('typeDropdown');
-
-function filterType(type) {
-    iType.value = type;
-    filters.type = type;
-    filter();
-}
 
 /** Affichage */
 function updateData() {
@@ -278,14 +290,14 @@ function updateData() {
                 }
 
                 /** Flower */
-                let flower = document.createElement('i');
-                flower.classList.add('bi');
-                flower.classList.add('bi-flower3');
+                let flower = document.createElement('img');
+                flower.setAttribute('src', 'img/svg/flower 1.svg');
                 flower.classList.add('flower');
                 product.appendChild(flower);
 
                 /** Corner */
-                let corner = document.createElement('div');
+                let corner = document.createElement('img');
+                corner.setAttribute('src', 'img/svg/Coin.svg');
                 corner.classList.add('corner');
                 product.appendChild(corner);
 
@@ -314,11 +326,6 @@ function updateData() {
                 let productContentHide = document.createElement('div');
                 productContentHide.classList.add('product-content-hide');
                 productContent.appendChild(productContentHide);
-                /** Price */
-                let productPrice = document.createElement('p');
-                productPrice.classList.add('product-price');
-                productPrice.textContent = item.price;
-                productContentHide.appendChild(productPrice);
                 /** Sizes */
                 let productSize = document.createElement('div');
                 productSize.classList.add('product-size');
@@ -330,6 +337,17 @@ function updateData() {
                 });
                 productSize.appendChild(productSizeUl);
                 productContentHide.appendChild(productSize);
+                /** Price */
+                let productPrice = document.createElement('p');
+                productPrice.classList.add('product-price');
+                productPrice.textContent = item.price;
+                productContentHide.appendChild(productPrice);
+
+                /** XP */
+                let xp = document.createElement('img');
+                xp.setAttribute('src', 'img/svg/xp.svg');
+                xp.classList.add('xp');
+                product.appendChild(xp);
             }
 
             productContainer.appendChild(product);

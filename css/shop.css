@@ -97,38 +97,72 @@ h1 {
     position: relative;
 }
 
+.dropdown-custom, .dropdown-custom li a:hover {
+    background-color: #0c0c0c;
+}
+
+.dropdown-custom li a, .dropdown-custom li a:hover {
+    color: white;
+}
+
 .buttons-group {
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    gap: 10px; /* Ajustez cet écart si nécessaire */
+    overflow: hidden;
+    display: flex;
+    border-radius: 10px 10px 0 0;
 }
 
 .buttons-group button {
-    border-radius: 10px 10px 0 0;
-    border-bottom: 1px solid #FFFFFF20;
+    border: 0;
+    padding: 0;
+    background-color: #0e0e0e;
 }
 
 .dropdown input {
     width: 200px;
     text-align: left;
-    background-color: #000000A0;
-    border: 1px solid #FFFFFF20;
+    background-color: #000000A0 !important;
+    border: 0 !important;
 }
 
 .dropdown ul li {
     width: 200px;
+    display: flex;
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
 }
 
-.dropdown::before {
+.dropdown ul li input {
+    width: 20px;
+    height: 20px;
+    margin-right: var(--bs-dropdown-item-padding-x);
+}
+
+.dropdown ul li input[type='checkbox'] {
+    accent-color: #0bb0fcc5;
+}
+
+.dropdown ul li label {
+    color: white;
+}
+
+.dropdown-toggle + .bi-chevron-down {
     position: absolute;
-    content: " \25BC";
     color: #ccc;
-    top: 8px;
-    right: 5px;
+    top: 3px;
+    right: 10px;
     height: 20px;
     width: 20px;
+    font-size: 20px;
+    transition: all 0.4s ease;
+}
+
+.dropdown-toggle.show + .bi-chevron-down {
+    top: 10px;
+    transform: rotate(180deg);
+    transition: all 0.4s ease;
 }
 
 .navigation-section .col-5 {
@@ -164,6 +198,8 @@ h1 {
 }
 
 .svg-overlay img {
+    width: 100%; /* L'image SVG occupera toute la largeur de son conteneur */
+    height: 100%; /* L'image SVG occupera toute la hauteur de son conteneur */
     object-fit: cover; /* L'image couvrira le conteneur sans déformer */
 }
 
