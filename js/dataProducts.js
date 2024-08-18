@@ -130,6 +130,7 @@ const productData = [
 
 const productContainer = document.querySelector('#products-to-reveal');
 const productDescription = document.querySelector('#product-description');
+const allSizes = ['S', 'M', 'L', 'XL', 'XXL'];
 
 /** Affichage */
 function updateData() {
@@ -156,12 +157,34 @@ function updateData() {
 
     /** Rend actif le produit surlequel on clique */
     const products = productContainer.querySelectorAll(".product");
-    products.forEach(product => {
+    products.forEach(function(product, idx) {
         product.addEventListener("click", function() {
             products.forEach(p => p.classList.remove("active"));
             this.classList.add("active");
+            centerProduct(product, idx);
         });
     });
+}
+
+function centerProduct(productElement, idx) {
+    if (productElement) {
+        const container = document.getElementById('products-to-reveal');
+        
+        // Calculez la position pour centrer le produit
+        const containerWidth = container.offsetWidth;
+        const productWidth = productElement.offsetWidth;
+        const productLeft = productElement.offsetLeft;
+        const containerScrollLeft = container.scrollLeft;
+
+        // Calculer le décalage nécessaire
+        const offset = (containerWidth / 2) - (productWidth / 2) - productLeft + containerScrollLeft;
+        
+        // Appliquer le décalage au conteneur du carrousel
+        container.scrollBy({
+            left: -offset,
+            behavior: 'smooth'
+        });
+    }
 }
 
 /** Ouvre une modal après avoir cliqué sur Découvrir */
@@ -187,7 +210,15 @@ function updateDescription(item) {
     for(let i = 0; i < 5 - Math.round(parsedItem.note); i++) stars += `<i class="bi bi-star"></i> `;
 
     /** Sizes */
-    let sizes = parsedItem.size.map(size => `<li class="size-item">${size}</li>`).join("");
+    let sizes = allSizes.map(size => {
+        let result = parsedItem.size.includes(size) ?
+            `<li class="size-item size-available">${size}</li>` :
+            `<li class="size-item size-disabled">
+                <img src="img/svg/hachures.png">
+                ${size}
+            </li>`
+        return result;
+    }).join("");
 
     /** Composant principal */
     productDescription.innerHTML = 
@@ -214,17 +245,19 @@ function updateDescription(item) {
                 <div class="description-collection">${parsedItem.collection}</div>
                 <div class="description-description">${parsedItem.description}</div>
                 <div class="description-icons">
-                    <div class="icon"><i style="font-size:40px" class="bi bi-flower2"></i><p> 100% Coton</p></div>
-                    <div class="icon"><i style="font-size:40px" class="bi bi-shop-window"></i><p> Impression numérique</p></div>
-                    <div class="icon"><i style="font-size:40px" class="bi bi-person-fill"></i><p> Coupe unique</p></div>
+                    <div class="icon"><i style="font-size:40px" class="bi bi-flower2"></i><p> 100% coton<br> bio</p></div>
+                    <div class="icon"><i style="font-size:40px" class="bi bi-shop-window"></i><p> Impression<br> numérique</p></div>
+                    <div class="icon"><i style="font-size:40px" class="bi bi-person-fill"></i><p> Coupe<br> unique</p></div>
                 </div>
                 <div class="star-rating" data-rating="${parsedItem.note}">
                     ${stars}
-                    ${parsedItem.note}/5 (${parsedItem.nbNotes} avis)
+                    ${parsedItem.note}/5 (${parsedItem.nbNotes})
                 </div>
                 <div class="description-price">${parsedItem.price}</div>
                 <div>
-                    <div class="description-size">Choisir taille : <ul>${sizes}</ul></div>
+                    <div class="description-size">
+                        Choisir taille : <ul>${sizes}</ul>
+                    </div>
                 </div>
                 <button class="btn-panier lootbox">AJOUTER LA LOOTBOX AU PANIER</button>
             </div>
@@ -241,7 +274,7 @@ function updateDescription(item) {
 
 
     // Gestionnaires d'événements pour les tailles
-    document.querySelectorAll('.size-item').forEach(item => {
+    document.querySelectorAll('.size-available').forEach(item => {
         item.addEventListener('click', function() {
             document.querySelectorAll('.size-item').forEach(el => el.classList.remove('active'));
             this.classList.add('active');

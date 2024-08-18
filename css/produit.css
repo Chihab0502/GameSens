@@ -27,9 +27,9 @@ body, html {
     height: 60vh;
     display: flex;
     align-items: center;
-    overflow-x: auto;
+    overflow-x: hidden;
     gap: 2em;
-    padding: 2em 5%;
+    padding: 2em calc(50% - 15vh);
     margin-bottom: 2em;
 }
 
@@ -73,6 +73,7 @@ body, html {
 
 .product.active {
     transform: scale(1.1);
+    backdrop-filter: blur(10px);
     cursor: auto;
 }
 
@@ -95,6 +96,7 @@ body, html {
 }
 
 .product-title {
+    font-size: 1.5em;
     text-align: left;
     text-transform: uppercase;
     padding: 1em 1em 0 1em;
@@ -139,7 +141,7 @@ body, html {
     top: 10vh;
     left: 10vw;
     width: 80vw;
-    height: 80vh;
+    height: 85vh;
     z-index: 1000;
     overflow: auto;
 }
@@ -175,15 +177,21 @@ body, html {
 
 .description-collection {
     padding-bottom: 1em;
+    margin-top: -0.5em;
 }
 
 .description-collection, .description-price, .description-footer .rarety {
-    font-size: 1.8em;
+    font-size: 1.5em;
 }
 
 .description-description, .description-icons, .star-rating {
-    /** Changer le font family ici pour la description du modal */
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Montserrat';
+    color: #cbcbcb;
+    line-height: 1.1em;
+}
+
+.description-description {
+    padding-bottom: 1em;
 }
 
 .description-icons {
@@ -208,6 +216,7 @@ body, html {
     align-items: center;
     gap: 1em;
     margin-bottom: 1em;
+    font-size: 1em;
 }
 
 .description-size ul {
@@ -222,8 +231,9 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 2.6em;
-    height: 2.6em;
+    width: 3.5em;
+    height: 3.5em;
+    font-size: 0.8em;
     border-radius: 50%;
     border: 1px solid white;
     cursor: pointer;
@@ -232,6 +242,18 @@ body, html {
 .size-item.active {
     color: black;
     background-color: white;
+}
+
+.size-disabled {
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+    opacity: 0.5;
+}
+
+.size-disabled img {
+    position: absolute;
+    top: 0;
 }
 
 .description-footer {
@@ -254,7 +276,6 @@ body, html {
 }
 
 .carousel img {
-    padding: 4em;
     height: auto;
     width: 75%;
     margin: 0 auto;
@@ -262,6 +283,11 @@ body, html {
 
 .star-rating {
     padding-bottom: 1em;
+}
+
+.star-rating i {
+    padding-right: 0.5em;
+    font-size: 1em;
 }
 
 .lootbox {

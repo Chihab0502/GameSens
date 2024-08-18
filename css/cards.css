@@ -21,7 +21,7 @@
     border: 1px solid #FFFFFF20;
     position: relative;
     overflow: hidden;
-    height: calc(35vh - 3px);
+    height: calc(50vh - 3px);
 }
 
 .blur {
@@ -55,7 +55,7 @@
 }
 
 .product:hover .product-title {
-    color: #0bb0fcc5;
+    color: #a1d1ea;
     transition: color 0.2s ease-in-out;
 }
 
@@ -120,7 +120,7 @@
 .product-size ul li {
     border: 1px solid #FFFFFF20;
     padding: 5px 10px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .buttons-group button.btn-active {
@@ -180,7 +180,7 @@ button svg {
     font-size: 14px;
     color: black;
     padding: 5px 1.5em;
-    border-radius: 0 0 20px 0;
+    border-radius: 0 0 30px 0;
     transition: opacity 0.3s ease;
 }
 
