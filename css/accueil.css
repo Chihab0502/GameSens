@@ -73,7 +73,7 @@ h1 {
 }
 
 .social-icons a:hover {
-    color: #ccc;
+    color: #9DD3EE;
 }
 
 /* Ajoutez cette classe pour le fond qui va flouter le reste de la page */
@@ -98,8 +98,8 @@ h1 {
     cursor: pointer;
 }
 .checkout-btn:hover {
-    background-color: black;
-    color: white;
+    background-color: #9DD3EE;
+    color: #FFF;
 }
 
 /* Animation d'ouverture et de fermeture */
@@ -203,10 +203,7 @@ h1 {
     margin-bottom: 4%;
 }
 
-.checkout-btn:hover {
-    background-color: black;
-    color: white;
-}
+
 
 .box-info {
     text-align: center; /* Centre le texte à l'intérieur de .stock-box */
@@ -291,6 +288,30 @@ h1 {
     object-fit: cover; /* L'image couvrira le conteneur sans déformer */
 }
 
+/* Style pour le bouton "OPENING" */
+#mainOpeningButton {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Ajoute une transition fluide pour la couleur de fond et le zoom */
+}
+
+/* Effet de survol pour le bouton "OPENING" */
+#mainOpeningButton:hover {
+    background-color: #9DD3EE; /* Couleur de fond lors du survol */
+    transform: scale(1.05); /* Effet de zoom léger */
+}
+
+/* Style pour le bouton "COMMANDER" */
+.buttons .btn-outline-light {
+    border-color: #ffffff; /* Couleur de la bordure par défaut pour s'assurer que la bordure est visible */
+    color: #ffffff; /* Couleur du texte par défaut */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide pour la couleur de fond et le zoom */
+}
+
+/* Effet de survol pour le bouton "COMMANDER" */
+.buttons .btn-outline-light:hover {
+    background-color: #9DD3EE; /* Couleur de fond lors du survol */
+    color: #000000; /* Couleur du texte lors du survol pour assurer une bonne lisibilité */
+    transform: scale(1.05); /* Effet de zoom léger */
+}
 
 
 
