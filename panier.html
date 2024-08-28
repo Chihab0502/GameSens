@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/panier.css">
     <script src="js/footer.js" defer></script>
     <script src="js/stock.js" defer></script>
-
+    <script src="js/cart.js" defer></script>
 </head>
 
 
@@ -24,9 +24,9 @@
         <div class="container-fluid position-relative">
             <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
             <div class="navbar-header position-absolute" style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
-                <a class="navbar-brand" href="accueil.html">
+                <a class="navbar-brand" href="#">
                     <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
-                </a>   
+                </a>
             </div>
             <!-- Conteneur central pour les boutons -->
             <div class="mx-auto d-flex justify-content-center" style="flex-grow: 1;">
@@ -43,6 +43,7 @@
                 </ul>
             </div>
             <!-- Conteneur à droite pour les icônes -->
+
             <ul class="navbar-nav ms-auto"  style="margin-right: 2%">
                 <a class="nav-link" href="panier.html" id="cartToggle">
                     <!-- Icône Panier en SVG -->
@@ -56,6 +57,42 @@
             </ul>
         </div>
     </nav>
+
+
+
+    <div class="backdrop" id="backdrop"></div>
+    <div id="cartContent" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <h2 class="cart-title" style="margin-left: 4%; font-size: 60px; margin-top: 2%" >Panier</h2>
+            <button onclick="document.getElementById('cartContent').style.display='none'" class="close-cart-btn">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <!-- Conteneur pour les éléments du panier -->
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img style="width: 290px; margin-left: -12%" src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
+                    <div class="item-details">
+                        <h4>BOX "FLOWER"</h4>
+                        <p>Taille: S</p>
+                        <p>Prix: 35€</p>
+                        <div class="item-actions">
+                            <a href="#">
+                                <p style="color: #555555;text-decoration: underline;display: inline">Modifier</p></a>
+                            <p style="color: #555555;display: inline; margin-left: 1%; margin-right: 1%">|</p>
+                            <a href="#">
+                                <p style="color: #555555; text-decoration: underline;display: inline ">Retirer</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="panier.html" style="text-decoration: none;">
+                <button type="button" style=" margin-right: 47%;border-radius: 0 0 50px 0 !important;white-space: nowrap;font-family: 'Conthrax';
+        src: url('../conthrax/conthrax-sb.otf') format('truetype');" class="checkout-btn"><b>PASSER COMMANDE</b></button>
+            </a>
+        </div>
+    </div>
+
+
 </header>
 
 <div class="fullscreen-bg"></div>

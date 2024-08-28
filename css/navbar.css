@@ -56,9 +56,9 @@ body, html {
 .cart-modal {
     position: fixed;
     right: -650px; /* Commence à l'extérieur de la vue */
-    top: 10%;
+    top: 1%;
     bottom: 0; /* Ajouté pour maintenir un espace de 20px du bas de la page */
-    width: 650px; /* Largeur ajustée comme dans tes dernières spécifications */
+    width: 550px; /* Largeur ajustée comme dans tes dernières spécifications */
     background: rgba(0, 0, 0, 0.9);
     border-left: 1px solid white;
     border-top: 1px solid white;
@@ -289,4 +289,26 @@ body, html {
     display: block;
     top: -5%; /* La position finale souhaitée de la modale */
     bottom: 13%;
+}
+
+.item-actions a p:hover {
+    color: #A9A9A9 !important; /* Gris avec !important pour s'assurer qu'il prenne effet */
+}
+
+.checkout-btn:hover {
+    background-color: #9DD3EE;
+    color: white;
+}
+
+/* Styles de base pour les boutons */
+.btn-zoom {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet de zoom et l'ombre */
+}
+
+/* Effet de zoom au survol */
+.btn-zoom:hover {
+    transform: scale(1.1); /* Zoom de 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée pour plus d'effet */
+    background-color: #9DD3EE;
+
 }
