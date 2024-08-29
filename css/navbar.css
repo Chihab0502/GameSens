@@ -309,6 +309,6 @@ body, html {
 .btn-zoom:hover {
     transform: scale(1.1); /* Zoom de 10% */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée pour plus d'effet */
-    background-color: #9DD3EE;
+    background-color: #FFF;
 
 }

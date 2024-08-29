@@ -37,18 +37,17 @@
             <div class="mx-auto d-flex justify-content-center" style="flex-grow: 1;">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link nav-button" aria-current="page" href="projet.html"><b>PROJET</b></a>
+                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="projet.html"><b>PROJET</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button" href="shop.html"><b>SHOP</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="shop.html"><b>SHOP</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
                     </li>
                 </ul>
             </div>
             <!-- Conteneur à droite pour les icônes -->
-
             <ul class="navbar-nav ms-auto"  style="margin-right: 2%">
                 <a class="nav-link" href="panier.html" id="cartToggle">
                     <!-- Icône Panier en SVG -->
@@ -58,7 +57,8 @@
                     <a class="nav-link" href="connexion.html">
                         <!-- Icône Connexion en SVG -->
                         <img src="img/logoNavbar/Button_compte (1).svg" alt="Connexion" style="width: 24px; height: 24px;">
-                    </a>                </li>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -89,11 +89,11 @@
                 </div>
                 <!-- Répéter pour d'autres produits -->
             </div>
-            <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button>
+            <a href="panier.html" style="text-decoration: none">
+                <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button></a>
         </div>
     </div>
 </header>
-
 <div class="social-icons" style="margin-right: 2%;">
     <a href="https://instagram.com" target="_blank">
         <img src="img/logoNavbar/insta.png" alt="Instagram" style="width: 18px; height: 18px;">

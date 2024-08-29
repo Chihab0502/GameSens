@@ -23,8 +23,9 @@
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid position-relative">
             <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
-            <div class="navbar-header position-absolute" style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
-                <a class="navbar-brand" href="#">
+            <div class="navbar-header position-absolute"
+                 style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
+                <a class="navbar-brand" href="accueil.html">
                     <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
                 </a>
             </div>
@@ -32,18 +33,17 @@
             <div class="mx-auto d-flex justify-content-center" style="flex-grow: 1;">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link nav-button" aria-current="page" href="projet.html"><b>PROJET</b></a>
+                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="projet.html"><b>PROJET</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button" href="shop.html"><b>SHOP</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="shop.html"><b>SHOP</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
                     </li>
                 </ul>
             </div>
             <!-- Conteneur à droite pour les icônes -->
-
             <ul class="navbar-nav ms-auto"  style="margin-right: 2%">
                 <a class="nav-link" href="panier.html" id="cartToggle">
                     <!-- Icône Panier en SVG -->
@@ -53,24 +53,23 @@
                     <a class="nav-link" href="connexion.html">
                         <!-- Icône Connexion en SVG -->
                         <img src="img/logoNavbar/Button_compte (1).svg" alt="Connexion" style="width: 24px; height: 24px;">
-                    </a>                </li>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
 
-
-
     <div class="backdrop" id="backdrop"></div>
     <div id="cartContent" class="cart-modal" style="display: none;">
         <div class="cart-content">
-            <h2 class="cart-title" style="margin-left: 4%; font-size: 60px; margin-top: 2%" >Panier</h2>
+            <h2 class="cart-title">Panier</h2>
             <button onclick="document.getElementById('cartContent').style.display='none'" class="close-cart-btn">
                 <i class="bi bi-x-lg"></i>
             </button>
             <!-- Conteneur pour les éléments du panier -->
             <div class="cart-items">
                 <div class="cart-item">
-                    <img style="width: 290px; margin-left: -12%" src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
+                    <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
                     <div class="item-details">
                         <h4>BOX "FLOWER"</h4>
                         <p>Taille: S</p>
@@ -84,17 +83,13 @@
                         </div>
                     </div>
                 </div>
+                <!-- Répéter pour d'autres produits -->
             </div>
-            <a href="panier.html" style="text-decoration: none;">
-                <button type="button" style=" margin-right: 47%;border-radius: 0 0 50px 0 !important;white-space: nowrap;font-family: 'Conthrax';
-        src: url('../conthrax/conthrax-sb.otf') format('truetype');" class="checkout-btn"><b>PASSER COMMANDE</b></button>
-            </a>
+            <a href="panier.html" style="text-decoration: none">
+                <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button></a>
         </div>
     </div>
-
-
 </header>
-
 <div class="fullscreen-bg"></div>
 <div class="container mt-5 text-left panier-header">
     <h1 class="panier-title" style="font-size:58px">PANIER</h1>

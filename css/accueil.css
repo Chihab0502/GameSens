@@ -295,7 +295,7 @@ h1 {
 
 /* Effet de survol pour le bouton "OPENING" */
 #mainOpeningButton:hover {
-    background-color: #9DD3EE; /* Couleur de fond lors du survol */
+    background-color: #FFF; /* Couleur de fond lors du survol */
     transform: scale(1.05); /* Effet de zoom léger */
 }
 
@@ -308,7 +308,7 @@ h1 {
 
 /* Effet de survol pour le bouton "COMMANDER" */
 .buttons .btn-outline-light:hover {
-    background-color: #9DD3EE; /* Couleur de fond lors du survol */
+    background-color: #FFF; /* Couleur de fond lors du survol */
     color: #000000; /* Couleur du texte lors du survol pour assurer une bonne lisibilité */
     transform: scale(1.05); /* Effet de zoom léger */
 }
