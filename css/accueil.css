@@ -198,8 +198,8 @@ h1 {
     padding: 10px 15px; /* Espacement intérieur */
     font-size: 13px; /* Taille du texte */
     cursor: pointer;
-    margin-left: auto; /* Déplace le bouton vers la droite */
-    border-radius: 0 100px 0 100px; /* Arrondi seulement deux coins */
+    margin-left: 1%; /* Déplace le bouton vers la droite */
+    border-radius: 0 100px 0 0; /* Arrondi seulement deux coins */
     margin-bottom: 4%;
 }
 

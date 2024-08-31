@@ -134,10 +134,19 @@ body, html {
     z-index: 999; /* Assurez-vous que l'image soit au-dessus du reste du contenu */
 }
 
-.footer-image img {
-    width: 55px; /* Ajustez la largeur de l'image selon vos besoins */
-    height: auto; /* Pour maintenir le ratio d'aspect de l'image */
+.video-container {
+    background-color: white; /* White background */
+    border-radius: 90px; /* Rounded corners */
+    padding: 3px; /* Adjust padding to your preference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#shirtVideo {
+    border-radius: 90px; /* Ensure the video itself also has rounded corners */
+}
+
 
 .footer-modal {
     opacity: 0;
