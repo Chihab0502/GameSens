@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameSens Navbar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/shop.css"> <!--Pour les dropdowns-->
+    <link rel="stylesheet" href="css/utilisateur.css"> 
+    <script src="js/footer.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+        <div class="container-fluid position-relative">
+            <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
+            <div class="navbar-header position-absolute"
+                 style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
+                <a class="navbar-brand" href="accueil.html">
+                    <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
+                </a>
+            </div>
+            <!-- Conteneur central pour les boutons -->
+            <div class="mx-auto d-flex justify-content-center" style="flex-grow: 1;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="projet.html"><b>PROJET</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-button btn-zoom" href="shop.html"><b>SHOP</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Conteneur à droite pour les icônes -->
+            <ul class="navbar-nav ms-auto"  style="margin-right: 2%">
+                <a class="nav-link" href="panier.html" id="cartToggle">
+                    <!-- Icône Panier en SVG -->
+                    <img src="img/logoNavbar/Button_panier (1).svg" alt="Panier" style="width: 32px; height: 32px;">
+                </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="connexion.html">
+                        <!-- Icône Connexion en SVG -->
+                        <img src="img/logoNavbar/Button_compte (1).svg" alt="Connexion" style="width: 24px; height: 24px;">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="backdrop" id="backdrop"></div>
+    <div id="cartContent" class="cart-modal" style="display: none;">
+        <div class="cart-content">
+            <h2 class="cart-title">Panier</h2>
+            <button onclick="document.getElementById('cartContent').style.display='none'" class="close-cart-btn">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <!-- Conteneur pour les éléments du panier -->
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
+                    <div class="item-details">
+                        <h4>BOX "FLOWER"</h4>
+                        <p>Taille: S</p>
+                        <p>Prix: 35€</p>
+                        <div class="item-actions">
+                            <a href="#">
+                                <p style="color: #555555;text-decoration: underline;display: inline">Modifier</p></a>
+                            <p style="color: #555555;display: inline; margin-left: 1%; margin-right: 1%">|</p>
+                            <a href="#">
+                                <p style="color: #555555; text-decoration: underline;display: inline ">Retirer</p></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Répéter pour d'autres produits -->
+            </div>
+            <a href="panier.html" style="text-decoration: none">
+                <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button></a>
+        </div>
+    </div>
+</header>
+<div class="fullscreen-bg">
+    <video autoplay muted loop id="background-video">
+        <source src="img/Background/Web Home Space V0 Bg Compress.webm" type="video/webm">
+        Votre navigateur ne prend pas en charge la balise vidéo.
+    </video>
+    <div class="content">
+
+        <div class="profil">
+            <img src="img/Shooting photos/Shooting Photo/Photoshoot_format_Back/ImageFemme.png" alt="">
+            <div class="profil-content">
+                <h2>BONJOUR, FLASHBLOOD16</h2>
+                <p>BIENVENUE DANS VOTRE DASHBOARD</p>
+            </div>
+            <div class="separator"></div>
+            <div class="profil-nav">
+                <button onclick="openSection('statistiques', this);" class="dashboard-nav active">STATISTIQUES</button>
+                <button onclick="openSection('inventaire', this);" class="dashboard-nav">INVENTAIRE</button>
+                <button onclick="openSection('infos', this);" class="dashboard-nav">INFOS PROFIL</button>
+                <button onclick="openSection('commandes', this);" class="dashboard-nav">COMMANDES</button>
+
+                <script>
+                    function openSection(sectionId, button) {
+                        // Gérer les sections
+                        let allSections = document.getElementsByClassName('dashboard');
+                        Array.from(allSections).forEach(element => {
+                            element.classList.remove('active');
+                        });
+                        let section = document.getElementById(sectionId);
+                        section.classList.add('active');
+                        
+                        // Gérer les boutons
+                        let allButtons = document.getElementsByClassName('dashboard-nav');
+                        Array.from(allButtons).forEach(btn => {
+                            btn.classList.remove('active');
+                        });
+                        button.classList.add('active');
+                    }
+                </script>
+            </div>
+        </div>
+
+        <section id="statistiques" class="dashboard">
+            <div class="first-container">
+                <div class="item-rectangle">
+                    <div>
+                        <i class="bi bi-upload" style="font-size: 6em;"></i>
+                        <p>NIV. <span>2</span></p>
+                        <div style="display: flex; align-items: center; gap: 1em; margin-top: 1em;">
+                            <progress value="50" max="100"></progress>
+                            <p><span>50</span> / 100XP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-rectangle">
+                    <div class="grid-vertical" style="width: 230px; margin: 1em auto; gap: 0;">
+                        <p>RÉCOMPENSE DISPONIBLE :</p>
+                        <span style="font-size: 4em;">-5 %</span>
+                        <button>UTILISER</button>
+                    </div>
+                </div>
+                <div class="grid-vertical">
+                    <div class="item-rectangle">QUÊTES RÉALISÉES <span style="margin-left: 1em;">12</span></div>
+                    <div class="item-rectangle">NB D'ITEMS TOTAL <span style="margin-left: 1em;">4</span></div>
+                    <div class="item-rectangle">NB. D'AVIS LAISSÉS <span style="margin-left: 1em;">3/4</span></div>
+                </div>
+            </div>
+            <div class="second-container">
+                <div class="item-rectangle" style="display: grid; grid-auto-rows: 1fr; grid-template-columns: repeat(3, 1fr); gap: 1em;">
+                    <div>
+                        <i class="bi bi-globe" style="font-size: 6em;"></i>
+                        <p>NB. D'ITEMS<br>RARES</p>
+                        <p style="margin-top: 1em;"><span>2</span></p>
+                    </div>
+                    <div>
+                        <i class="bi bi-globe" style="font-size: 6em;"></i>
+                        <p>NB. D'ITEMS<br>ÉPIQUES</p>
+                        <p style="margin-top: 1em;"><span>1</span></p>
+                    </div>
+                    <div>
+                        <i class="bi bi-globe" style="font-size: 6em;"></i>
+                        <p>NB. D'ITEMS<br>LÉGENDAIRES</p>
+                        <p style="margin-top: 1em;"><span>1</span></p>
+                    </div>
+                    
+                </div>
+                <div class="item-rectangle">
+                    <div style="width: 280px; text-align: left;">
+                        <p>SYSTÈME DE POINTS :</p>
+                        <p class="listing">> Gagne de l'xp</p>
+                        <p class="listing">> Obtient <span>5% de remise</span> à chaque niveau</p>
+                        <p class="listing">> Obtient <span>une boxe offerte</span> tous les 10 niveaux</p>
+                        <p>EXPÉRIENCE GAGNÉE :</p>
+                        <p class="listing">x1 commande = <span>50xp</span></p>
+                        <p class="listing">x1 avis = <span>10xp</span></p>
+                        <p class="listing">x1 quête = <span>50xp</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="inventaire" class="dashboard">
+            <div style="display: flex; justify-content: space-between;">
+                <p>FILTRES</p>
+                <div class="dropdown">
+                    <input class="btn btn-dark dropdown-toggle" data-bs-auto-close="outside" type="button" id="raretyDropdown" data-bs-toggle="dropdown" aria-expanded="false" value="TRIER PAR">
+                    </input>
+                    <i class="bi bi-chevron-down"></i>
+                    <ul class="dropdown-menu dropdown-custom">
+                        <li>
+                            <input type="checkbox" name="rarety" id="commun" checked>
+                            <label for="commun">COMMUN</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="rarety" id="rare">
+                            <label for="rare">RARE</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="rarety" id="legendaire">
+                            <label for="legendaire">LÉGENDAIRE</label>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    const checkboxesFilter = document.querySelectorAll('input[name="rarety"]');
+                    checkboxesFilter.forEach(checkbox => {
+                        checkbox.addEventListener('change', () => {
+                            let checked = document.querySelectorAll('input[name="rarety"]:checked');
+                            let selectedLabels = [];
+                            checked.forEach(checkbox => {
+                                selectedLabels.push(checkbox.id);
+                            });
+                            let cards = document.getElementsByClassName('card');
+                            
+                            Array.from(cards).forEach(card => {
+                                card.style.display = "flex";
+                                if(!Array.from(card.classList).some(c => selectedLabels.includes(c))) {
+                                    card.style.display = "none";
+                                }
+                            });
+                        });
+                    });
+                </script>
+            </div>
+            <div class="cards">
+                <div class="card rare">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="card-info">
+                        <p class="name">FLOWERBUG</p>
+                        <p class="subtitle">FLOWER</p>
+                    </div>
+                </div>
+                <div class="card commun to-reveal">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="to-reveal-text">À DÉCOUVRIR</div>
+                </div>
+                <div class="card commun to-reveal">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="to-reveal-text">À DÉCOUVRIR</div>
+                </div>
+                <div class="card commun to-reveal">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="to-reveal-text">À DÉCOUVRIR</div>
+                </div>
+                <div class="card commun">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="card-info">
+                        <p class="name">FLOWERBUG</p>
+                        <p class="subtitle">FLOWER</p>
+                    </div>
+                </div>
+                <div class="card commun">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="card-info">
+                        <p class="name">FLOWERBUG</p>
+                        <p class="subtitle">FLOWER</p>
+                    </div>
+                </div>
+                <div class="card commun to-reveal">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="to-reveal-text">À DÉCOUVRIR</div>
+                </div>
+                <div class="card legendaire">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="card-info">
+                        <p class="name">FLOWERBUG</p>
+                        <p class="subtitle">FLOWER</p>
+                    </div>
+                </div>
+                <div class="card commun to-reveal">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="to-reveal-text">À DÉCOUVRIR</div>
+                </div>
+                <div class="card commun to-reveal">
+                    <img src="img/T-shirts (3D)/TOAD/TOAD_DisplaceLoop (SANS ETQ)0001.png" alt="Toad T-shirts">
+                    <div class="to-reveal-text">À DÉCOUVRIR</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="infos" class="dashboard" style="width: 60%; margin: 0 auto;">
+
+        </section>
+
+        <section id="commandes" class="dashboard active">
+
+        </section>
+
+    </div>
+</div>
+
+<div class="social-icons" style="margin-right: 2%;">
+    <a href="https://instagram.com" target="_blank">
+        <img src="img/logoNavbar/insta.png" alt="Instagram" style="width: 18px; height: 18px;">
+    </a>
+    <a href="https://tiktok.com" target="_blank">
+        <img src="img/logoNavbar/tiktok.png" alt="TikTok" style="width: 18px; height: 18px;">
+    </a>
+    <a href="https://twitter.com" target="_blank">
+        <img src="img/logoNavbar/twitter.png" alt="Twitter" style="width: 18px; height: 18px;">
+    </a>
+</div>
+
+<div class="svg-overlay">
+    <img src="img/svg/Grid_layout_1projet.svg" alt="Superposed SVG">
+</div>
+
+
+<footer>
+    <div class="footer-image" style="margin-left: 1%;margin-right: 0.5%;margin-bottom: -0.5% !important">
+        <a href="https://discord.com/invite/FKYBwJp4ZR">
+            <video style="width: 80% !important;    border-radius: 90px 90px 90px 90px; /* Arrondi seulement deux coins */
+" id="shirtVideo" autoplay muted loop>
+                <source src="./img/video/discord.webm" type="video/webm">
+                Votre navigateur ne prend pas en charge la balise vidéo.
+            </video>
+        </a>
+    </div>
+
+    <div class="footer-button">
+        <a href="#" id="footerToggle">
+            <img src="./img/Logo/button_info%20(1).svg" alt="Info" style="width: 33px; height: 31px;margin-left: 44% !important;"> <!-- Assurez-vous que les dimensions sont correctes -->
+        </a>
+    </div>
+
+    <div id="footerContent" class="footer-modal" style="display: none;">
+        <div class="footer-content">
+                <button class="close-btn">
+                    <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
+                </button>
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h4>Explorer</h4>
+                    <a href="accueil.html">Accueil</a>
+                    <a href="projet.html">Projet</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="shop.html">Opening</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Légal</h4>
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">CGU / CGV</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Social</h4>
+                    <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="bi bi-discord"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <a href="#">Nous Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-backdrop" id="footerBackdrop"></div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

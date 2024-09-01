@@ -1,0 +1,278 @@
+progress {
+    height: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.2);;
+    border-radius: 10px; 
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: black;
+    border-radius: 10px; 
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: white;
+    border-radius: 10px; 
+}
+
+.content {
+    position: absolute;
+    top: 10vh;
+    left: 1em;
+    display: flex;
+    width: calc(100% - 1em);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.profil {
+    width: 20%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: 100%;
+}
+
+.profil img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.separator {
+    height: 2em;
+}
+
+.profil-nav button.active, .profil-nav button:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profil-nav button {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom:1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    background-color: black;
+    padding: 1em;
+    margin: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.profil-nav:first-child {
+    border: none;
+}
+
+h2, .profil-nav button {
+    font-size: 0.7em;
+}
+
+p {
+    margin: 0;
+}
+
+.profil p {
+    color: gray;
+    font-size: 0.5em;
+}
+
+.profil-content {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1em;
+    background-color: black;
+}
+
+.dashboard {
+    display: none;
+}
+
+.dashboard.active {
+    display: grid;
+    gap: 1em;
+}
+
+.item-rectangle {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.item-rectangle span {
+    color: #0bb0fcc5;
+}
+
+section {
+    margin: 1em 2em 1em 1em;
+    width: calc(80% - 3em);
+}
+
+#statistiques {
+    grid-template-rows: 8.5em auto;
+}
+
+#inventaire {
+    grid-template-rows: 1.5em auto;
+}
+
+.first-container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    height: 8.5em;
+}
+
+.second-container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 66% 33%;
+    gap: 1em;
+}
+
+.second-container:first-child {
+    flex: 0 0 66%;
+}
+
+.grid-vertical {
+    display: grid;
+    gap: 1em;
+}
+
+.item-rectangle button {
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 0 0 100px 100px;
+    padding: 10px 70px !important;
+    color: black;    
+}
+
+.listing {
+    font-size: 0.8em;
+    margin: 1em 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.card {
+    border: none;
+    background: transparent;
+    border-radius: 20px 20px 20px 0;
+    overflow: hidden;
+    height: fit-content;
+    position: relative;
+}
+
+.card.commun {
+    border: 1px solid #63A2CF;
+}
+
+.card.rare {
+    border: 1px solid #CA843F;
+}
+
+.card.legendaire {
+    border: 1px solid #9C3FC0;
+}
+
+.card.commun .card-info {
+    background-color: #63A2CF;
+}
+
+.card.rare .card-info {
+    background-color: #CA843F;
+}
+
+.card.legendaire .card-info {
+    background-color: #9C3FC0;
+}
+
+.card-info {
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.card-info .name {
+    font-size: 0.5em;
+}
+
+.card-info .subtitle {
+    margin-top: 0.5em;
+    font-size: 0.4em;
+    letter-spacing: 8px;
+}
+
+.to-reveal-text {
+    display: none;
+    color: white;
+    text-align: center;
+    font-size: 0.5em;
+    width: 210px;
+}
+
+.card.to-reveal .to-reveal-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card.to-reveal .card-info {
+    display: none;
+}
+
+.card.to-reveal {
+    padding: 1em 0;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card.to-reveal img {
+    filter: blur(4px);
+}
+
+.dropdown {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.dropdown-toggle + .bi-chevron-down {
+    top: 10px;
+}
+
+.dropdown-toggle.show + .bi-chevron-down {
+    top: 15px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid rgba(84, 81, 81, 0.5); /* Contour gris */
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5); /* Noir transparent */
+    color: white;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 0.5em;
+}
+
+.item-references {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.item-details {
+    text-align: left;
+}
