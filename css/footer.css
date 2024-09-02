@@ -137,7 +137,7 @@ body, html {
 .video-container {
     background-color: white; /* White background */
     border-radius: 90px; /* Rounded corners */
-    padding: 3px; /* Adjust padding to your preference */
+    padding: 8px; /* Adjust padding to your preference */
     display: flex;
     justify-content: center;
     align-items: center;
