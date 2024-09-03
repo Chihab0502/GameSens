@@ -92,10 +92,7 @@
     </div>
 </header>
 <div class="fullscreen-bg">
-    <video autoplay muted loop id="background-video">
-        <source src="img/Background/Web Home Space V0 Bg Compress.webm" type="video/webm">
-        Votre navigateur ne prend pas en charge la balise vidéo.
-    </video>
+    
     <div class="content">
 
         <div class="profil">
@@ -106,10 +103,22 @@
             </div>
             <div class="separator"></div>
             <div class="profil-nav">
-                <button onclick="openSection('statistiques', this);" class="dashboard-nav active">STATISTIQUES</button>
-                <button onclick="openSection('inventaire', this);" class="dashboard-nav">INVENTAIRE</button>
-                <button onclick="openSection('infos', this);" class="dashboard-nav">INFOS PROFIL</button>
-                <button onclick="openSection('commandes', this);" class="dashboard-nav">COMMANDES</button>
+                <button onclick="openSection('statistiques', this);" class="dashboard-nav active">
+                    <img src="img/utilisateur/Vector_menu_statistiques.png" alt="menu statistiques">
+                    STATISTIQUES
+                </button>
+                <button onclick="openSection('inventaire', this);" class="dashboard-nav">
+                    <img src="img/utilisateur/Vector_menu_inventaire.png" alt="menu inventaire">
+                    INVENTAIRE
+                </button>
+                <button onclick="openSection('infos', this);" class="dashboard-nav">
+                    <img src="img/utilisateur/Vector_menu_info_profil.png" alt="menu info profil">
+                    INFOS PROFIL
+                </button>
+                <button onclick="openSection('commandes', this);" class="dashboard-nav">
+                    <img src="img/utilisateur/Vector_menu_commandes.png" alt="menu commandes">
+                    COMMANDES
+                </button>
 
                 <script>
                     function openSection(sectionId, button) {
@@ -132,11 +141,11 @@
             </div>
         </div>
 
-        <section id="statistiques" class="dashboard">
+        <section id="statistiques" class="dashboard active">
             <div class="first-container">
                 <div class="item-rectangle">
                     <div>
-                        <i class="bi bi-upload" style="font-size: 6em;"></i>
+                        <img src="img/utilisateur/Vector_lvl_statistique.png" alt="" style="width: auto; height: 9em;">
                         <p>NIV. <span>2</span></p>
                         <div style="display: flex; align-items: center; gap: 1em; margin-top: 1em;">
                             <progress value="50" max="100"></progress>
@@ -160,17 +169,17 @@
             <div class="second-container">
                 <div class="item-rectangle" style="display: grid; grid-auto-rows: 1fr; grid-template-columns: repeat(3, 1fr); gap: 1em;">
                     <div>
-                        <i class="bi bi-globe" style="font-size: 6em;"></i>
+                        <img src="img/utilisateur/Vector_nbr_item_rare.png" alt="Item rare" style="margin-bottom: 2em;">
                         <p>NB. D'ITEMS<br>RARES</p>
                         <p style="margin-top: 1em;"><span>2</span></p>
                     </div>
                     <div>
-                        <i class="bi bi-globe" style="font-size: 6em;"></i>
+                        <img src="img/utilisateur/Vector_nb_items_epiques.png" alt="Item épique" style="margin-bottom: 2em;">
                         <p>NB. D'ITEMS<br>ÉPIQUES</p>
                         <p style="margin-top: 1em;"><span>1</span></p>
                     </div>
                     <div>
-                        <i class="bi bi-globe" style="font-size: 6em;"></i>
+                        <img src="img/utilisateur/Vector_nb_items_legendaires.png" alt="Item légendaires" style="margin-bottom: 2em;">
                         <p>NB. D'ITEMS<br>LÉGENDAIRES</p>
                         <p style="margin-top: 1em;"><span>1</span></p>
                     </div>
@@ -291,32 +300,145 @@
         </section>
 
         <section id="infos" class="dashboard" style="width: 60%; margin: 0 auto;">
-
+            <div style="display: flex; align-items: center; gap: 2em;">
+                <img src="img/Shooting photos/Shooting Photo/Photoshoot_format_Back/ImageFemme.png" alt="Photo de profil" style="object-fit: cover; width: 350px; height: 350px;border-radius: 50%;">
+                <div>
+                    <p style="font-size: 1.5em;">FLASHBLOOD</p>
+                    <p style="font-size: 1em;">LÉO WEISHARD</p>
+                </div>
+            </div>
+            <div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 2em;">
+                    <p>INFORMATIONS DU PROFIL</p>
+                    <button style="border-radius: 0 50px 0 50px; border: none; font-size: 0.4em; padding: 0 2em;">ENREGISTRER LES MODIFS.</button>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em;">
+                    <div>
+                        <p style="font-size: 0.8em;">PSEUDO</p>
+                        <input type="text" id="pseudo" name="pseudo" placeholder="FLASHBLOOD">
+                    </div>
+                    <div>
+                        <p style="font-size: 0.8em;">NOM</p>
+                        <input type="text" id="name" name="name" placeholder="WEISHARD">
+                    </div>
+                    <div>
+                        <p style="font-size: 0.8em;">PRÉNOM</p>
+                        <input type="text" id="firstname" name="firstname" placeholder="LÉO">
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="commandes" class="dashboard active">
+        <section id="commandes" class="dashboard">
+            <div class="item-rectangle collapsed" style="flex-direction: column; height: max-content; margin-bottom: 2em;">
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="item-references">
+                        <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                        <p style="font-size: 1.5em;">BOX "FLOWER"</p>
+                        <p style="border-left: 1px solid white; padding-left: 2em;">Ref : G-784515</p>
+                        <p style="border-left: 1px solid white; padding-left: 2em;">02/03/2014</p>
+                    </div>
+                    <button onclick="toggleCollapse(this)" style="background: transparent; border: none;">
+                        <img src="img/Box/croixPanier.png" alt="Fermer/Ouvrir" style="width: 50px; height: 50px;">
+                    </button>
+                </div>
+                <div class="item-details">
+                    <div style="display: flex; gap: 2em;">
+                        <div>
+                            <p style="font-size: 1.5em; margin-top: 1em;">Détails</p>
+                            <p style="color: gray;">
+                                ITEM(S) OBTENU(S) : "FLOWER BUG" - "GOLDEN CROWN"<br>
+                                TAILLE : S<br>
+                                QUANTITÉ : 2<br>
+                                MONTANT TOTALTTC : 42€<br>
+                                MÉTHODE DE PAYEMENT : CARTE BANCAIRE
+                            </p>
+                        </div>
+                        <div>
+                            <p style="font-size: 1.5em; margin-top: 1em;">État de la commande</p>
+                            <div style="display: flex; align-items: center; gap: 1em;">
+                                <i class="bi bi-1-circle-fill"></i>
+                                <img style="width: 50px;" src="img/Rattachement/flecheSommaire.png" alt="">
+                                <i class="bi bi-2-circle-fill"></i>
+                                <img style="width: 50px;" src="img/Rattachement/flecheSommaire.png" alt="">
+                                <i class="bi bi-3-circle-fill"></i>
+                                <img style="width: 50px;" src="img/Rattachement/flecheSommaire.png" alt="">
+                                <i class="bi bi-4-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size: 1.5em; margin-top: 1em;">Avis</p>
+                    <p style="color: gray;">
+                        TU N'AS PAS ENCORE LAISSÉ D'AVIS. NOTE TA COMMANDE ET GAGNE DE L'EXPÉRIENCE !
+                    </p>
+                    <button style="border-bottom-left-radius: 0; margin: 2em 0;">LAISSER UN AVIS</button>
+                    <div  style="margin-bottom: 2em;">
+                        <a href="#" style="padding-right: 2em; color: gray;">Télécharger la Facture</a>
+                        <a href="#" style="border-left: 1px solid gray; padding-left: 2em; padding-right: 2em; color: gray;">Commander À Nouveau</a>
+                        <a href="#" style="border-left: 1px solid gray; padding-left: 2em; color: gray;">Déposer Une Réclamation</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="item-rectangle collapsed" style="flex-direction: column; height: max-content; margin-bottom: 2em;">
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="item-references">
+                        <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                        <p style="font-size: 1.5em;">BOX "FLOWER"</p>
+                        <p style="border-left: 1px solid white; padding-left: 2em;">Ref : G-784515</p>
+                        <p style="border-left: 1px solid white; padding-left: 2em;">02/03/2014</p>
+                    </div>
+                    <button onclick="toggleCollapse(this)" style="background: transparent; border: none;">
+                        <img src="img/Box/croixPanier.png" alt="Fermer/Ouvrir" style="width: 50px; height: 50px;">
+                    </button>
+                </div>
+                <div class="item-details">
+                    <div style="display: flex; gap: 2em;">
+                        <div>
+                            <p style="font-size: 1.5em; margin-top: 1em;">Détails</p>
+                            <p style="color: gray;">
+                                ITEM(S) OBTENU(S) : "FLOWER BUG" - "GOLDEN CROWN"<br>
+                                TAILLE : S<br>
+                                QUANTITÉ : 2<br>
+                                MONTANT TOTALTTC : 42€<br>
+                                MÉTHODE DE PAYEMENT : CARTE BANCAIRE
+                            </p>
+                        </div>
+                        <div>
+                            <p style="font-size: 1.5em; margin-top: 1em;">État de la commande</p>
+                            <div style="display: flex; align-items: center; gap: 1em;">
+                                <i class="bi bi-1-circle-fill"></i>
+                                <img style="width: 50px;" src="img/Rattachement/flecheSommaire.png" alt="">
+                                <i class="bi bi-2-circle-fill"></i>
+                                <img style="width: 50px;" src="img/Rattachement/flecheSommaire.png" alt="">
+                                <i class="bi bi-3-circle-fill"></i>
+                                <img style="width: 50px;" src="img/Rattachement/flecheSommaire.png" alt="">
+                                <i class="bi bi-4-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size: 1.5em; margin-top: 1em;">Avis</p>
+                    <p style="color: gray;">
+                        TU N'AS PAS ENCORE LAISSÉ D'AVIS. NOTE TA COMMANDE ET GAGNE DE L'EXPÉRIENCE !
+                    </p>
+                    <button style="border-bottom-left-radius: 0; margin: 2em 0;">LAISSER UN AVIS</button>
+                    <div  style="margin-bottom: 2em;">
+                        <a href="#" style="padding-right: 2em; color: gray;">Télécharger la Facture</a>
+                        <a href="#" style="border-left: 1px solid gray; padding-left: 2em; padding-right: 2em; color: gray;">Commander À Nouveau</a>
+                        <a href="#" style="border-left: 1px solid gray; padding-left: 2em; color: gray;">Déposer Une Réclamation</a>
+                    </div>
+                </div>
+            </div>
         </section>
+        <script>
+            function toggleCollapse(button) {
+                const itemRectangle = button.closest('.item-rectangle');
+                itemRectangle.classList.toggle('collapsed');
+            }
+        </script>
 
     </div>
 </div>
-
-<div class="social-icons" style="margin-right: 2%;">
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/logoNavbar/insta.png" alt="Instagram" style="width: 18px; height: 18px;">
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="img/logoNavbar/tiktok.png" alt="TikTok" style="width: 18px; height: 18px;">
-    </a>
-    <a href="https://twitter.com" target="_blank">
-        <img src="img/logoNavbar/twitter.png" alt="Twitter" style="width: 18px; height: 18px;">
-    </a>
-</div>
-
-<div class="svg-overlay">
-    <img src="img/svg/Grid_layout_1projet.svg" alt="Superposed SVG">
-</div>
-
 
 <footer>
     <div class="footer-image" style="margin-left: 1%;margin-right: 0.5%;margin-bottom: -0.5% !important">
