@@ -172,6 +172,17 @@ h1 {
     display: block;
 }
 
+.youtube-video {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Permet de positionner l'élément précisément */
+    top: 50%; /* Place l'élément au milieu verticalement */
+    left: 10%; /* Le positionne à 15% de la gauche */
+    transform: translateY(-50%); /* Centre verticalement l'élément en ajustant pour la moitié de sa hauteur */
+}
+
 .box-image {
     position: absolute;
     width: 60%; /* Ajuste selon la taille de tes images */
