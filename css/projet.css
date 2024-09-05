@@ -154,14 +154,21 @@ h1 {
 
 .shirt-container {
     position: absolute;
-    width: 35%; /* Ajuste selon la taille de tes images */
-    height: auto;
-    top: 20%;
+    width: 40%; /* Ajuste selon besoin */
+    height: 100vh;
+    top: 50%; /* Positionne le conteneur à 50% de la hauteur de l'écran */
     right: 10%;
+    transform: translateY(-50%); /* Centre verticalement en ajustant par rapport à son propre milieu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Cache les parties non visibles */
 }
-.shirt-container img {
-    width: 100%;
-    height: auto;
+
+.shirt-container video {
+    width: 100%; /* Vidéo occupera 100% de la largeur */
+    height: 100%; /* Vidéo occupera 100% de la hauteur */
+    object-fit: cover; /* Assure que la vidéo couvre tout le conteneur */
     display: block;
 }
 
@@ -179,7 +186,6 @@ h1 {
     display: block;
 
 }
-
 
 .section {
     scroll-snap-align: start;
@@ -317,21 +323,6 @@ h1 {
     animation: slideInFromLeft 2s ease-out forwards;
     /* Adjust the duration (1s) and timing function (ease-out) as needed */
 }
-
-.shirt-container {
-    position: absolute;
-    width: 35%; /* Ajuste selon la taille de tes vidéos */
-    height: auto;
-    top: 6%;
-    right: 6%;
-}
-
-.shirt-container video {
-    width: 80%;
-    height: auto;
-    display: block;
-}
-
 
 html, body {
     overflow-x: hidden;
