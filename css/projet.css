@@ -128,7 +128,7 @@ body {
 .buttons button {
     border: 1px solid white;
     border-radius: 0 0 100px 0;
-    padding: 10px 60px !important;
+    padding: 10px 35px !important;
     color: white;
     margin-top: 20px;
     margin-right: 10px;
@@ -156,7 +156,7 @@ h1 {
     position: absolute;
     width: 40%; /* Ajuste selon besoin */
     height: 100vh;
-    top: 50%; /* Positionne le conteneur à 50% de la hauteur de l'écran */
+    top: 48%; /* Positionne le conteneur à 50% de la hauteur de l'écran */
     right: 10%;
     transform: translateY(-50%); /* Centre verticalement en ajustant par rapport à son propre milieu */
     display: flex;
