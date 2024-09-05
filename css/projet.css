@@ -122,7 +122,7 @@ body {
     display: inline-block; /* Centre le bloc dans son parent */
     text-align: left; /* Alignement du texte à gauche dans le bloc */
     max-width: 100%; /* Empêche le bloc de dépasser la largeur de son parent */
-    width: auto; /* Permet au bloc de rétrécir pour s'adapter au contenu */
+    width: 80%; /* Permet au bloc de rétrécir pour s'adapter au contenu */
 }
 
 .buttons button {
