@@ -102,7 +102,7 @@
                 <p>BIENVENUE DANS VOTRE DASHBOARD</p>
             </div>
             <div class="separator"></div>
-            <div class="profil-nav">
+            <div class="profil-nav" style="font-size: 26px">
                 <button onclick="openSection('statistiques', this);" class="dashboard-nav active">
                     <img src="img/utilisateur/Vector_menu_statistiques.png" alt="menu statistiques">
                     STATISTIQUES
@@ -157,12 +157,12 @@
                     <div class="grid-vertical" style="width: 230px; margin: 1em auto; gap: 0;">
                         <p>RÉCOMPENSE DISPONIBLE :</p>
                         <span style="font-size: 4em;">-5 %</span>
-                        <button>UTILISER</button>
+                        <button style="width: 180px; height: 40px; margin-left: 12%; display: flex; align-items: center; justify-content: center; font-size: 13px">UTILISER</button>
                     </div>
                 </div>
                 <div class="grid-vertical">
-                    <div class="item-rectangle">QUÊTES RÉALISÉES <span style="margin-left: 1em;">12</span></div>
-                    <div class="item-rectangle">NB D'ITEMS TOTAL <span style="margin-left: 1em;">4</span></div>
+                    <div class="item-rectangle" style="margin-right: -20% !important;margin-bottom: -2%">QUÊTES RÉALISÉES <span style="margin-left: 1em;">12</span></div>
+                    <div class="item-rectangle" style="margin-bottom: -2%">NB D'ITEMS TOTAL <span style="margin-left: 1em;">4</span></div>
                     <div class="item-rectangle">NB. D'AVIS LAISSÉS <span style="margin-left: 1em;">3/4</span></div>
                 </div>
             </div>
@@ -299,31 +299,33 @@
             </div>
         </section>
 
-        <section id="infos" class="dashboard" style="width: 60%; margin: 0 auto;">
-            <div style="display: flex; align-items: center; gap: 2em;">
-                <img src="img/Shooting photos/Shooting Photo/Photoshoot_format_Back/ImageFemme.png" alt="Photo de profil" style="object-fit: cover; width: 350px; height: 350px;border-radius: 50%;">
+        <section id="infos" class="dashboard" >
+            <div style="width: 80%; margin: 0 auto;">
+                <div style="display: flex; align-items: center; gap: 2em; margin-bottom: 2em;">
+                    <img src="img/Shooting photos/Shooting Photo/Photoshoot_format_Back/ImageFemme.png" alt="Photo de profil" style="object-fit: cover; width: 350px; height: 350px;border-radius: 50%;">
+                    <div>
+                        <p style="font-size: 1.5em;">FLASHBLOOD</p>
+                        <p style="font-size: 0.8em;">LÉO WEISHARD</p>
+                    </div>
+                </div>
                 <div>
-                    <p style="font-size: 1.5em;">FLASHBLOOD</p>
-                    <p style="font-size: 1em;">LÉO WEISHARD</p>
-                </div>
-            </div>
-            <div>
-                <div style="display: flex; justify-content: space-between; margin-bottom: 2em;">
-                    <p>INFORMATIONS DU PROFIL</p>
-                    <button style="border-radius: 0 50px 0 50px; border: none; font-size: 0.4em; padding: 0 2em;">ENREGISTRER LES MODIFS.</button>
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em;">
-                    <div>
-                        <p style="font-size: 0.8em;">PSEUDO</p>
-                        <input type="text" id="pseudo" name="pseudo" placeholder="FLASHBLOOD">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 2em;">
+                        <p style="font-size: 22px">INFORMATIONS DU PROFIL</p>
+                        <button style="border-radius: 0 50px 0 50px; border: none; font-size: 0.3em; padding: 0 2em;">ENREGISTRER LES MODIFS.</button>
                     </div>
-                    <div>
-                        <p style="font-size: 0.8em;">NOM</p>
-                        <input type="text" id="name" name="name" placeholder="WEISHARD">
-                    </div>
-                    <div>
-                        <p style="font-size: 0.8em;">PRÉNOM</p>
-                        <input type="text" id="firstname" name="firstname" placeholder="LÉO">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1em;">
+                        <div>
+                            <p style="font-size: 0.5em;">PSEUDO</p>
+                            <input style="margin-left: -2%" type="text" id="pseudo" name="pseudo" placeholder="FLASHBLOOD">
+                        </div>
+                        <div>
+                            <p style="font-size: 0.5em;">NOM</p>
+                            <input style="margin-left: -2%" type="text" id="name" name="name" placeholder="WEISHARD">
+                        </div>
+                        <div>
+                            <p style="font-size: 0.5em;">PRÉNOM</p>
+                            <input style="margin-left: -2%" type="text" id="firstname" name="firstname" placeholder="LÉO">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -334,9 +336,9 @@
                 <div style="display: flex; justify-content: space-between;">
                     <div class="item-references">
                         <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
-                        <p style="font-size: 1.5em;">BOX "FLOWER"</p>
-                        <p style="border-left: 1px solid white; padding-left: 2em;">Ref : G-784515</p>
-                        <p style="border-left: 1px solid white; padding-left: 2em;">02/03/2014</p>
+                        <p style="font-size: 1.3em; white-space: nowrap;">BOX "FLOWER"</p>
+                        <p style="font-size: 0.8em;border-left: 1px solid white; padding-left: 2em;white-space: nowrap;">Ref : G-784515</p>
+                        <p style="font-size: 0.8em;border-left: 1px solid white; padding-left: 2em;white-space: nowrap;">02/03/2014</p>
                     </div>
                     <button onclick="toggleCollapse(this)" style="background: transparent; border: none;">
                         <img src="img/Box/croixPanier.png" alt="Fermer/Ouvrir" style="width: 50px; height: 50px;">
@@ -345,8 +347,8 @@
                 <div class="item-details">
                     <div style="display: flex; gap: 2em;">
                         <div>
-                            <p style="font-size: 1.5em; margin-top: 1em;">Détails</p>
-                            <p style="color: gray;">
+                            <p style="font-size: 1.2em; margin-top: 1em; margin-left: 20%">Détails</p>
+                            <p style="color: gray;margin-left: 20%; font-size: 0.8em">
                                 ITEM(S) OBTENU(S) : "FLOWER BUG" - "GOLDEN CROWN"<br>
                                 TAILLE : S<br>
                                 QUANTITÉ : 2<br>
@@ -367,12 +369,12 @@
                             </div>
                         </div>
                     </div>
-                    <p style="font-size: 1.5em; margin-top: 1em;">Avis</p>
-                    <p style="color: gray;">
+                    <p style="font-size: 1.2em; margin-top: 1em;margin-left: 10%;">Avis</p>
+                    <p style="color: gray;font-size: 0.7em;margin-left: 10%;">
                         TU N'AS PAS ENCORE LAISSÉ D'AVIS. NOTE TA COMMANDE ET GAGNE DE L'EXPÉRIENCE !
                     </p>
-                    <button style="border-bottom-left-radius: 0; margin: 2em 0;">LAISSER UN AVIS</button>
-                    <div  style="margin-bottom: 2em;">
+                    <button style="border-bottom-left-radius: 0; margin: 2em 0; font-size: 13px; margin-left: 10% !important;">LAISSER UN AVIS</button>
+                    <div  style="margin-bottom: 2em;margin-left: 10%; font-size: 0.7em">
                         <a href="#" style="padding-right: 2em; color: gray;">Télécharger la Facture</a>
                         <a href="#" style="border-left: 1px solid gray; padding-left: 2em; padding-right: 2em; color: gray;">Commander À Nouveau</a>
                         <a href="#" style="border-left: 1px solid gray; padding-left: 2em; color: gray;">Déposer Une Réclamation</a>
@@ -384,9 +386,9 @@
                 <div style="display: flex; justify-content: space-between;">
                     <div class="item-references">
                         <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
-                        <p style="font-size: 1.5em;">BOX "FLOWER"</p>
-                        <p style="border-left: 1px solid white; padding-left: 2em;">Ref : G-784515</p>
-                        <p style="border-left: 1px solid white; padding-left: 2em;">02/03/2014</p>
+                        <p style="font-size: 1.3em; white-space: nowrap;">BOX "FLOWER"</p>
+                        <p style="font-size: 0.8em; border-left: 1px solid white; padding-left: 2em; white-space: nowrap;">Ref : G-784515</p>
+                        <p style="font-size: 0.8em; border-left: 1px solid white; padding-left: 2em; white-space: nowrap;">02/03/2014</p>
                     </div>
                     <button onclick="toggleCollapse(this)" style="background: transparent; border: none;">
                         <img src="img/Box/croixPanier.png" alt="Fermer/Ouvrir" style="width: 50px; height: 50px;">
@@ -395,12 +397,12 @@
                 <div class="item-details">
                     <div style="display: flex; gap: 2em;">
                         <div>
-                            <p style="font-size: 1.5em; margin-top: 1em;">Détails</p>
-                            <p style="color: gray;">
+                            <p style="font-size: 1.2em; margin-top: 1em; margin-left: 20%;">Détails</p>
+                            <p style="color: gray; margin-left: 20%; font-size: 0.8em;">
                                 ITEM(S) OBTENU(S) : "FLOWER BUG" - "GOLDEN CROWN"<br>
                                 TAILLE : S<br>
                                 QUANTITÉ : 2<br>
-                                MONTANT TOTALTTC : 42€<br>
+                                MONTANT TOTAL TTC : 42€<br>
                                 MÉTHODE DE PAYEMENT : CARTE BANCAIRE
                             </p>
                         </div>
@@ -417,12 +419,12 @@
                             </div>
                         </div>
                     </div>
-                    <p style="font-size: 1.5em; margin-top: 1em;">Avis</p>
-                    <p style="color: gray;">
+                    <p style="font-size: 1.2em; margin-top: 1em; margin-left: 10%;">Avis</p>
+                    <p style="color: gray; font-size: 0.7em; margin-left: 10%;">
                         TU N'AS PAS ENCORE LAISSÉ D'AVIS. NOTE TA COMMANDE ET GAGNE DE L'EXPÉRIENCE !
                     </p>
-                    <button style="border-bottom-left-radius: 0; margin: 2em 0;">LAISSER UN AVIS</button>
-                    <div  style="margin-bottom: 2em;">
+                    <button style="border-bottom-left-radius: 0; margin: 2em 0; font-size: 13px; margin-left: 10% !important;">LAISSER UN AVIS</button>
+                    <div style="margin-bottom: 2em; margin-left: 10%; font-size: 0.7em;">
                         <a href="#" style="padding-right: 2em; color: gray;">Télécharger la Facture</a>
                         <a href="#" style="border-left: 1px solid gray; padding-left: 2em; padding-right: 2em; color: gray;">Commander À Nouveau</a>
                         <a href="#" style="border-left: 1px solid gray; padding-left: 2em; color: gray;">Déposer Une Réclamation</a>

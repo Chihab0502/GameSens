@@ -381,3 +381,15 @@ html, body {
     color: white; /* Couleur du texte au survol */
 }
 
+.social-icons {
+    opacity: 1; /* Par défaut, les icônes sont visibles */
+    transition: opacity 0.5s ease-out;
+}
+
+.social-icons.hide {
+    opacity: 0; /* Rend les icônes invisibles */
+    pointer-events: none; /* Empêche toute interaction avec les icônes lorsqu'elles sont invisibles */
+}
+
+
+

@@ -34,9 +34,9 @@ progress[value]::-webkit-progress-value {
 }
 
 .profil {
+    position: fixed;
     width: 20%;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    height: 100%;
 }
 
 .profil img {
@@ -124,7 +124,7 @@ p {
 }
 
 section {
-    margin: 1em 2em 1em 1em;
+    margin: 1em 2em 1em  calc(20% + 1em);
     width: calc(80% - 3em);
 }
 
@@ -181,6 +181,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1em;
+    padding-bottom: 1em;
 }
 
 .card {

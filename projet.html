@@ -22,8 +22,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
 </head>
 
-
-
 <body>
 
 <header>
@@ -97,6 +95,7 @@
         </div>
     </div>
 </header>
+
 <div class="social-icons" style="margin-right: 2%;">
     <a href="https://instagram.com" target="_blank">
         <img src="img/logoNavbar/insta.png" alt="Instagram" style="width: 18px; height: 18px;">
@@ -289,6 +288,31 @@
             observer.observe(section);
         });
     });
+    document.addEventListener("DOMContentLoaded", function () {
+        // Sélection des éléments nécessaires
+        const socialIcons = document.querySelector('.social-icons');
+        const firstSection = document.querySelector('.section'); // Sélecteur de votre première section
+
+        // Créer un observer d'intersection pour détecter la fin de la première section
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Afficher les icônes de réseaux sociaux quand la première section est visible
+                    socialIcons.classList.remove('hide');
+                } else {
+                    // Cacher les icônes de réseaux sociaux quand on quitte la première section
+                    socialIcons.classList.add('hide');
+                }
+            });
+        }, {
+            threshold: 1.0 // Seuil à 100%, déclenche lorsque 100% de la première section quitte la vue
+        });
+
+        // Observer la première section
+        observer.observe(firstSection);
+    });
+
+
 
 </script>
 
