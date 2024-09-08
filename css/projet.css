@@ -1,4 +1,6 @@
 /* accueil.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
 @font-face {
     font-family: 'Conthrax';
     src: url('../conthrax/conthrax-sb.otf') format('truetype');
@@ -389,6 +391,34 @@ html, body {
 .social-icons.hide {
     opacity: 0; /* Rend les icônes invisibles */
     pointer-events: none; /* Empêche toute interaction avec les icônes lorsqu'elles sont invisibles */
+}
+
+.buttons {
+    position: relative; /* Important pour que z-index fonctionne */
+    z-index: 10; /* Met un z-index plus élevé pour s'assurer qu'ils sont au-dessus */
+}
+
+.carousel-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular weight */
+}
+
+.carousel-item img {
+    border-radius: 0; /* Assure que les coins sont non arrondis */
+}
+
+.carousel-item {
+    transition: filter 0.3s ease, opacity 0.3s ease; /* Ajoute une transition pour des effets plus fluides */
+}
+
+.carousel-item:not(.selected) {
+    filter: blur(2px); /* Applique un léger flou */
+    opacity: 0.6; /* Applique une légère transparence */
+}
+
+.carousel-item.selected {
+    filter: none; /* Retire le flou pour l'élément sélectionné */
+    opacity: 1; /* Assure que l'élément sélectionné est complètement opaque */
 }
 
 
