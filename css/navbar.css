@@ -22,8 +22,12 @@ body, html {
     padding: 10px 0; /* Ajustement de l'espacement autour des éléments de la navbar */
 }
 
+.navbar-nav{
+    margin-left: 10%;
+}
+
 .navbar-brand img {
-    height: 70px;
+    height: 64px;
 }
 
 .navbar-header {
@@ -32,12 +36,11 @@ body, html {
 }
 
 .nav-link.nav-button {
-
     border: 1px solid white; /* Bordure blanche autour des boutons */
     border-radius: 0 100px 0 100px; /* Arrondis en haut à droite et en bas à gauche */
-    padding: 10px 70px !important; /* Augmentation de l'espacement interne horizontal pour élargir le bouton */
+    padding: 10px 50px !important; /* Augmentation de l'espacement interne horizontal pour élargir le bouton */
     color: white; /* Couleur du texte */
-    margin: 5px 15px; /* Marge entre les boutons */
+    margin: 5px 25px; /* Marge entre les boutons */
 }
 
 .nav-link.nav-button:hover {
@@ -313,3 +316,4 @@ body, html {
     background-color: #FFF;
 
 }
+
