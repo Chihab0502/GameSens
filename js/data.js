@@ -2,7 +2,7 @@
 const productData = [
     {
         id: 1,
-        title: "TOAD C1 T1",
+        title: "RULE OF TIME",
         category: "tshirt",
         collection: "Collection 1",
         type: "Type 1",
@@ -13,7 +13,7 @@ const productData = [
     },
     {
         id: 2,
-        title: "NOM PLUS LONG",
+        title: "RULE OF TIME",
         category: "tshirt",
         collection: "Collection 1",
         type: "Type 1",
@@ -24,7 +24,7 @@ const productData = [
     },
     {
         id: 3,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "tshirt",
         collection: "Collection 1",
         type: "Type 1",
@@ -35,7 +35,7 @@ const productData = [
     },
     {
         id: 4,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "tshirt",
         collection: "Collection 1",
         type: "Type 1",
@@ -46,7 +46,7 @@ const productData = [
     },
     {
         id: 5,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "tshirt",
         collection: "Collection 1",
         type: "Type 2",
@@ -57,7 +57,7 @@ const productData = [
     },
     {
         id: 6,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "box",
         collection: "Collection 1",
         type: "Type 1",
@@ -68,7 +68,7 @@ const productData = [
     },
     {
         id: 7,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "box",
         collection: "Collection 2",
         type: "Type 1",
@@ -79,7 +79,7 @@ const productData = [
     },
     {
         id: 8,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "box",
         collection: "Collection 2",
         type: "Type 2",
@@ -90,7 +90,7 @@ const productData = [
     },
     {
         id: 9,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "tshirt",
         collection: "Collection 1",
         type: "Type 2",
@@ -101,7 +101,7 @@ const productData = [
     },
     {
         id: 10,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "tshirt",
         collection: "Collection 1",
         type: "Type 2",
@@ -112,7 +112,7 @@ const productData = [
     },
     {
         id: 11,
-        title: "TOAD",
+        title: "RULE OF TIME",
         category: "tshirt",
         collection: "Collection 1",
         type: "Type 2",

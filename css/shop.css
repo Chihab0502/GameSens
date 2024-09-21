@@ -72,10 +72,17 @@ body, html {
 }
 
 h1 {
-    font-size: 4vw; /* Taille du texte relative à la largeur de l'écran */
+    font-size: 2vw; /* Réduction de la taille du texte */
     font-weight: 700;
-    margin: 0; /* Supprime les marges par défaut pour un contrôle précis */
+    margin: 0;
 }
+
+h3 {
+    font-size: 1.5vw; /* Si vous avez des titres en h3, réduisez aussi ici */
+    font-weight: 600;
+    margin: 0;
+}
+
 
 /* CSS pour la section color-section */
 .color-section {
@@ -172,7 +179,7 @@ h1 {
 }
 
 .navigation-section h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0;
     line-height: 10vh; /* Pour centrer verticalement le titre */
 }
