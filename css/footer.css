@@ -11,9 +11,8 @@ body, html {
 /* footer.css */
 .footer-button {
     position: fixed;
-    left: 25px;
-    bottom: 20px;
-    z-index: 100; /* Assurez-vous qu'il reste au-dessus des autres éléments */
+    left: 55px;
+    bottom: 38px;
     cursor: pointer;
 }
 
@@ -129,23 +128,19 @@ body, html {
 
 .footer-image {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999; /* Assurez-vous que l'image soit au-dessus du reste du contenu */
-}
-
-.video-container {
-    background-color: white; /* White background */
-    border-radius: 90px; /* Rounded corners */
-    padding: 8px; /* Adjust padding to your preference */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    bottom: 27px;
+    right: 70px;
 }
 
 #shirtVideo {
     border-radius: 90px; /* Ensure the video itself also has rounded corners */
 }
+
+.discord-container img{
+    width: 50px; /* Ajuste la taille selon tes besoins */
+    height: auto; /* Pour garder les proportions */
+}
+
 
 
 .footer-modal {

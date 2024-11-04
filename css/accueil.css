@@ -35,8 +35,8 @@ body, html {
 
 .content {
     position: absolute;
-    top: 50%; /* Adjusted as per your requirement */
-    left: 10%; /* Text aligned to the left */
+    top: 39%; /* Adjusted as per your requirement */
+    left: 12%; /* Text aligned to the left */
     color: white; /* Assuming you want white text */
     font-size: 2rem; /* Adjust the size as needed */
     z-index: 10; /* Make sure it's above the background image */
@@ -49,6 +49,10 @@ body, html {
     color: white;
     margin-top: 20px;
     margin-right: 10px;
+}
+
+.buttons{
+    margin-left: -5%;
 }
 
 h1 {
@@ -117,6 +121,13 @@ h1 {
     width: 100%;
     height: 100%;
 }
+
+.collection-title {
+    font-family: 'Conthrax', sans-serif;
+    font-size: 69px;
+    margin-left: -6%;
+}
+
 
 
 /* Fond assombri */
