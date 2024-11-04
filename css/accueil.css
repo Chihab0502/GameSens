@@ -106,7 +106,7 @@ h1 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: flex; /*flex=afficher none=cacher*/
     justify-content: center;
     align-items: center;
     overflow: hidden;

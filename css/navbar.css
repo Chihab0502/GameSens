@@ -15,10 +15,9 @@ body, html {
     z-index: 50;
 }
 
-
 .navbar {
     background-color: transparent; /* Noir semi-transparent */
-    padding: 10px 0; /* Ajustement de l'espacement autour des éléments de la navbar */
+    padding: 22px 0 0 0; /* Ajustement de l'espacement autour des éléments de la navbar */
 }
 
 .navbar-nav{
@@ -30,11 +29,14 @@ body, html {
 }
 
 .navbar-header {
-    left: 10px;
+    left: 9%;
     top: 50%;
     transform: translateY(-50%);
     z-index: 30;
-    margin-left: 5%;
+}
+
+.navbar-burger{
+    margin-left: 3%;
 }
 
 .nav-link.nav-button {
@@ -48,6 +50,10 @@ body, html {
 .nav-link.nav-button:hover {
     background-color: white; /* Couleur de fond au survol */
     color: black; /* Couleur du texte au survol */
+}
+
+.icons{
+    margin-right: 4%;
 }
 
 .bi:hover {
