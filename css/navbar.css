@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'Conthrax';
     src: url('../conthrax/conthrax-sb.otf') format('truetype');
-    /* Ajoutez d'autres variations de la police si nécessaire */
 }
 
 body, html {
@@ -31,8 +30,11 @@ body, html {
 }
 
 .navbar-header {
-    top: 50%; /* Positionne le haut du logo au centre vertical de la navbar */
-    transform: translateY(-50%); /* Décale le logo de -50% de sa propre hauteur pour centrer */
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 30;
+    margin-left: 5%;
 }
 
 .nav-link.nav-button {
