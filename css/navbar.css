@@ -66,14 +66,14 @@ body, html {
 
 .cart-modal {
     position: fixed;
-    right: -650px; /* Commence à l'extérieur de la vue */
-    top: 1%;
-    bottom: 0; /* Ajouté pour maintenir un espace de 20px du bas de la page */
+    right: 10%; /* Commence à l'extérieur de la vue */
+    top: 10%;
+    bottom: 50%; /* Ajouté pour maintenir un espace de 20px du bas de la page */
     width: 550px; /* Largeur ajustée comme dans tes dernières spécifications */
     background: rgba(0, 0, 0, 0.9);
     border-left: 1px solid white;
     border-top: 1px solid white;
-    border-radius: 50px 0 0 0;
+    border-radius: 50px 50px 50px 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ body, html {
 
 .cart-title {
     color: white;
-    font-size: 80px; /* Taille du texte pour le titre */
+    font-size: 25px; /* Taille du texte pour le titre */
     margin: 0 0 20px 0; /* Marge en dessous du titre pour l'espacement */
     padding: 15px 10px; /* Padding pour ne pas coller sur les bords */
     text-align: left; /* Centre le texte */
@@ -211,18 +211,6 @@ body, html {
 }
 
 
-
-/* Fond assombri */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: none;
-    z-index: 999;
-}
 
 .stock-content {
     font-family: 'Conthrax', sans-serif;

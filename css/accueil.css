@@ -1,4 +1,5 @@
 /* accueil.css */
+
 @font-face {
     font-family: 'Conthrax';
     src: url('../conthrax/conthrax-sb.otf') format('truetype');
@@ -61,19 +62,6 @@ h1 {
     font-weight: 700;
 }
 
-/* Ajoutez cette classe pour le fond qui va flouter le reste de la page */
-.backdrop {
-    position: fixed;
-    top: 70px; /* Ajuste ceci à la hauteur de ta navbar */
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Fond légèrement transparent pour voir le contenu derrière */
-    backdrop-filter: blur(5px); /* Applique un effet de flou */
-    display: none; /* Cache ce fond par défaut */
-    z-index: 1000; /* S'assure que ça se trouve derrière le panier mais au-dessus des autres contenus */
-}
-
 .checkout-btn {
     background-color: white;
     color: black;
@@ -113,6 +101,7 @@ h1 {
     display: flex; /*flex=afficher none=cacher*/
     justify-content: center;
     align-items: center;
+    pointer-events: none; /* Ignorer les clics pour cette image */
     overflow: hidden;
     z-index: 999;
 }
@@ -126,20 +115,6 @@ h1 {
     font-family: 'Conthrax', sans-serif;
     font-size: 69px;
     margin-left: -6%;
-}
-
-
-
-/* Fond assombri */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: none;
-    z-index: 999;
 }
 
 /* Bloc central */
