@@ -36,7 +36,7 @@ body, html {
 
 .content {
     position: absolute;
-    top: 39%; /* Adjusted as per your requirement */
+    top: 35%; /* Adjusted as per your requirement */
     left: 12%; /* Text aligned to the left */
     color: white; /* Assuming you want white text */
     font-size: 2rem; /* Adjust the size as needed */
@@ -113,8 +113,9 @@ h1 {
 
 .collection-title {
     font-family: 'Conthrax', sans-serif;
-    font-size: 69px;
-    margin-left: -6%;
+    font-size: 77px;
+    margin-left: -5%;
+    margin-bottom: 3%;
 }
 
 /* Bloc central */
