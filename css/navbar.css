@@ -77,11 +77,45 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 100px 70px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
     transform: translateX(-100%); /* Masqué par défaut */
 }
+
+.menu-content{
+    top: 20%;
+}
+
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.menu-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.menu-subtitles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-subtitles li {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 5px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.menu-subtitles li:hover {
+    opacity: 1; /* Changement d'opacité au survol */
+}
+
 
 .menu-overlay.show {
     transform: translateX(0); /* Affiché quand activé */
