@@ -7,6 +7,8 @@ body, html {
     font-family: 'Conthrax', sans-serif;
 }
 
+
+
 .navbar {
     width: 100%;
     position: absolute;
@@ -63,6 +65,50 @@ body, html {
 .bi {
     font-size: 24px; /* Augmente la taille des icônes (ajustez selon vos besoins) */
 }
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.8); /* Noir semi-transparent */
+    z-index: 10; /* Toujours au-dessus des autres éléments */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transform: translateX(-100%); /* Masqué par défaut */
+}
+
+.menu-overlay.show {
+    transform: translateX(0); /* Affiché quand activé */
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-links li {
+    margin-bottom: 20px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-links a:hover {
+    color: #aaa; /* Changement de couleur au survol */
+}
+
 
 .cart-modal {
     position: fixed;

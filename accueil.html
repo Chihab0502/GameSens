@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/accueil.css">
     <script src="js/footer.js" defer></script>
-    <script src="js/cart.js" defer></script>
+    <script src="js/navbar.js" defer></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid position-relative">
             <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
-            <a class="navbar-burger" href="accueil.html">
+            <a class="navbar-burger">
                 <img src="img/bouton_deroule.png" alt="bouton hamburger">
             </a>
             <div class="navbar-header position-absolute">
@@ -89,6 +89,15 @@
                 <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button></a>
         </div>
     </div>
+
+    <div id="menuOverlay" class="menu-overlay" style="display: none;">
+        <ul class="menu-links">
+            <li><a href="vêtements.html">Vêtements</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
 </header>
 <div class="fullscreen-overlay">
     <img src="img/grille.png">
