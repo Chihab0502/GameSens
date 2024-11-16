@@ -12,3 +12,20 @@ hamburgerButton.addEventListener('click', () => {
         setTimeout(() => menuOverlay.style.display = 'none', 300); // Attendre la fin de la transition
     }
 });
+
+
+// Sélection des éléments
+const cartToggle = document.getElementById('cartToggle');
+const cartOverlay = document.getElementById('cartOverlay');
+const closeCart = document.getElementById('closeCart');
+
+// Événement de clic pour afficher le panier
+cartToggle.addEventListener('click', () => {
+    cartOverlay.style.display = 'block';
+});
+
+// Événement de clic pour fermer le panier
+closeCart.addEventListener('click', () => {
+    cartOverlay.style.display = 'none';
+});
+

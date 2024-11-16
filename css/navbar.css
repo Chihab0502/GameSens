@@ -143,6 +143,82 @@ body, html {
     color: #aaa; /* Changement de couleur au survol */
 }
 
+.cart-overlay {
+    position: fixed;
+    top: 100px; /* Positionnement vertical */
+    right: 70px; /* Positionnement horizontal */
+    width: 25%; /* Largeur du panier */
+    height: 60%; /* Hauteur du panier */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    border: 2px solid white; /* Bordure blanche */
+    border-radius: 20px; /* Bords arrondis */
+    z-index: 10000; /* Au-dessus des autres éléments */
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.cart-items-container {
+    width: 100%;
+    height: 70%;
+    margin: 20px auto;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2); /* Fond transparent pour permettre le flou */
+    backdrop-filter: blur(5px); /* Effet de flou plus prononcé */
+    border: 1px solid rgba(128, 128, 128, 0.5); /* Bordure grise fine */
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.item-image img {
+    width: 50px; /* Taille de l'image */
+    height: 50px;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.item-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.item-size, .item-price {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
 
 /* Bloc central */
 .stock-modal {
