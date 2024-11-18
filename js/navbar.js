@@ -21,11 +21,34 @@ const closeCart = document.getElementById('closeCart');
 
 // Événement de clic pour afficher le panier
 cartToggle.addEventListener('click', () => {
-    cartOverlay.style.display = 'block';
+    if (cartOverlay.style.display === 'none') {
+        cartOverlay.style.display = 'block';
+    }else{
+        cartOverlay.style.display = 'none';
+    }
+
 });
 
 // Événement de clic pour fermer le panier
 closeCart.addEventListener('click', () => {
     cartOverlay.style.display = 'none';
+});
+
+document.querySelector('.minus').addEventListener('click', function() {
+    const quantityElement = document.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.textContent);
+
+    if (quantity > 1) {
+        quantity--;
+        quantityElement.textContent = quantity;
+    }
+});
+
+document.querySelector('.plus').addEventListener('click', function() {
+    const quantityElement = document.querySelector('.quantity');
+    let quantity = parseInt(quantityElement.textContent);
+
+    quantity++;
+    quantityElement.textContent = quantity;
 });
 

@@ -196,14 +196,13 @@ body, html {
 }
 
 .item-image img {
-    width: 50px; /* Taille de l'image */
-    height: 50px;
-    border-radius: 5px;
+    width: 100px; /* Taille de l'image */
+    height: 100px;
 }
 
 .item-details {
     flex-grow: 1;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .item-name {
@@ -218,6 +217,67 @@ body, html {
     color: rgba(255, 255, 255, 0.8);
     margin: 0;
 }
+
+.item-details {
+    flex-grow: 1;
+    margin-left: 30px;
+}
+
+.quantity-delete-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 10px; /* Espace entre le sélecteur de quantité et le bouton delete */
+}
+
+.quantity-button {
+    background: none;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.minus {
+    left: 0;
+}
+
+.plus {
+    right: 0;
+}
+
+.quantity {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.delete-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.delete-icon:hover {
+    opacity: 1;
+}
+
 
 
 /* Bloc central */
