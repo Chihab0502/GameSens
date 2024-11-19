@@ -237,8 +237,8 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90px;
-    height: 30px;
+    width: 100px;
+    height: 32px;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -265,11 +265,14 @@ body, html {
 }
 
 .quantity {
-    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    font-size: 10px;
     color: white;
     font-weight: bold;
-    position: relative;
-    z-index: 1;
+    z-index: -1;
+    text-align: center;
+    width: 100%;
 }
 
 .delete-icon {
@@ -281,6 +284,19 @@ body, html {
 .delete-icon:hover {
     opacity: 1;
 }
+
+.item-price {
+    font-family: 'Conthrax', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    position: absolute;
+    right: 10px; /* Distance du bord droit */
+    transform: translateY(-50%); /* Centrer verticalement */
+    top: 50%;
+}
+
 
 
 
