@@ -150,7 +150,7 @@ body, html {
     top: 100px; /* Positionnement vertical */
     right: 70px; /* Positionnement horizontal */
     width: 30%; /* Largeur du panier */
-    height: 60%; /* Hauteur du panier */
+    height: 70%; /* Hauteur du panier */
     background-color: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
     backdrop-filter: blur(10px); /* Effet de flou */
     border: 2px solid white; /* Bordure blanche */
@@ -179,7 +179,7 @@ body, html {
 
 .cart-items-container {
     width: 100%;
-    height: 75%;
+    height: 65%;
     margin: 20px auto;
     padding: 10px;
     overflow-y: auto;
@@ -295,6 +295,70 @@ body, html {
     right: 10px; /* Distance du bord droit */
     transform: translateY(-50%); /* Centrer verticalement */
     top: 50%;
+}
+
+.cart-subtotal {
+    display: flex;
+    justify-content: space-between; /* Espace entre le texte et le montant */
+    align-items: center; /* Centre verticalement les éléments */
+    padding: 5px 35px; /* Espacement au-dessus et en dessous */
+    margin-top: 20px;
+}
+
+.sous-total-texte {
+    font-size: 24px;
+    color: white; /* Couleur blanche avec opacité */
+    margin: 0;
+}
+
+.sous-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+
+.cart-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.buttons-commander-panier {
+    border: 1px solid white;
+    border-radius: 0 0 100px 0;
+    padding: 10px 50px;
+    color: black;
+    background-color: #FFF;
+    font-size: 16px;
+}
+
+.buttons-commander-panier:hover {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.voir-panier-container {
+    display: flex;
+    justify-content: center; /* Centre le lien horizontalement */
+    align-items: center; /* Centre le lien verticalement */
+    margin-top: 20px; /* Ajoute un espace au-dessus */
+    margin-bottom: 20px; /* Ajoute un espace en dessous */
+}
+
+.voir-panier {
+    font-size: 14px;
+    color: grey;
+    text-decoration: underline; /* Supprime le soulignement par défaut */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Effet de transition pour l'interaction */
+}
+
+.voir-panier:hover {
+    color: white; /* Change la couleur au survol (doré, par exemple) */
+    text-decoration: underline; /* Ajoute un soulignement au survol */
 }
 
 
