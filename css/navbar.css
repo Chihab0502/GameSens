@@ -361,9 +361,6 @@ body, html {
     text-decoration: underline; /* Ajoute un soulignement au survol */
 }
 
-
-
-
 /* Bloc central */
 .stock-modal {
     position: fixed;
@@ -372,9 +369,9 @@ body, html {
     transform: translateX(-50%);
     width: 85%;
     height: 90%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
     display: none;
     z-index: 1000;
     text-align: left;
@@ -391,20 +388,6 @@ body, html {
     top: 6%; /* La position finale souhaitée de la modale */
 }
 
-
-
-.stock-content {
-    font-family: 'Conthrax', sans-serif;
-    position: absolute; /* Positionnement absolu pour placer le texte */
-    top: 0; /* Alignement en haut */
-    left: 0; /* Alignement à gauche */
-    width: 100%; /* Largeur à 100% */
-    height: 100%; /* Hauteur à 100% */
-    padding-left: 20px; /* Espacement à gauche pour le texte */
-    padding-top: 50px; /* Espacement en haut pour le texte */
-    color: white; /* Couleur du texte en blanc */
-    z-index: 10; /* Assure que le texte est au-dessus du fond */
-}
 
 
 .close-stock-btn {
@@ -425,44 +408,6 @@ body, html {
     justify-content: flex-start; /* Aligne les blocs en haut */
     align-items: center;
     height: calc(100% - 60px); /* Ajuste la hauteur en tenant compte du titre et du bouton de fermeture */
-}
-
-
-/* Styles pour les blocs rectangulaires */
-.stock-box {
-    display: flex;
-    justify-content: space-between; /* Aligner les éléments à l'extrémité */
-    align-items: center; /* Centrer verticalement */
-    width: 75%;
-    height: 22%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid #3A3333FF;
-    border-radius: 10px; /* Arrondi tous les coins */
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 23px; /* Espacement entre les blocs */
-    padding: 10px; /* Espacement interne */
-}
-
-.stock-modal {
-    position: fixed;
-    top: -5%; /* Commence en dehors de l'écran en haut */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 85%;
-    bottom: 13%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: none;
-    z-index: 1000;
-    text-align: left;
-    color: white;
-    border: 1px solid gray;
-    border-radius: 20px;
-    overflow: auto;
-    transition: top 0.5s ease; /* Transition pour l'animation */
 }
 
 /* Classe pour montrer la modale */
@@ -494,3 +439,118 @@ body, html {
 
 }
 
+.stock-boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre verticalement les éléments */
+    align-items: center; /* Centre horizontalement les éléments */
+    gap: 20px; /* Espacement entre les blocs */
+    height: 100%; /* Prend toute la hauteur */
+}
+
+.stock-box {
+    width: 80%; /* Ajustez si nécessaire (par exemple, 75% ou 90%) */
+    max-width: 500px; /* Taille maximale pour éviter qu'ils soient trop grands */
+    margin: 0 auto; /* S'assure qu'ils restent centrés si un espace horizontal est disponible */
+}
+
+.item-image {
+    max-width: 650px; /* Limite la taille de l'image */
+    height: auto;
+    margin-right: 15px; /* Ajoute un espace entre l'image et le contenu texte */
+}
+
+.box-info {
+    margin-left: -400px !important;
+}
+
+.box-info {
+    display: flex;
+    flex-direction: column; /* Empile verticalement les éléments enfants */
+    align-items: flex-start; /* Aligne les enfants sur la gauche */
+    justify-content: center; /* Centre verticalement les enfants à l'intérieur du parent */
+    gap: 5px; /* Espace entre le titre (h3) et le texte (p) */
+    margin: 0; /* Supprime les marges supplémentaires */
+    padding: 0; /* Supprime les paddings supplémentaires */
+}
+
+.box-info h3,
+.box-info p {
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+}
+
+.box-info {
+    margin-left: 2% !important; /* Supprime les décalages manuels */
+    margin-right: auto; /* S'assure que `.box-info` n'est pas décalé */
+    margin-top: 0; /* Supprime les décalages manuels */
+}
+
+.box-info p {
+    margin-right: -200% !important;
+}
+
+
+.stock-box {
+    display: flex;
+    justify-content: space-between; /* Aligner les éléments à l'extrémité */
+    align-items: center; /* Centre verticalement */
+    width: var(--stock-box-width, 15%); /* Largeur par défaut de 75%, ajustable dynamiquement */
+    max-width: 100%; /* Empêche les blocs de dépasser la largeur totale */
+    height: 22%; /* Hauteur par défaut */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #3A3333FF;
+    border-radius: 10px; /* Arrondi des coins */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 23px; /* Espacement entre les blocs */
+    padding: 10px; /* Espacement interne */
+}
+
+:root {
+    --stock-box-width: 75%; /* Par défaut, 75% de la largeur */
+}
+
+@media (max-width: 768px) {
+    .box-info {
+        align-items: center; /* Centre horizontalement sur mobile */
+        text-align: center; /* Centre le texte */
+    }
+
+    .text-content h3, .text-content p {
+        font-size: 14px; /* Réduire la taille du texte sur mobile */
+    }
+}
+
+
+.stock-modal {
+    position: fixed;
+    top: -5%; /* Aligne la modale vers le haut */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%; /* Largeur de la modale */
+    bottom: 13%; /* Ajuste la hauteur visible */
+    height: 100%;
+    background: rgba(0, 0, 0, 1); /* Fond noir plus opaque */
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 9); /* Ombre plus sombre */
+    display: none;
+    z-index: 1000;
+    text-align: left;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 20px;
+    overflow: auto;
+    transition: top 0.5s ease; /* Transition fluide pour l'affichage */
+}
+
+/* Active la modale */
+.stock-modal.show {
+    display: block;
+    top: 6%; /* Position visible */
+}
+
+/* Affiche l'overlay lorsque la modale est active */
+#overlay.active {
+    display: block; /* Affiche l'overlay */
+}
