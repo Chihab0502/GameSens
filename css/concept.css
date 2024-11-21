@@ -276,6 +276,16 @@ h1 {
     font-weight: bold;
 }
 
+.btn-commu{
+    background-color: black;
+    color: white !important;
+    font-weight: bold;
+}
+
+.btn-commu:hover{
+    background-color: #FFF;
+    color: black !important;
+}
 
 .btn-precommander {
     background-color: white;
@@ -284,8 +294,8 @@ h1 {
 }
 
 .btn-precommander:hover {
-    background-color: #9DD3EE;
-    color: black !important;
+    background-color: black;
+    color: #FFF !important;
 }
 
 .btn-savoirplus {
@@ -380,7 +390,7 @@ html, body {
 }
 
 .btn-custom:hover, .btn-custom:focus {
-    background-color: #95c2d9; /* Couleur de fond au survol */
+    background-color: black; /* Couleur de fond au survol */
     color: white; /* Couleur du texte au survol */
 }
 
@@ -511,7 +521,6 @@ h1, h2, h3, p, span, a {
 .community-title,
 .newsletter-title {
     font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
     color: #FFF; /* Couleur blanche */
     margin-bottom: 20px;
 }
@@ -526,10 +535,8 @@ h1, h2, h3, p, span, a {
 }
 
 .community-text {
-    color: #FFF; /* Texte blanc */
     font-size: 16px;
     margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .community-btn,
@@ -564,16 +571,90 @@ h1, h2, h3, p, span, a {
     border: 2px solid #FFF; /* Bordure blanche */
     border-radius: 25px;
     background-color: transparent;
-    color: #FFF;
+    color: #00000080;
     font-size: 14px;
     outline: none;
-    font-family: 'Montserrat', sans-serif;
 }
 
-.newsletter-input::placeholder {
-    color: #AAA; /* Couleur du placeholder */
+
+.color-section {
+    background-color: Black;
+    color: white;
 }
 
-.newsletter-input:focus {
-    border-color: #95c2d9; /* Couleur bleue en focus */
+.newsletter-form {
+    display: flex;
+    flex-direction: column; /* Positionne les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 15px; /* Ajoute de l'espacement entre les éléments */
 }
+
+.newsletter-input {
+    width: 185%; /* Ajuste la largeur du champ */
+    max-width: 500px; /* Limite la largeur */
+    padding: 10px; /* Ajoute de l'espace intérieur */
+    border: 2px solid darkslategrey; /* Bordure personnalisée */
+    border-radius: 25px; /* Coins arrondis */
+    margin-left: -60% !important;
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn-precommander {
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-precommander:hover {
+    background-color: black;
+    color: white;
+    border-color: #FFF;
+}
+
+.angle-container {
+    position: relative; /* Position relative pour permettre un positionnement absolu des lignes */
+    width: 100px; /* Largeur totale de l'angle */
+    height: 100px; /* Hauteur totale de l'angle */
+}
+
+.horizontal-line {
+    position: absolute;
+    top: 20%;
+    left: -600%;
+    width: 140px; /* Longueur de la ligne horizontale */
+    height: 6px; /* Épaisseur de la ligne */
+    background-color: white; /* Couleur de la ligne */
+}
+
+.vertical-line {
+    position: absolute;
+    top: 20%;
+    left: -600%;
+    width: 6px; /* Épaisseur de la ligne */
+    height: 100px; /* Longueur de la ligne verticale */
+    background-color: white; /* Couleur de la ligne */
+}
+
+.horizontal-line2 {
+    position: absolute;
+    top: 290%;
+    left: 454%;
+    width: 140px; /* Longueur de la ligne horizontale */
+    height: 6px; /* Épaisseur de la ligne */
+    background-color: white; /* Couleur de la ligne */
+}
+
+.vertical-line2 {
+    position: absolute;
+    top: 195%;
+    left: 590%;
+    width: 6px; /* Épaisseur de la ligne */
+    height: 100px; /* Longueur de la ligne verticale */
+    background-color: white; /* Couleur de la ligne */
+}
+
+
