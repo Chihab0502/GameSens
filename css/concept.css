@@ -292,6 +292,7 @@ h1 {
     background-color: white;
     color: black !important;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .btn-savoirplus:hover {
@@ -422,4 +423,157 @@ html, body {
 }
 
 
+.title {
+    font-size: 30px;
+    color: #FFFFFF; /* Blanc */
+}
 
+.highlight-blue {
+    color: #95c2d9; /* Bleu */
+}
+
+.highlight-white {
+    color: #FFFFFF; /* Blanc */
+    font-weight: bold; /* Gras pour les termes "rare", "épique", "légendaire" */
+}
+
+.sous-texte {
+    margin-left: -3%;
+    font-weight: 400;
+    padding-right: 36%;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF; /* Assurez-vous que le texte principal est blanc */
+    text-decoration: none; /* Supprime toutes les soulignures */
+}
+
+/* Supprime le soulignement pour toutes les balises <span> */
+span.highlight-blue {
+    text-decoration: none;
+    color: #95c2d9; /* Bleu défini */
+}
+
+/* Supprime le soulignement pour toutes les balises <a> si elles en ont */
+a {
+    text-decoration: none;
+}
+
+/* Supprime le soulignement pour les balises <a> spécifiques si elles héritent d'une classe */
+a.highlight-blue {
+    text-decoration: none;
+}
+
+/* Ajoute une règle globale pour s'assurer qu'aucun soulignement n'est hérité */
+h1, h2, h3, p, span, a {
+    text-decoration: none;
+}
+
+.content4 {
+    width: 100%; /* Augmente la largeur à 90% de l'écran */
+    margin: 0 auto; /* Centre horizontalement */
+    padding: 20px; /* Ajoute de l'espace intérieur */
+}
+
+.content4 h1 {
+    font-size: 30px !important; /* Ajuste la taille de police si nécessaire */
+    margin-left: 3%; /* Supprime ou réduit le décalage gauche */
+}
+
+.content4 .sous-texte {
+    font-size: 16px; /* Ajuste la taille du texte */
+    margin-left: 0; /* Réduit le décalage gauche */
+    text-align: justify; /* Alignement justifié pour une meilleure lisibilité */
+}
+
+.community-newsletter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fond noir */
+    padding: 40px 0; /* Espacement vertical */
+    width: 1000%;
+}
+
+.community-newsletter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; /* Largeur totale du conteneur */
+    max-width: 1200px; /* Largeur maximale */
+}
+
+.community-block,
+.newsletter-block {
+    flex: 1; /* Équilibre les deux blocs */
+    margin: 20px; /* Espacement entre les blocs */
+}
+
+.community-title,
+.newsletter-title {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF; /* Couleur blanche */
+    margin-bottom: 20px;
+}
+
+.highlight-blue {
+    color: #95c2d9; /* Couleur bleue pour les mots importants */
+}
+
+.highlight-white {
+    color: #FFF; /* Couleur blanche */
+    font-weight: bold;
+}
+
+.community-text {
+    color: #FFF; /* Texte blanc */
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.community-btn,
+.newsletter-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #FFF; /* Bordure blanche */
+    border-radius: 25px; /* Coins arrondis */
+    background-color: transparent;
+    color: #FFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.community-btn:hover,
+.newsletter-btn:hover {
+    background-color: #95c2d9; /* Couleur bleue au survol */
+    color: #000; /* Texte noir au survol */
+    border-color: #95c2d9;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #FFF; /* Bordure blanche */
+    border-radius: 25px;
+    background-color: transparent;
+    color: #FFF;
+    font-size: 14px;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.newsletter-input::placeholder {
+    color: #AAA; /* Couleur du placeholder */
+}
+
+.newsletter-input:focus {
+    border-color: #95c2d9; /* Couleur bleue en focus */
+}

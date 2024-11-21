@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/projet.css">
+    <link rel="stylesheet" href="css/concept.css">
     <script src="js/footer.js" defer></script>
     <script src="js/navbar.js" defer></script>
     <script src="js/t-shirt.js" defer></script>
@@ -29,8 +29,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid position-relative">
             <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
-            <div class="navbar-header position-absolute"
-                 style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
+            <a class="navbar-burger">
+                <img src="img/bouton_deroule.png" alt="bouton hamburger">
+            </a>
+            <div class="navbar-header position-absolute">
                 <a class="navbar-brand" href="accueil.html">
                     <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
                 </a>
@@ -39,29 +41,67 @@
             <div class="mx-auto d-flex justify-content-center" style="flex-grow: 1;">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="projet.html"><b>PROJET</b></a>
+                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="concept.html"><b>CONCEPT</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button btn-zoom" href="shop.html"><b>SHOP</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="shop.html"><b>BOUTIQUE</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OUVRE TA BOX</b></a>
                     </li>
                 </ul>
             </div>
             <!-- Conteneur à droite pour les icônes -->
-            <ul class="navbar-nav ms-auto"  style="margin-right: 2%">
+            <ul class="navbar-nav icons ms-auto">
                 <a class="nav-link" href="#" id="cartToggle">
                     <!-- Icône Panier en SVG -->
-                    <img src="img/logoNavbar/Button_panier (1).svg" alt="Panier" style="width: 32px; height: 32px;">
+                    <img src="img/logoNavbar/Button_panier (1).svg" alt="Panier">
                 </a>
                 <li class="nav-item">
                     <a class="nav-link" href="connexion.html">
                         <!-- Icône Connexion en SVG -->
-                        <img src="img/logoNavbar/Button_compte (1).svg" alt="Connexion" style="width: 24px; height: 24px;">
+                        <img src="img/logoNavbar/Button_compte (1).svg" alt="Connexion">
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="stock-modal" id="stockModal">
+            <div class="stock-content">
+                <h2 style="font-size: 52px;margin-left: 12%;margin-top: 6%;margin-bottom: 2%">Ouvre ta box</h2>
+
+                <button onclick="closeStockModal()" style="margin-top: 0.3%" class="close-btn">
+                    <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
+                </button>
+
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+            </div>
         </div>
     </nav>
 
@@ -97,18 +137,6 @@
     </div>
 </header>
 
-<div class="social-icons" style="margin-right: 2%;">
-    <a href="https://instagram.com" target="_blank">
-        <img src="img/logoNavbar/insta.png" alt="Instagram" style="width: 18px; height: 18px;">
-    </a>
-    <a href="https://tiktok.com" target="_blank">
-        <img src="img/logoNavbar/tiktok.png" alt="TikTok" style="width: 18px; height: 18px;">
-    </a>
-    <a href="https://twitter.com" target="_blank">
-        <img src="img/logoNavbar/twitter.png" alt="Twitter" style="width: 18px; height: 18px;">
-    </a>
-</div>
-
 <div class="section">
 
     <div class="svg-overlay">
@@ -124,18 +152,17 @@
         </div>
         <div class="content"  style="margin-left: 1% !important; margin-top: 5% !important;">
             <h1 style="font-size: 35px;">LA MARQUE DE</h1>
-            <h1 style="color: #95c2d9;font-size: 35px; margin-bottom: -2% !important;">VÊTEMENTS GAMIFIÉS</h1>
-            <p class="sous-texte" style="margin-left: -8%; font-family: 'Montserrat'; font-size: 13px;">
-                <span style="display: inline-block; width: 4px; height: 50%; background-color: #ffffff; margin-right: 8px;">¡</span>
-                le vêtement du gamer, inspiré des codes du jeu vidéo.
+            <h1 style="color: #95c2d9;font-size: 35px; margin-bottom: -2% !important;">VÊTEMENTS GAMING</h1>
+            <p class="sous-texte" style="white-space: nowrap;margin-left: -9%; font-family: 'Montserrat'; font-size: 16px;">
+            Des <span style="font-weight: bold">vêtements pour gamers</span>, inspiré des codes du jeu vidéo.
             </p>
+
             <div class="buttons">
 
                 <a href="shop.html">
 
-                <button type="button" style="font-size: 12px;" class="btn btn-outline-light btn-precommander"><b>COMMANDER</b></button></a>
+                <button type="button" style="font-size: 14px;" class="btn btn-outline-light btn-precommander"><b>DÉCOUVRIR</b></button></a>
                 <a href="produit.html">
-                <button type="button" style="font-size: 12px" class="btn btn-outline-light"><b>DECOUVRIR</b></button></a>
             </div>
         </div>
     </div>
@@ -158,10 +185,12 @@
             <h1 style="color: #95c2d9; margin-left: 16% !important; font-size: 30px">
                 STREETWEAR <span style="color: #ffffff;">X</span> GAMING
             </h1>
-            <p class="sous-texte" style=" margin-left: 8% !important;font-size: 12px; padding-right: 1% !important; font-family: 'Montserrat';">GAMESENS, c'est l'union idéale entre la mode et le jeu vidéo ! Découvrez des vêtements premium, orientés streetwear, aux design inspirés des références iconiques du monde du gaming et à l'attribution aléatoire gamifiée.</p>
+            <p class="sous-texte" style="margin-left: 9.2% !important; font-size: 16px; padding-right: 1% !important; font-family: 'Montserrat';">
+                GAMESENS, c’est la fusion parfaite entre la mode streetwear et le jeu vidéo ! Découvre des <span style="font-weight: bold">vêtements premium pour gamers</span>, avec des designs inspirés des références iconiques du monde du gaming, disponibles via un système d'attribution aléatoire, à la manière des <span style="font-weight: bold">lootbox</span>.
+            </p>
         </div>
         <div class="buttons" style="margin-left: 13% !important;">
-            <button type="button" class="btn btn-outline-light btn-savoirplus" style="font-size: 12px;"><b>EN SAVOIR PLUS</b></button>
+            <button type="button" class="btn btn-outline-light btn-savoirplus" ><b>EN SAVOIR PLUS</b></button>
         </div>
     </div>
 </div>
@@ -174,17 +203,23 @@
         <img id="boxImage" src="img/Box/Box_sans%20habillage/BOX_Screen%20Rotate_PP_00000.png" alt="T-shirt GameSens">
     </div>
     <div class="content">
-        <h1 style="font-size: 27px">COMMANDE TA <span style="color: #95c2d9;">LOOTBOX</span>,</h1>
-        <h1 style="font-size: 27px">DÉCOUVRE TA <span style="color: #95c2d9">RÉCOMPENSE</span></h1>
-        <p class="sous-texte" style="margin-left: -4%; font-weight: 400 !important; padding-right: 36% !important; font-family: 'Montserrat';">
-            Nos vêtements sont attribués selon un système de Lootbox largement inspiré de l’univers gaming. Choisis une box de collection et obtient un produit tiré aléatoirement parmi trois niveaux de rareté :
-            <span style="color: #ffffff; font-weight: bold">rare</span>,
-            <span style="color: #ffffff;font-weight: bold">épique</span> &
-            <span style="color: #ffffff;font-weight: bold">légendaire</span> !
+        <h1 class="title">
+            COMMANDE TA <span class="highlight-blue">LOOTBOX</span>,
+        </h1>
+        <h1 class="title">
+            DÉCOUVRE TA <span class="highlight-blue">RÉCOMPENSE</span>
+        </h1>
+        <p class="sous-texte">
+            Nos vêtements sont attribués via un système de lootbox inspiré du monde du jeu vidéo. Choisis une box de collection et obtiens un vêtement tiré aléatoirement parmi trois niveaux de rareté :
+            <span class="highlight-white">rare</span>,
+            <span class="highlight-white">épique</span> &
+            <span class="highlight-white">légendaire</span> !
         </p>
+
+
         <div class="buttons">
             <a href="shop.html">
-            <button type="button" class="btn btn-outline-light btn-commander" style="font-size: 12px;"><b>COMMANDER TA LOOTBOX</b></button>
+            <button type="button" class="btn btn-outline-light btn-commander" style="font-size: 16px;"><b>COMMANDER TA LOOTBOX</b></button>
             </a>
         </div>
     </div>
@@ -234,12 +269,17 @@
     <div class="svg-overlay">
         <img src="img/svg/Grid_layout_2projet.svg" alt="Superposed SVG">
     </div>
-    <div class="content4" style="margin-left: 1.3% !important;">
-        <h1 style="margin-left: 8% !important;font-size: 27px !important;">NOUS SOMMES</h1>
-        <p style="font-size: 13px; margin-left: 1.2%; font-family: 'Montserrat'; white-space: normal;" class="sous-texte">
-            GAMESENS, une jeune startup basée à <span class="strasbourg">Strasbourg</span> dirigée par trois <span class="entrepreneurs">jeunes entrepreneurs Alsaciens</span>. Soutenue par plusieurs réseaux entrepreneuriaux du grand Est, elle est aujourd'hui lauréate de plusieurs concours tels que <span class="awards">Tango & Scan </span>financé par l'Eurométropole de Strasbourg.
+    <div class="content4">
+        <h1>NOUS SOMMES</h1>
+        <p class="sous-texte">
+            GAMESENS, une jeune <span style="font-weight: bold">startup basée à Strasbourg</span>, drivée par trois
+            jeunes entrepreneurs alsaciens. Soutenue par plusieurs réseaux <span style="font-weight: bold">entrepreneuriaux
+        du Grand Est</span>, elle est aujourd’hui lauréate de plusieurs concours, tels que <span style="font-weight: bold">
+        Tango & Scan</span>, financé par l'Eurométropole de Strasbourg.
         </p>
     </div>
+
+
 
     <div class="carousel-container"> <!-- Conteneur spécifique pour le carousel -->
         <div class="carousel">
@@ -257,6 +297,27 @@
                 <img src="img/Photo%20de%20profil%20(IA)/Copie de Raph.jpeg" alt="Person 3">
                 <h2 style="text-align: left;margin-top: 4% !important;">Raphaël</h2>
                 <p style="text-align: left; font-family: 'Montserrat', sans-serif; font-weight: 400;">Maître d'oeuvre</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="community-newsletter-section">
+        <div class="community-newsletter-container">
+            <!-- Bloc gauche : Rejoindre la communauté -->
+            <div class="community-block">
+                <h2 class="community-title">PRÊT À <span class="highlight-blue">REJOINDRE LA COMMUNAUTÉ</span> ?</h2>
+                <p class="community-text">Rejoins-nous sur <span class="highlight-blue">Discord</span> et découvre une communauté de <span class="highlight-white">passionnés de gaming</span>.</p>
+                <a href="https://discord.com" target="_blank" class="btn btn-outline-light community-btn">REJOINS LA COMMUNAUTÉ</a>
+            </div>
+
+            <!-- Bloc droit : Newsletter -->
+            <div class="newsletter-block">
+                <h2 class="newsletter-title">REÇOIS NOTRE NEWSLETTER</h2>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Renseigne ton email" required>
+                    <button type="submit" class="btn btn-outline-light newsletter-btn">S'INSCRIRE</button>
+                </form>
             </div>
         </div>
     </div>
@@ -324,35 +385,32 @@
 
 
 <footer>
-    <div class="footer-image" style="margin-left: 1%;margin-right: 0.5%;margin-bottom: -0.5% !important">
+    <div class="footer-image" >
         <a href="https://discord.com/invite/FKYBwJp4ZR">
-            <div class="video-container">
-                <video style="width: 100%; border-radius: 50%;" id="shirtVideo" autoplay muted loop>
-                    <source src="./img/video/discord.webm" type="video/webm">
-                    Votre navigateur ne prend pas en charge la balise vidéo.
-                </video>
+            <div class="discord-container">
+                <img src="img/Logo/bouton_logo_discord.png" alt="Logo Discord">
             </div>
         </a>
     </div>
 
-    <div class="footer-button" style="margin-left: 0.5%;margin-bottom: -1%">
+    <div class="footer-button">
         <a href="#" id="footerToggle">
-            <img src="./img/Logo/button_info%20(1).svg" alt="Info" style="width: 33px; height: 31px;margin-left: 25% !important; margin-bottom: 50% !important;"> <!-- Assurez-vous que les dimensions sont correctes -->
+            <img src="./img/Logo/button_info%20(1).svg" alt="Info" style="width: 40px; height: 43px;margin-left: 35% !important;"> <!-- Assurez-vous que les dimensions sont correctes -->
         </a>
     </div>
 
     <div id="footerContent" class="footer-modal" style="display: none;">
         <div class="footer-content">
-            <button class="close-btn">
+            <button style="margin-top: 0.3%" class="close-btn">
                 <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
             </button>
             <div class="footer-columns">
                 <div class="footer-column">
                     <h4>Explorer</h4>
-                    <a href="#">Accueil</a>
-                    <a href="#">Projet</a>
-                    <a href="#">Shop</a>
-                    <a href="#">Opening</a>
+                    <a href="accueil.html">Accueil</a>
+                    <a href="concept.html">Concept</a>
+                    <a href="shop.html">Boutique</a>
+                    <a href="shop.html">Ouvre Ta Box</a>
                 </div>
                 <div class="footer-column">
                     <h4>Légal</h4>
@@ -360,10 +418,10 @@
                     <a href="#">CGU / CGV</a>
                 </div>
                 <div class="footer-column">
-                    <h4>Social</h4>
-                    <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://tiktok.com" target="_blank"><i class="bi bi-discord"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <h4>Réseaux</h4>
+                    <a href="https://twitter.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="bi bi-discord"></i></a>
                 </div>
                 <div class="footer-column">
                     <h4>Contact</h4>
@@ -376,44 +434,7 @@
 
 </footer>
 <div class="overlay" id="overlay"></div>
-<div class="stock-modal" id="stockModal">
-    <div class="stock-content">
-        <h2 style="font-size: 42px;margin-left: 12%;margin-top: 2%;margin-bottom: 2%">Stock</h2>
 
-        <div class="stock-boxes">
-            <button onclick="closeStockModal()" class="close-cart-btn">
-                <i class="bi bi-x-lg"></i>
-            </button>
-            <div class="stock-box">
-                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
-                <div class="box-info">
-                    <h3>BOX "FLOWER"</h3>
-                    <p>Box n° 784515</p>
-                </div>
-                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
-            </div>
-
-            <div class="stock-box">
-                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
-                <div class="box-info">
-                    <h3>BOX "FLOWER"</h3>
-                    <p>Box n° 784515</p>
-                </div>
-                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
-            </div>
-
-            <div class="stock-box">
-                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
-                <div class="box-info">
-                    <h3>BOX "FLOWER"</h3>
-                    <p>Box n° 784515</p>
-                </div>
-                <button type="button" class="checkout-btn"><b>OUVRIR</b></button>
-            </div>
-
-        </div>
-    </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

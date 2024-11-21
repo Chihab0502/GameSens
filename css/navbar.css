@@ -431,13 +431,7 @@ body, html {
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet de zoom et l'ombre */
 }
 
-/* Effet de zoom au survol */
-.btn-zoom:hover {
-    transform: scale(1.1); /* Zoom de 10% */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombre portée pour plus d'effet */
-    background-color: #FFF;
 
-}
 
 .stock-boxes {
     display: flex;

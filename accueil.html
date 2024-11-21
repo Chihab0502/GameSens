@@ -34,13 +34,13 @@
             <div class="mx-auto d-flex justify-content-center" style="flex-grow: 1;">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="projet.html"><b>CONCEPT</b></a>
+                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="concept.html"><b>CONCEPT</b></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-button btn-zoom" href="shop.html"><b>BOUTIQUE</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OUVRE TA BOXE</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OUVRE TA BOX</b></a>
                     </li>
                 </ul>
             </div>
@@ -58,11 +58,50 @@
                 </li>
             </ul>
         </div>
+        <div class="stock-modal" id="stockModal">
+            <div class="stock-content">
+                <h2 style="font-size: 52px;margin-left: 12%;margin-top: 6%;margin-bottom: 2%">Ouvre ta box</h2>
+
+                <button onclick="closeStockModal()" style="margin-top: 0.3%" class="close-btn">
+                    <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
+                </button>
+
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+            </div>
+        </div>
     </nav>
 
-    <div id="cartOverlay" class="cart-overlay" style="display: none;">
-        <h2 class="cart-title">Panier</h2>
-        <img src="img/bouton_x.png" alt="Fermer" class="close-button" id="closeCart">
+    <div id="cartOverlay" class="cart-overlay" style="display: none; border-radius: 60px">
+        <br>
+        <h2 class="cart-title" style="margin-left: 3%">Panier</h2>
+        <img style="margin-top: 4%; margin-right: 2%" src="img/bouton_x.png" alt="Fermer" class="close-button" id="closeCart">
 
         <div class="cart-items-container">
             <div class="item-container">
@@ -145,6 +184,7 @@
             </div>
         </div>
         <div class="cart-subtotal">
+            <br>
             <h3 class="sous-total-texte">Sous total</h3>
             <h3 class="sous-total">79,98€</h3>
         </div>
@@ -158,6 +198,7 @@
         <div class="voir-panier-container">
             <a href="panier.html" class="voir-panier">Voir Le Panier</a>
         </div>
+        <br>
     </div>
 
 
@@ -180,9 +221,6 @@
     </div>
 
 </header>
-<div class="fullscreen-overlay">
-    <img src="img/grille.png">
-</div> <!-- Grille -->
 
 <div class="fullscreen-bg">
     <video autoplay muted loop id="background-video">
@@ -223,7 +261,7 @@
                 <div class="footer-column">
                     <h4>Explorer</h4>
                     <a href="accueil.html">Accueil</a>
-                    <a href="projet.html">Concept</a>
+                    <a href="concept.html">Concept</a>
                     <a href="shop.html">Boutique</a>
                     <a href="shop.html">Ouvre Ta Box</a>
                 </div>
@@ -250,44 +288,7 @@
 </footer>
 <!-- Ajoutez ceci juste avant la balise de fermeture </body> -->
 <div class="overlay" id="overlay"></div>
-<div class="stock-modal" id="stockModal">
-    <div class="stock-content">
-        <h2 style="font-size: 52px;margin-left: 12%;margin-top: 6%;margin-bottom: 2%">Ouvre ta box</h2>
 
-            <button onclick="closeStockModal()" style="margin-top: 0.3%" class="close-btn">
-                <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
-            </button>
-
-
-            <div class="stock-box">
-                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
-                <div class="box-info">
-                    <h3>BOX T-SHIRT FLOWER</h3>
-                    <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
-                </div>
-                <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
-            </div>
-
-            <div class="stock-box">
-                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
-                <div class="box-info">
-                    <h3>BOX T-SHIRT FLOWER</h3>
-                    <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
-                </div>
-                <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
-            </div>
-
-            <div class="stock-box">
-                <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
-                <div class="box-info">
-                    <h3>BOX T-SHIRT FLOWER</h3>
-                    <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
-                </div>
-                <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
-            </div>
-
-        </div>
-    </div>
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {

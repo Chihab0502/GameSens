@@ -71,7 +71,7 @@ body, html {
     border-right: 1px solid white ;
     background-color: rgba(0, 0, 0, 0.9);
     color: white;
-    border-radius: 70px 70px 0 0; /* Conservez vos arrondis définis */
+    border-radius: 100px 100px 0 0; /* Conservez vos arrondis définis */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     height: 60%; /* Contrôle de la hauteur totale du footer */
     width: 95%;
