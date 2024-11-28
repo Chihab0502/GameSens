@@ -97,28 +97,7 @@ body {
     text-justify: inter-word;
 }
 
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10%;
-}
-.image-wrapper {
-    width: 100%;
-    max-width: 300px;
-    position: relative;
-    margin: auto;
-    padding-top: 65%; /* 4:5 ratio (height is 125% of width) */
-    overflow: hidden; /* Ensure image stays within the bounds */
-}
-.image-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire container without distortion */
-}
+
 
 .heading-container {
     display: inline-block; /* Centre le bloc dans son parent */
@@ -244,8 +223,9 @@ h1 {
 }
 
 .carousel-item img {
-    max-width: 100%;
+    max-width: 150%;
     border-radius: 10px;
+    margin-left: -130%;
 }
 
 .carousel-item h2, .carousel-item p {
@@ -657,4 +637,78 @@ h1, h2, h3, p, span, a {
     background-color: white; /* Couleur de la ligne */
 }
 
+.sous-texte8 {
+    text-align: center;
+    margin-left: 2%;
+    font-size: 20px;
+    font-family: Arial, serif;
+    width: 100%;
+    text-justify: inter-word;
+}
 
+
+.sous-texte8 span:last-child {
+    display: block; /* Met le dernier span sur une ligne séparée */
+    margin-top: 5px; /* Optionnel : espace entre les lignes */
+}
+
+.image-container .col-md-6 {
+    margin-bottom: 30px; /* Plus d'espacement vertical entre les images */
+    padding-left: 50px; /* Réduit l'espacement horizontal gauche */
+    padding-right: 50px; /* Réduit l'espacement horizontal droit */
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.image-wrapper {
+    width: 110%;
+    max-width: 950px; /* Augmente la largeur maximale */
+    position: relative;
+    margin-right: 10%; /* Centre l'image */
+    padding-top: 110%; /* Diminue le ratio pour rendre l'image plus grande */
+    overflow: hidden; /* Empêche tout dépassement */
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Assure une couverture totale */
+    object-fit: cover; /* Maintient les proportions sans déformer */
+}
+
+.image-wrapper.image-wrapper2{
+    margin-left: 23%;
+}
+
+.soustitreimage{
+    color: white;
+    position: absolute;
+    z-index: 3;
+    margin-top: 23%;
+}
+
+.soustitreimage2{
+    color: white;
+    position: absolute;
+    z-index: 3;
+    margin-top: 23%;
+    margin-right: 8%;
+}
+
+.sousdescriptionimage{
+    font-family: 'Montserrat';
+    margin-left: -12% !important;
+    font-size: 15px;
+    font-weight: 300;
+    width: 106%;
+    text-align: justify;
+    text-justify: inter-word;
+}
