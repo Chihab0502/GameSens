@@ -777,3 +777,19 @@ h1, h2, h3, p, span, a {
     margin-left: 5%;
     font-size: 20px;
 }
+
+.image-container .image-wrapper {
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition fluide */
+    opacity: 0.5; /* Tous les éléments sont assombris par défaut */
+    transform: scale(1); /* Taille normale */
+    cursor: pointer; /* Ajoute un curseur pour montrer qu'il est cliquable */
+}
+
+.image-container .image-wrapper.selected {
+    opacity: 1; /* L'élément sélectionné est complètement visible */
+    z-index: 10; /* S'assure qu'il est au-dessus des autres éléments */
+}
+
+.image-wrapper6{
+    margin-right: -12%;
+}
