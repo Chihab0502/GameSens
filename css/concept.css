@@ -671,8 +671,7 @@ h1, h2, h3, p, span, a {
     max-width: 950px; /* Augmente la largeur maximale */
     position: relative;
     margin-right: 10%; /* Centre l'image */
-    padding-top: 110%; /* Diminue le ratio pour rendre l'image plus grande */
-    overflow: hidden; /* Empêche tout dépassement */
+    padding-top: 120%; /* Diminue le ratio pour rendre l'image plus grande */
 }
 
 .image-wrapper img {
@@ -686,6 +685,7 @@ h1, h2, h3, p, span, a {
 
 .image-wrapper.image-wrapper2{
     margin-left: 23%;
+    margin-top: 17%;
 }
 
 .soustitreimage{
@@ -703,12 +703,77 @@ h1, h2, h3, p, span, a {
     margin-right: 8%;
 }
 
-.sousdescriptionimage{
-    font-family: 'Montserrat';
-    margin-left: -12% !important;
-    font-size: 15px;
+
+.text-overlay {
+    position: absolute; /* Position absolue pour placer le texte sur l'image */
+    bottom: 15%; /* Place le texte à 10% du bas de l'image */
+    left: 10%; /* Place le texte à 10% du côté gauche de l'image */
+    color: white; /* Texte blanc pour la lisibilité */
+    z-index: 2; /* S'assure que le texte est au-dessus de l'image */
+    max-width: 80%; /* Optionnel : ajuste la largeur du texte */
+}
+
+.text-overlay h1 {
+    font-size: 40px; /* Taille du titre */
+    margin-top: -10%;
+    }
+
+.text-overlay p {
+    font-size: 1rem; /* Taille du texte descriptif */
+    line-height: 1.5; /* Espacement entre les lignes pour lisibilité */
+    margin: 0; /* Supprime les marges par défaut */
+}
+
+.buttonsImg {
+    margin-left: -40%;
+    margin-bottom: -10%;
+    display: flex; /* Pour que les enfants soient flexibles */
+    justify-content: center; /* Centrer horizontalement le contenu */
+    align-items: center; /* Centrer verticalement le contenu */
+}
+
+.buttonsImg .btn {
+    width: 243px; /* Largeur du bouton */
+    height: 48px; /* Hauteur du bouton */
+    font-size: 16px !important; /* Taille du texte du bouton */
+    border: 1px solid white;
+    border-radius: 0 0 100px 0;
+    background-color: #fff; /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    transition: all 0.3s ease-in-out; /* Ajoute une animation */
+}
+
+.buttonsImg .btn:hover {
+    background-color: black; /* Fond noir au survol */
+    color: white; /* Texte blanc au survol */
+}
+
+.sous-texte-image.sousdescriptionimage {
+    font-family: Montserrat;
+    font-size: 20px; /* Augmente la taille de la police */
+    text-align: left; /* Centre le texte horizontalement */
+    overflow: hidden; /* Empêche tout débordement du conteneur */
+    width: 100%; /* Fait en sorte que le texte occupe toute la largeur du parent */
+    display: block; /* Assure que l'élément est traité comme un bloc */
     font-weight: 300;
-    width: 106%;
-    text-align: justify;
-    text-justify: inter-word;
+    color: #FFFFFF;
+
+}
+
+.image-wrapper5{
+    margin-right: -15%;
+}
+
+.sousdescriptionimage{
+    font-family: Montserrat;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+.sousdescriptionimage2{
+    margin-top: 1%;
+    overflow: hidden; /* Empêche tout débordement du conteneur */
+    width: 40% !important; /* Fait en sorte que le texte occupe toute la largeur du parent */
+    margin-left: 5%;
+    font-size: 20px;
 }
