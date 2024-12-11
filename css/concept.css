@@ -793,3 +793,20 @@ h1, h2, h3, p, span, a {
 .image-wrapper6{
     margin-right: -12%;
 }
+
+.heading-container{
+    margin-top: -5%;
+}
+
+.content{
+    margin-top: -3%;
+}
+
+.image-container{
+    margin-left: -5%;
+    margin-top: 13%;
+}
+
+.content4{
+    margin-top: -5%;
+}
