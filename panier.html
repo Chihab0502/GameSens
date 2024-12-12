@@ -23,8 +23,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark ">
         <div class="container-fluid position-relative">
             <!-- Conteneur pour le logo, maintenant ajusté pour être centré verticalement -->
-            <div class="navbar-header position-absolute"
-                 style="left: 10px; top: 50%; transform: translateY(-50%); z-index: 30;">
+            <a class="navbar-burger">
+                <img src="img/bouton_deroule.png" alt="bouton hamburger">
+            </a>
+            <div class="navbar-header position-absolute">
                 <a class="navbar-brand" href="accueil.html">
                     <img src="./img/Logo/PNG/Fond transparent/logoGameSensT.png" alt="GAMESENS Logo">
                 </a>
@@ -33,63 +35,201 @@
             <div class="mx-auto d-flex justify-content-center" style="flex-grow: 1;">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="concept.html"><b>PROJET</b></a>
+                        <a class="nav-link nav-button btn-zoom" aria-current="page" href="concept.html"><b>CONCEPT</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button btn-zoom" href="shop.html"><b>SHOP</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="shop.html"><b>BOUTIQUE</b></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OPENING</b></a>
+                        <a class="nav-link nav-button btn-zoom" href="#" id="navbarOpeningButton"><b>OUVRE TA BOX</b></a>
                     </li>
                 </ul>
             </div>
             <!-- Conteneur à droite pour les icônes -->
-            <ul class="navbar-nav ms-auto"  style="margin-right: 2%">
+            <ul class="navbar-nav icons ms-auto">
                 <a class="nav-link" href="#" id="cartToggle">
                     <!-- Icône Panier en SVG -->
-                    <img src="img/logoNavbar/Button_panier (1).svg" alt="Panier" style="width: 32px; height: 32px;">
+                    <img src="img/logoNavbar/Button_panier (1).svg" alt="Panier">
                 </a>
                 <li class="nav-item">
                     <a class="nav-link" href="connexion.html">
                         <!-- Icône Connexion en SVG -->
-                        <img src="img/logoNavbar/Button_compte (1).svg" alt="Connexion" style="width: 24px; height: 24px;">
+                        <img src="img/logoNavbar/Button_compte (1).svg" alt="Connexion">
                     </a>
                 </li>
             </ul>
         </div>
+        <div class="stock-modal" id="stockModal">
+            <div class="stock-content">
+                <h2 style="font-size: 52px;margin-left: 12%;margin-top: 6%;margin-bottom: 2%">Ouvre ta box</h2>
+
+                <button onclick="closeStockModal()" style="margin-top: 0.3%" class="close-btn">
+                    <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
+                </button>
+
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+                <div class="stock-box">
+                    <img src="./img/Box/Box_sans habillage/BOX_Screen Rotate_PP_00000.png" alt="Produit" class="item-image">
+                    <div class="box-info">
+                        <h3>BOX T-SHIRT FLOWER</h3>
+                        <p style="margin-left: 1% !important;">N° de commande : G_000001</p>
+                    </div>
+                    <button type="button" class="checkout-btn" style="margin-right: 15% !important;border-radius: 0 0 100px 0; width: 17%; margin-top:5%"><b>OUVRIR</b></button>
+                </div>
+
+            </div>
+        </div>
     </nav>
 
-    <div class="backdrop" id="backdrop"></div>
-    <div id="cartContent" class="cart-modal" style="display: none;">
-        <div class="cart-content">
-            <h2 class="cart-title">Panier</h2>
-            <button onclick="document.getElementById('cartContent').style.display='none'" class="close-cart-btn">
-                <i class="bi bi-x-lg"></i>
-            </button>
-            <!-- Conteneur pour les éléments du panier -->
-            <div class="cart-items">
-                <div class="cart-item">
-                    <img src="./img/Box/Box_sans%20habillage/BOX_Screen Rotate_PP_00000.png" alt="Box Flower" class="item-image">
-                    <div class="item-details">
-                        <h4>BOX "FLOWER"</h4>
-                        <p>Taille: S</p>
-                        <p>Prix: 35€</p>
-                        <div class="item-actions">
-                            <a href="#">
-                                <p style="color: #555555;text-decoration: underline;display: inline">Modifier</p></a>
-                            <p style="color: #555555;display: inline; margin-left: 1%; margin-right: 1%">|</p>
-                            <a href="#">
-                                <p style="color: #555555; text-decoration: underline;display: inline ">Retirer</p></a>
+    <div id="cartOverlay" class="cart-overlay" style="display: none; border-radius: 60px">
+        <br>
+        <h2 class="cart-title" style="margin-left: 3%">Panier</h2>
+        <img style="margin-top: 4%; margin-right: 2%" src="img/bouton_x.png" alt="Fermer" class="close-button" id="closeCart">
+
+        <div class="cart-items-container">
+            <div class="item-container">
+                <div class="item-image">
+                    <img src="img/GS_Box_Floral-Alpha-4k (1) 1.png" alt="Produit">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-name">BOX T-SHIRT FLOWER</h3>
+                    <p class="item-size">Taille : S</p>
+                    <div class="quantity-delete-container">
+                        <div class="quantity-selector" style="background-image: url('img/bouton_qté.svg');">
+                            <button class="quantity-button minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-button plus">+</button>
                         </div>
+                        <img src="img/image%206.svg" alt="Supprimer" class="delete-icon">
                     </div>
                 </div>
-                <!-- Répéter pour d'autres produits -->
+                <p class="item-price">39,99€</p>
             </div>
-            <a href="panier.html" style="text-decoration: none">
-                <button type="button" class="btn btn-outline-light checkout-btn"><b>Passer Commande</b></button></a>
+
+            <div class="item-container">
+                <div class="item-image">
+                    <!-- Image du produit -->
+                    <img src="img/GS_Box_Floral-Alpha-4k (1) 1.png" alt="Produit">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-name">BOX T-SHIRT FLOWER</h3>
+                    <p class="item-size">Taille : S</p>
+                    <div class="quantity-delete-container">
+                        <div class="quantity-selector" style="background-image: url('img/bouton_qté.svg');">
+                            <button class="quantity-button minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-button plus">+</button>
+                        </div>
+                        <img src="img/image%206.svg" alt="Supprimer" class="delete-icon">
+                    </div>
+                </div>
+                <p class="item-price">39,99€</p>
+            </div>
+
+            <div class="item-container">
+                <div class="item-image">
+                    <!-- Image du produit -->
+                    <img src="img/GS_Box_Floral-Alpha-4k (1) 1.png" alt="Produit">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-name">BOX T-SHIRT FLOWER</h3>
+                    <p class="item-size">Taille : S</p>
+                    <div class="quantity-delete-container">
+                        <div class="quantity-selector" style="background-image: url('img/bouton_qté.svg');">
+                            <button class="quantity-button minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-button plus">+</button>
+                        </div>
+                        <img src="img/image%206.svg" alt="Supprimer" class="delete-icon">
+                    </div>
+                </div>
+                <p class="item-price">39,99€</p>
+            </div>
+
+            <div class="item-container">
+                <div class="item-image">
+                    <!-- Image du produit -->
+                    <img src="img/GS_Box_Floral-Alpha-4k (1) 1.png" alt="Produit">
+                </div>
+                <div class="item-details">
+                    <h3 class="item-name">BOX T-SHIRT FLOWER</h3>
+                    <p class="item-size">Taille : S</p>
+                    <div class="quantity-delete-container">
+                        <div class="quantity-selector" style="background-image: url('img/bouton_qté.svg');">
+                            <button class="quantity-button minus">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-button plus">+</button>
+                        </div>
+                        <img src="img/image%206.svg" alt="Supprimer" class="delete-icon">
+                    </div>
+                </div>
+                <p class="item-price">39,99€</p>
+            </div>
+        </div>
+        <div class="cart-subtotal">
+            <br>
+            <h3 class="sous-total-texte">Sous total</h3>
+            <h3 class="sous-total">79,98€</h3>
+        </div>
+        <div class="cart-button-container">
+            <a href="produit.html">
+                <button style="background-color: #FFF; color: black" type="button" class="buttons-commander-panier">
+                    <b>COMMANDER</b>
+                </button>
+            </a>
+        </div>
+        <div class="voir-panier-container">
+            <a href="panier.html" class="voir-panier">Voir Le Panier</a>
+        </div>
+        <br>
+    </div>
+
+
+    <div id="menuOverlay" class="menu-overlay" style="display: none;">
+        <div class="menu-content">
+            <div class="menu-section">
+                <h2 class="menu-title">VÊTEMENTS</h2>
+                <ul class="menu-subtitles">
+                    <li>Box T-shirts</li>
+                    <li>Box Hoodies & Sweatshirts</li>
+                </ul>
+            </div>
+            <div class="menu-section">
+                <h2 class="menu-title">COLLECTION</h2>
+                <ul class="menu-subtitles">
+                    <li>Flower x Connie</li>
+                </ul>
+            </div>
         </div>
     </div>
+
 </header>
+
+<div class="section slide-in">
+    <div class="fullscreen-overlay">
+        <img src="img/grille.png" alt="Superposed SVG">
+    </div>
+</div>
+
+
 <div class="fullscreen-bg"></div>
 <div class="container mt-5 text-left panier-header">
     <h1 class="panier-title" style="font-size:58px">PANIER</h1>
@@ -151,34 +291,32 @@
 
 
 <footer>
-    <div class="footer-image" style="margin-left: 1%;margin-right: 0.5%;margin-bottom: -0.5% !important">
+    <div class="footer-image" >
         <a href="https://discord.com/invite/FKYBwJp4ZR">
-            <div class="video-container">
-                <video style="width: 100%; border-radius: 50%;" id="shirtVideo" autoplay muted loop>
-                    <source src="./img/video/discord.webm" type="video/webm">
-                    Votre navigateur ne prend pas en charge la balise vidéo.
-                </video>
+            <div class="discord-container">
+                <img src="img/Logo/bouton_logo_discord.png" alt="Logo Discord">
             </div>
         </a>
     </div>
+
     <div class="footer-button">
         <a href="#" id="footerToggle">
-            <img src="./img/Logo/button_info%20(1).svg" alt="Info" style="width: 33px; height: 31px;margin-right: -20% !important;"> <!-- Assurez-vous que les dimensions sont correctes -->
+            <img src="./img/Logo/button_info%20(1).svg" alt="Info" style="width: 40px; height: 43px;margin-left: 35% !important;"> <!-- Assurez-vous que les dimensions sont correctes -->
         </a>
     </div>
 
     <div id="footerContent" class="footer-modal" style="display: none;">
         <div class="footer-content">
-            <button class="close-btn">
+            <button style="margin-top: 0.3%" class="close-btn">
                 <i class="bi bi-x-lg"></i> <!-- Assurez-vous que l'icône de croix est correctement référencée -->
             </button>
             <div class="footer-columns">
                 <div class="footer-column">
                     <h4>Explorer</h4>
-                    <a href="#">Accueil</a>
-                    <a href="#">Projet</a>
-                    <a href="#">Shop</a>
-                    <a href="#">Opening</a>
+                    <a href="accueil.html">Accueil</a>
+                    <a href="concept.html">Concept</a>
+                    <a href="shop.html">Boutique</a>
+                    <a href="shop.html">Ouvre Ta Box</a>
                 </div>
                 <div class="footer-column">
                     <h4>Légal</h4>
@@ -186,10 +324,10 @@
                     <a href="#">CGU / CGV</a>
                 </div>
                 <div class="footer-column">
-                    <h4>Social</h4>
-                    <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://tiktok.com" target="_blank"><i class="bi bi-discord"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <h4>Réseaux</h4>
+                    <a href="https://twitter.com" target="_blank"><i class="bi bi-tiktok"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="bi bi-discord"></i></a>
                 </div>
                 <div class="footer-column">
                     <h4>Contact</h4>

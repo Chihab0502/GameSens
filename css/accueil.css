@@ -5,6 +5,14 @@
     src: url('../conthrax/conthrax-sb.otf') format('truetype');
     /* Ajoutez d'autres variations de la police si nécessaire */
 }
+body, html {
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    width: 100%; /* S'assure que l'élément prend toute la largeur */
+    height: 100%; /* S'assure que l'élément prend toute la hauteur */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
 
 body, html {
     font-family: 'Conthrax', sans-serif;
@@ -18,13 +26,6 @@ body, html {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-}
-
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
 }
 
 .navbar {
@@ -98,7 +99,7 @@ h1 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: flex; /*flex=afficher none=cacher*/
+    display: none; /*flex=afficher none=cacher*/
     justify-content: center;
     align-items: center;
     pointer-events: none; /* Ignorer les clics pour cette image */
