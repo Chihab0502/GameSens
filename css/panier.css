@@ -52,14 +52,14 @@ body, html {
 
 /* Style pour le composant parent */
 .parent-component {
-    margin: 150px 200px;
+    margin: 150px 180px;
 }
 
 /* Style pour le titre */
 .title {
     margin: 0;
     padding: 0 0 10px 0;
-    font-size: 75px;
+    font-size: 85px;
     color: white;
 }
 
@@ -67,7 +67,7 @@ body, html {
 .child-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Espace entre les deux composants */
+    gap: -10px; /* Espace entre les deux composants */
 }
 
 /* Style pour les sous-composants */
@@ -77,15 +77,166 @@ body, html {
 }
 
 .child-one {
-    flex: 0 0 65%;
+    flex: 0 0 70%;
     overflow-y: auto; /* Permet de scroller si nécessaire */
-
 }
 
 .child-two {
-    flex: 0 0 35%;
+    flex: 0 0 38.5%;
+    overflow-y: auto; /* Permet de scroller si nécessaire */
 }
 
-.child-one .item-image{
-
+.child-one .item-container{
+    width: 90%;
+    height: 180px;
 }
+
+
+.item-name{
+    font-size: 25px;
+    margin-left: -50%;
+}
+
+.item-size{
+    font-size: 17px;
+    margin-left: -92%;
+    font-weight: bold;
+    color: white;
+}
+
+.item-options {
+    display: flex;
+    gap: 20px;
+}
+
+.item-options p {
+    margin: 0;
+}
+
+.item-options select {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    padding-right: 20px;
+    appearance: none;
+    background: url('../img/Box/flechebas.png') no-repeat left 20px center;
+    background-size: 25px;
+}
+
+.item-options select option {
+    background: #000;
+    color: #fff;
+}
+
+.quantity-delete-container{
+    margin-top: -0.4%;
+    margin-left: -3%;
+}
+
+.quantity-selector{
+    margin-left: -1%;
+    margin-top: -0.4%;
+}
+
+.item-price{
+    font-size: 20px;
+    margin-right: 2%;
+}
+
+.item-name2{
+    font-size: 31px !important;
+    margin-top: 4%;
+}
+
+.sous-item-name2{
+    font-size: 19px;
+    margin-right: -15% !important;
+    margin-top: 6%;
+}
+
+.item-size2{
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    margin-right: -16% !important;
+    margin-top: 6%;
+}
+
+.item-size3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    margin-right: -16% !important;
+    margin-top: 2%;
+}
+
+.item-size4{
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    margin-right: -6% !important;
+    margin-top: 2%;
+    font-weight: bold;
+}
+
+.item-size5{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin-right: -8% !important;
+    margin-top: 2%;
+}
+
+.blocfinalpanier{
+    margin-top: -2% !important;
+}
+
+.buttons{
+    border: 1px solid white;
+    border-radius: 0 0 100px 0;
+    padding: 10px 70px !important;
+    color: blue;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    align-items: flex-start; /* Aligner le texte à gauche */
+    gap: 5px; /* Petit espace entre les lignes du texte */
+}
+
+.checkbox {
+    position: relative;
+    width: 24px; /* Augmentation de la taille */
+    height: 24px; /* Augmentation de la taille */
+    border: 1px solid #000;
+    display: inline-block; /* Utiliser display: inline-block; pour aligner horizontalement */
+}
+
+.checkbox::before {
+    content: '';
+    width: 12px; /* Augmentation de la taille du carré blanc */
+    height: 12px; /* Augmentation de la taille du carré blanc */
+    background-color: white;
+    border: 1px solid #000;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: none;
+}
+
+.checkbox input:checked::before {
+    display: block;
+}
+
+.text {
+    color: gray;
+    font-size: 13px;
+    white-space: pre-wrap; /* Permet le retour à la ligne automatiquement */
+    display: inline-block; /* Pour forcer l'affichage horizontal */
+}
+
+.text:nth-child(2) {
+    margin-top: 2px; /* Espacement ajusté entre les deux lignes de texte */
+}
+
