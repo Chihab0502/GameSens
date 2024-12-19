@@ -278,7 +278,7 @@ h1 {
 /* Style pour le bouton "COMMANDER" */
 .buttons .btn-outline-light {
     border-color: #ffffff; /* Couleur de la bordure par défaut pour s'assurer que la bordure est visible */
-    color: blue; /* Couleur du texte par défaut */
+    color: #ffffff; /* Couleur du texte par défaut */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide pour la couleur de fond et le zoom */
 }
 
@@ -288,13 +288,5 @@ h1 {
     color: #FFF; /* Couleur du texte lors du survol pour assurer une bonne lisibilité */
 }
 
-.btn-outline-light{
-    border: 1px solid white;
-    border-radius: 0 0 100px 0;
-    padding: 10px 70px !important;
-    color: white;
-    margin-top: 20px;
-    margin-right: 10px;
-}
 
 
