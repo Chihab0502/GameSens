@@ -50,168 +50,42 @@ body, html {
     z-index: 1; /* Ensures the overlay is above the background image but below the content */
 }
 
-.fullscreen-bg > * {
-    position: relative; /* Ensures that any children are above the overlay */
-    z-index: 2;
+/* Style pour le composant parent */
+.parent-component {
+    margin: 150px 200px;
 }
 
-.mt-5 {
-    margin-top: 100px !important; /* Ajuste cette valeur selon tes besoins */
-}
-
-.panier-header {
-    display: flex;
-    align-items: center;
-    gap: 100px; /* Espacement entre les éléments */
-}
-
-.panier-title {
-    font-size: 58px;
-    color: white;
-    margin: 0; /* Supprime les marges pour un alignement parfait */
-}
-
-.panier-subtitle {
-    font-size: 18px;
-    font-weight: lighter;
-    color: white;
-    margin: 0; /* Supprime les marges pour un alignement parfait */
-    font-family: Arial, sans-serif;
-}
-
-.panier-items {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espacement entre les items */
-}
-
-.item-rectangle {
-    width: 100%; /* Ajuste la largeur selon le conteneur parent */
-    background: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
-    border-radius: 10px; /* Coins arrondis */
-    padding: 20px; /* Padding intérieur */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure translucide */
-    color: white; /* Couleur du texte */
-    display: flex; /* Utilise flexbox pour aligner le contenu */
-    align-items: center; /* Centre verticalement le contenu */
-    gap: 20px; /* Espace entre l'image et le texte */
-}
-
-.item-image {
-    width: 40%; /* Ajuste la largeur selon tes besoins */
-    height: auto; /* Assure que la hauteur est ajustée proportionnellement */
-    margin-left: -10%; /* Décale l'image plus à gauche */
-    flex-shrink: 0; /* Empêche l'image de rétrécir */
-}
-
-.item-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centre verticalement le contenu */
-}
-
-.item-price {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.item-size{
-    font-size: 12px;
-}
-
-.item-quantity{
-    font-size: 12px;
-}
-
-.item-name {
-    font-size: 24px;
-    font-weight: normal;
-}
-
-.item-options {
-    display: flex;
-    gap: 20px; /* Espacement entre la taille et la quantité */
-}
-
-.item-options p {
+/* Style pour le titre */
+.title {
     margin: 0;
-}
-
-.item-options select {
-    background: transparent;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    padding-right: 20px; /* Ajoute un padding à droite pour faire de la place pour la flèche */
-    appearance: none;
-    background: url('../img/Box/flechebas.png') no-repeat left 20px center;
-    background-size: 25px;
-}
-
-.item-options select option {
-    background: #000;
-    color: #fff;
-}
-
-.item-delete {
-    position: absolute;
-    top: 10px; /* Ajuste selon la hauteur souhaitée */
-    right: 10px; /* Ajuste selon l'écart souhaité par rapport au bord droit */
-    width: 50px; /* Ajuste la taille de la croix */
-    height: 50px; /* Assure un aspect carré */
-    cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
-}
-
-.resume {
-    background: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
-    border-radius: 10px; /* Coins arrondis */
-    padding: 20px; /* Padding intérieur */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordure translucide */
-    color: white; /* Couleur du texte */
-}
-
-.resume h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.resume p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.resume button {
-    border: 1px solid white;
-    background-color: white;
-    border-radius: 0 0 100px 0;
-    padding: 10px 70px !important;
-    color: black;
-    margin-top: 20px;
-    margin-right: 10px;
-}
-
-.resume button:hover {
-    background-color: transparent;
+    padding: 0 0 10px 0;
+    font-size: 75px;
     color: white;
 }
 
-.resume .resume-item {
+/* Conteneur des sous-composants */
+.child-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    gap: 10px; /* Espace entre les deux composants */
 }
 
-.resume-item{
-    font-size: 15px;
+/* Style pour les sous-composants */
+.child-component {
+    flex: 1; /* Permet d'occuper un espace égal pour chaque composant */
+    text-align: center; /* Pour centrer le contenu (optionnel) */
 }
 
-.resume h3{
-    font-size: 21px;
+.child-one {
+    flex: 0 0 65%;
+    overflow-y: auto; /* Permet de scroller si nécessaire */
+
 }
 
-.resume .resume-item span {
-    flex-grow: 1;
-    text-align: right;
-    margin-left: 10px;
+.child-two {
+    flex: 0 0 35%;
+}
+
+.child-one .item-image{
+
 }
