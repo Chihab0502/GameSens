@@ -343,3 +343,239 @@ body, html {
     background-size: 25px;
 }
 
+
+.color-section {
+    background-color: black; /* Fond noir */
+    color: white; /* Texte blanc */
+    padding: 200px 0; /* Augmente l'espace en haut et en bas */
+    margin-top: 50px; /* Ajoute de l'espace au-dessus pour bien séparer */
+}
+
+.angle-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.horizontal-line {
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    width: 140px; /* Longueur de la ligne horizontale */
+    height: 6px; /* Épaisseur de la ligne */
+    background-color: white; /* Couleur de la ligne */
+}
+
+.vertical-line {
+    position: absolute;
+    top: 20%;
+    left: 90%;
+    width: 6px; /* Épaisseur de la ligne */
+    height: 100px; /* Longueur de la ligne verticale */
+    background-color: white; /* Couleur de la ligne */
+}
+
+.horizontal-line2 {
+    position: absolute;
+    top: 330%;
+    left: 1160%;
+    width: 140px; /* Longueur de la ligne horizontale */
+    height: 6px; /* Épaisseur de la ligne */
+    background-color: white; /* Couleur de la ligne */
+}
+
+.vertical-line2 {
+    position: absolute;
+    top: 236%;
+    left: 1296%;
+    width: 6px; /* Épaisseur de la ligne */
+    height: 100px; /* Longueur de la ligne verticale */
+    background-color: white; /* Couleur de la ligne */
+}
+
+/* Community and Newsletter Section */
+.community-newsletter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 40px 20px;
+    margin-right:-5%;
+}
+
+.community-newsletter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.community-block,
+.newsletter-block {
+    flex: 1;
+    margin: 20px;
+}
+
+.community-title,
+.newsletter-title {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.newsletter-title {
+    text-decoration: none !important; /* Supprime la sous-ligne */
+    color: white; /* Définit une couleur blanche ou celle que vous préférez */
+}
+
+
+.newsletter-input {
+    width: 185%;
+    max-width: 500px;
+    padding: 10px;
+    border: 2px solid darkslategrey;
+    border-radius: 25px;
+    margin-left: -62%;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+
+.highlight-blue {
+    color: #95c2d9; /* Bleu */
+}
+
+.highlight-white {
+    color: #FFFFFF; /* Blanc */
+    font-weight: bold; /* Gras pour les termes "rare", "épique", "légendaire" */
+}
+
+.sous-texte8 {
+    text-align: center;
+    margin-left: 2%;
+    font-size: 20px;
+    font-family: Arial, serif;
+    width: 100%;
+    text-justify: inter-word;
+}
+
+
+.sous-texte8 span:last-child {
+    display: block; /* Met le dernier span sur une ligne séparée */
+    margin-top: 5px; /* Optionnel : espace entre les lignes */
+}
+
+.community-block {
+    position: relative; /* Permet un contrôle local */
+    display: block; /* Assurez-vous que le bouton peut bouger indépendamment */
+    text-align: left; /* Alignement à gauche par défaut */
+}
+
+.community-block {
+    position: relative;
+}
+
+.btn-commu {
+    position: absolute;
+    top: 110%; /* Ajustez selon vos besoins */
+    left: -13%; /* Décalage vers la gauche */
+    transform: translateY(-50%); /* Centre verticalement */
+    background-color: black;
+    color: white !important;
+    font-weight: bold;
+}
+
+.btn-commu:hover{
+    background-color: #FFF;
+    color: black !important;
+}
+
+.community-newsletter-section.btn-precommander {
+    background-color: white;
+    color: black !important;
+    font-weight: bold;
+}
+
+.buttons button {
+    border: 1px solid white;
+    border-radius: 0 0 100px 0;
+    padding: 10px 35px !important;
+    color: white;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.btn-precommander:hover {
+    background-color: black; /* Fond noir au survol */
+    color: white; /* Texte blanc pour contraste */
+    border: 1px solid black; /* Bordure noire pour uniformité */
+}
+
+.newsletter-form .btn-precommander:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+
+.btn-savoirplus {
+    background-color: white;
+    color: black !important;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-savoirplus:hover {
+    background-color: black;
+    color: white !important;
+}
+
+.btn-commander {
+    background-color: white;
+    color: black !important;
+    font-weight: bold;
+}
+
+.btn-commander:hover {
+    background-color: black;
+    color: white !important;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column; /* Positionne les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    gap: 15px; /* Ajoute de l'espacement entre les éléments */
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #FFF; /* Bordure blanche */
+    border-radius: 25px;
+    background-color: transparent;
+    color: #FFF;
+    font-size: 14px;
+    outline: none;
+}

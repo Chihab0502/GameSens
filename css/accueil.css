@@ -345,7 +345,7 @@ h1 {
         margin: 0;
     }
 
-    .navbar-nav {
+    .navbar-nav.icons {
         flex-direction: row;
         gap: 10px;
     }
@@ -363,8 +363,30 @@ h1 {
     }
 
     .cart-overlay {
-        left: 0;
-        width: 100%;
+        position: absolute;
+        right: 4%;
+        width: 300px;
+    }
+
+    .cart-overlay .item-image img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-details {
+        margin-left: 0;
+    }
+
+    .item-name, .sous-total-texte, .buttons-commander-panier {
+        font-size: 14px;
+    }
+
+    .item-size, .sous-total {
+        font-size: 12px;
+    }
+
+    .cart-button-container {
+        margin-top: 10px;
     }
 
     .footer-content {
