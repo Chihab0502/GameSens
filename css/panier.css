@@ -15,7 +15,7 @@ body, html {
     left: 0;
     width: 100vw;
     height: 100vh;
-    display: flex; /*flex=afficher none=cacher*/
+    display: none; /*flex=afficher none=cacher*/
     justify-content: center;
     align-items: center;
     pointer-events: none; /* Ignorer les clics pour cette image */
@@ -52,15 +52,15 @@ body, html {
 
 /* Style pour le composant parent */
 .parent-component {
-    margin: 170px 180px;
+    margin: 130px 180px;
 }
 
 /* Style pour le titre */
 .title {
-    margin: 0;
     padding: 0 0 10px 0;
     font-size: 85px;
     color: white;
+    margin-left: -8% ;
 }
 
 /* Conteneur des sous-composants */
@@ -77,12 +77,14 @@ body, html {
 }
 
 .child-one {
-    flex: 0 0 70%;
+    margin-left: -8%;
+    flex: 0 0 90%;
     overflow-y: auto; /* Permet de scroller si nécessaire */
 }
 
 .child-two {
-    flex: 0 0 38.5%;
+    margin-left: -5%;
+    flex: 0 0 40%;
     overflow-y: auto; /* Permet de scroller si nécessaire */
 }
 
@@ -92,28 +94,28 @@ body, html {
 }
 
 
-.item-name{
+.parent-component .item-name{
     font-size: 25px;
     margin-left: -50%;
 }
 
-.item-size{
+.parent-component  .item-size{
     font-size: 17px;
     margin-left: -92%;
     font-weight: bold;
     color: white;
 }
 
-.item-options {
+.parent-component .item-options {
     display: flex;
     gap: 20px;
 }
 
-.item-options p {
+.parent-component .item-options p {
     margin: 0;
 }
 
-.item-options select {
+.parent-component .item-options select {
     background: transparent;
     color: #fff;
     border: none;
@@ -124,79 +126,80 @@ body, html {
     background-size: 25px;
 }
 
-.item-options select option {
+.parent-component .item-options select option {
     background: #000;
     color: #fff;
 }
 
-.quantity-delete-container{
+.parent-component .quantity-delete-container{
     margin-top: -0.4%;
     margin-left: -3%;
 }
 
-.quantity-selector{
+.parent-component .quantity-selector{
     margin-left: -1%;
     margin-top: -0.4%;
 }
 
-.item-price{
+.parent-component .item-price{
     font-size: 20px;
     margin-right: 2%;
 }
 
-.item-name2{
+.parent-component .item-name2{
     font-size: 31px !important;
     margin-top: 4%;
+    margin-right: -10%;
 }
 
-.sous-item-name2{
+.parent-component .sous-item-name2{
     font-size: 19px;
-    margin-right: -12% !important;
+    margin-right: -32% !important;
     margin-top: 6%;
 }
 
-.item-size2{
+.parent-component .item-size2{
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
     margin-right: -16% !important;
     margin-top: 6%;
 }
 
-.item-size3{
+.parent-component .item-size3{
     font-family: "Montserrat", sans-serif;
     font-size: 17px;
     margin-right: -16% !important;
     margin-top: 2%;
 }
 
-.item-size4{
+.parent-component .item-size4{
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
-    margin-right: -12% !important;
+    margin-right: -14% !important;
     margin-top: 3%;
     font-weight: bold;
 }
 
-.item-size5{
+.parent-component .item-size5{
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
-    margin-right: -9% !important;
+    margin-right: -7% !important;
     margin-top: 2%;
 }
 
-.blocfinalpanier{
+.parent-component .blocfinalpanier{
     margin-top: -2% !important;
     margin-left: 1.5%;
 }
 
-.checkbox-container {
+.parent-component .checkbox-container {
     display: flex;
     flex-direction: column; /* Alignement vertical */
     align-items: flex-start; /* Aligner le texte à gauche */
     gap: 5px; /* Petit espace entre les lignes du texte */
 }
 
-.checkbox {
+.parent-component .checkbox {
     position: relative;
     width: 24px; /* Augmentation de la taille */
     height: 24px; /* Augmentation de la taille */
@@ -204,7 +207,7 @@ body, html {
     display: inline-block; /* Utiliser display: inline-block; pour aligner horizontalement */
 }
 
-.checkbox::before {
+.parent-component .checkbox::before {
     content: '';
     width: 12px; /* Augmentation de la taille du carré blanc */
     height: 12px; /* Augmentation de la taille du carré blanc */
@@ -216,63 +219,72 @@ body, html {
     display: none;
 }
 
-.checkbox input:checked::before {
+.parent-component .checkbox input:checked::before {
     display: block;
 }
 
-.text {
+.parent-component .text {
     color: gray;
     font-size: 13px;
     white-space: pre-wrap; /* Permet le retour à la ligne automatiquement */
     display: inline-block; /* Pour forcer l'affichage horizontal */
 }
 
-.text:nth-child(2) {
+.parent-component .text:nth-child(2) {
     margin-top: 2px; /* Espacement ajusté entre les deux lignes de texte */
 }
 
-.promo-code-section {
+.parent-component .promo-code-section {
     margin-top: -8%;
     margin-left: 90%;
 }
 
-.toggle-promo-code {
+.parent-component .toggle-promo-code {
     background-color: black;
     border: 1px solid transparent;
     padding: 5px 10px;
     cursor: pointer;
-    margin-left: -87%;
-    color: #FFF;
+    margin-left: -7%;
+    margin-top: -20%;
+    color: grey;
 }
 
-.promo-code-input {
+.parent-component .promo-code-input {
     display: none; /* Caché par défaut */
     padding: 10px;
     border: 1px solid gray;
     border-radius: 100px 100px 100px 100px;
     margin-top: 20%;
-    margin-left: -920% !important;
+    margin-left: -950% !important;
     background-color: transparent;
-    width: 500px;
+    width: 350px;
     color: #FFF; /* Couleur du texte en blanc */
 }
 
-.btnCommander2{
+.parent-component .btnCommander2{
     border-radius: 0 0 100px 0;
-    margin-left: -55%;
+    margin-left: -48%;
     margin-top: 6%;
     margin-bottom: 5%;
     background-color: white;
     color: black;
     padding: 10px 40px; /* Augmenter les marges pour rendre le bouton plus grand */
-    font-size: 16px; /* Ajuster la taille de la police */
+    font-size: 15px; /* Ajuster la taille de la police */
     border: 1px solid transparent; /* Si nécessaire */
     cursor: pointer; /* Afficher une main lors du survol */
 }
 
-.btnCommander3{
+.parent-component .btnCommander2:hover {
+    background-color: black; /* Fond rouge au survol */
+    color: white; /* Texte blanc pour le contraste */
+    border: 1px solid white; /* Contour blanc au survol */
+}
+
+
+
+.parent-component .btnCommander3{
     border-radius: 0 0 100px 0;
-    margin-left: -900%;
+    margin-left: -930%;
     margin-top: 56%;
     background-color: black;
     color: white;
@@ -281,3 +293,53 @@ body, html {
     border: 1px solid #FFF; /* Si nécessaire */
     cursor: pointer; /* Afficher une main lors du survol */
 }
+
+.parent-component .btnCommander3:hover {
+    background-color: #FFF; /* Fond rouge au survol */
+    color: black; /* Texte blanc pour le contraste */
+    border: 1px solid black; /* Contour blanc au survol */
+}
+
+.parent-component .quantity-display {
+    font-size: 13px;
+    width: 40px; /* Ajustez la largeur pour bien centrer */
+    height: 40px; /* Ajoutez une hauteur pour un carré parfait */
+    line-height: 40px; /* Assurez un centrage vertical */
+    text-align: center; /* Centrage horizontal */
+    border: 1px solid transparent; /* Optionnel, pour une bordure visible */
+    border-radius: 5px; /* Ajoutez des coins arrondis */
+    color: #FFF; /* Couleur du texte */
+    display: inline-block; /* Assurez que l'élément prend la largeur/hauteur définie */
+    margin: 0 28px; /* Ajoutez un espace autour si nécessaire */
+    box-sizing: border-box; /* Inclut la bordure et le padding dans les dimensions */
+}
+
+
+.parent-component .checkbox-container {
+    display: flex;
+    flex-direction: row; /* Met en ligne au lieu d'une colonne */
+    align-items: center; /* Aligne verticalement au centre */
+    gap: 10px; /* Espace horizontal entre la checkbox et le texte */
+}
+
+
+.textcheckB{
+    margin-left: -4%;
+    margin-bottom: -2%;
+}
+
+.item-details{
+    margin-bottom: -3%;
+}
+
+.parent-component .item-options select {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    padding-right: 40px;
+    appearance: none;
+    background: url('../img/Box/flechebas.png') no-repeat right 20px center;
+    background-size: 25px;
+}
+

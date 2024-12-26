@@ -231,7 +231,6 @@
     </div>
 </div>
 
-
 <div class="fullscreen-bg"></div>
 
 <div class="parent-component">
@@ -251,9 +250,11 @@
                                 <p style="color: #FFF;margin-top: 1%">ǀ</p>
                                 <p class="item-size" style="margin-top: 0.7%">Qté :</p>
                                 <div class="quantity-selector" style="background-image: url('img/bouton_qté.svg');margin-top: 0.2%">
-                                    <button class="quantity-button minus">-</button>
-                                    <span class="quantity">1</span>
-                                    <button class="quantity-button plus">+</button>
+                                    <div class="quantity-container">
+                                        <button class="quantity-button minus">-</button>
+                                        <span class="quantity-display">1</span>
+                                        <button class="quantity-button plus">+</button>
+                                    </div>
                                 </div>
                                 <div class="quantity-delete-container">
                                     <img src="img/image%206.svg" alt="Supprimer" class="delete-icon">
@@ -264,14 +265,16 @@
                                 <input type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="text" style="font-family: 'Montserrat', sans-serif">Option d’emballage : reçois ta Box en version physique</span>
-                            <span class="text" style="font-family: 'Montserrat', sans-serif">pour seulement 5 € de plus</span>
+                            <span class="text textcheckB" style="font-family: 'Montserrat', sans-serif">
+        Option d’emballage : reçois ta Box en version physique <br> pour seulement 5 € de plus
+    </span>
                         </div>
+
                     </div>
                 </div>
 
 
-                <p class="item-price">39,99€</p>
+                <p class="item-price" data-item-price="39.99">39,99€</p>
             </div>
 
             <div class="item-container">
@@ -287,9 +290,11 @@
                             <p style="color: #FFF;margin-top: 1%">ǀ</p>
                             <p class="item-size" style="margin-top: 0.7%">Qté :</p>
                             <div class="quantity-selector" style="background-image: url('img/bouton_qté.svg');margin-top: 0.2%">
-                                <button class="quantity-button minus">-</button>
-                                <span class="quantity">1</span>
-                                <button class="quantity-button plus">+</button>
+                                <div class="quantity-container">
+                                    <button class="quantity-button minus">-</button>
+                                    <span class="quantity-display">1</span>
+                                    <button class="quantity-button plus">+</button>
+                                </div>
                             </div>
                             <div class="quantity-delete-container">
                                 <img src="img/image%206.svg" alt="Supprimer" class="delete-icon">
@@ -303,13 +308,14 @@
                             <input type="checkbox">
                             <span class="checkmark"></span>
                         </label>
-                        <span class="text" style="font-family: 'Montserrat', sans-serif; font-weight: lighter">Option d’emballage : reçois ta Box en version physique</span>
-                        <span class="text" style="font-family: 'Montserrat', sans-serif">pour seulement 5 € de plus</span>
+                        <span class="text textcheckB" style="font-family: 'Montserrat', sans-serif">
+        Option d’emballage : reçois ta Box en version physique <br> pour seulement 5 € de plus
+    </span>
                     </div>
                 </div>
 
 
-                <p class="item-price">39,99€</p>
+                <p class="item-price" data-item-price="39.99">39,99€</p>
             </div>
         </div>
         <div class="child-component child-two">
@@ -341,10 +347,6 @@
         </div>
     </div>
 </div>
-
-
-
-
 
 <footer>
     <div class="footer-image" >
