@@ -150,8 +150,8 @@ body, html {
     position: fixed;
     top: 100px; /* Positionnement vertical */
     right: 70px; /* Positionnement horizontal */
-    width: 30%; /* Largeur du panier */
-    height: 70%; /* Hauteur du panier */
+    width: 35%; /* Largeur du panier */
+    height: 80%; /* Hauteur du panier */
     background-color: rgba(0, 0, 0, 0.8); /* Fond noir avec transparence */
     backdrop-filter: blur(10px); /* Effet de flou */
     border: 2px solid white; /* Bordure blanche */
@@ -304,19 +304,20 @@ body, html {
     align-items: center; /* Centre verticalement les éléments */
     padding: 5px 35px; /* Espacement au-dessus et en dessous */
     margin-top: 20px;
+    margin-left: -20%;
 }
 
 .sous-total-texte {
-    font-size: 24px;
+    font-size: 18px;
     color: white; /* Couleur blanche avec opacité */
-    margin: 0;
+    margin-left: -35%;
 }
 
 .sous-total {
     font-size: 18px;
     font-weight: bold;
     color: white;
-    margin: 0;
+    margin-left: -25%;
 }
 
 
@@ -329,11 +330,11 @@ body, html {
 
 .buttons-commander-panier {
     border: 1px solid white;
-    border-radius: 0 0 100px 0;
-    padding: 10px 50px;
+    border-radius: 0 0 50px 0;
+    padding: 8px 40px;
     color: black;
     background-color: #FFF;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .buttons-commander-panier:hover {
@@ -345,7 +346,7 @@ body, html {
     display: flex;
     justify-content: center; /* Centre le lien horizontalement */
     align-items: center; /* Centre le lien verticalement */
-    margin-top: 20px; /* Ajoute un espace au-dessus */
+    margin-top: 5px; /* Ajoute un espace au-dessus */
     margin-bottom: 20px; /* Ajoute un espace en dessous */
 }
 
