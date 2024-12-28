@@ -459,7 +459,7 @@ h1, h2, h3, p, span, a {
 }
 
 .content4 {
-    width: 100%; /* Augmente la largeur à 90% de l'écran */
+    width: 90%; /* Augmente la largeur à 90% de l'écran */
     margin: 0 auto; /* Centre horizontalement */
     padding: 20px; /* Ajoute de l'espace intérieur */
 }
@@ -482,6 +482,7 @@ h1, h2, h3, p, span, a {
     background-color: #000; /* Fond noir */
     padding: 40px 0; /* Espacement vertical */
     width: 1000%;
+    margin-right: -8%;
 }
 
 .community-newsletter-container {
@@ -556,7 +557,6 @@ h1, h2, h3, p, span, a {
     outline: none;
 }
 
-
 .color-section {
     background-color: Black;
     color: white;
@@ -599,6 +599,7 @@ h1, h2, h3, p, span, a {
     position: relative; /* Position relative pour permettre un positionnement absolu des lignes */
     width: 100px; /* Largeur totale de l'angle */
     height: 100px; /* Hauteur totale de l'angle */
+    margin-right: -9%;
 }
 
 .horizontal-line {
